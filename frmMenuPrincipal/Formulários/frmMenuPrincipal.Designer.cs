@@ -51,7 +51,7 @@
 			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tpEditar = new System.Windows.Forms.TabPage();
 			this.dgvLista = new System.Windows.Forms.DataGridView();
-			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.dsPrincipal = new Dados.dsPrincipal();
 			this.dsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.lblTarefas = new System.Windows.Forms.Label();
 			this.dgvTarefas = new System.Windows.Forms.DataGridView();
@@ -673,7 +673,7 @@
 		private System.Windows.Forms.TabPage tpEditar;
 		private System.Windows.Forms.DataGridView dgvLista;
 		private System.Windows.Forms.BindingSource dsPrincipalBindingSource;
-		private frmMenuPrincipal.Dados.dsPrincipal dsPrincipal;
+		private Dados.dsPrincipal dsPrincipal;
 		private System.Windows.Forms.Label lblCad5;
 		private System.Windows.Forms.Label lblCad6;
 		private System.Windows.Forms.Label lblCad4;
