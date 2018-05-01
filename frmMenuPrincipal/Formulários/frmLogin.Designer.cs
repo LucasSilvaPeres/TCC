@@ -37,10 +37,11 @@
 			this.btnOK = new System.Windows.Forms.Button();
 			this.errErro = new System.Windows.Forms.ErrorProvider(this.components);
 			this.masktxtSenha = new System.Windows.Forms.MaskedTextBox();
-			this.taUsuario = new Dados.dsPrincipalTableAdapters.UsuarioTableAdapter();
-			this.dsPrincipal = new Dados.dsPrincipal();
+			this.taUsuario = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.UsuarioTableAdapter();
+			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
 			this.cbMostrarSenha = new System.Windows.Forms.CheckBox();
 			this.timerMostrarSenha = new System.Windows.Forms.Timer(this.components);
+			this.btnCancelar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.errErro)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
@@ -51,7 +52,7 @@
 			this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsuario.Location = new System.Drawing.Point(282, 51);
 			this.txtUsuario.Name = "txtUsuario";
-			this.txtUsuario.Size = new System.Drawing.Size(183, 29);
+			this.txtUsuario.Size = new System.Drawing.Size(225, 29);
 			this.txtUsuario.TabIndex = 7;
 			// 
 			// lblSenha
@@ -112,7 +113,7 @@
 			this.masktxtSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.masktxtSenha.Location = new System.Drawing.Point(282, 121);
 			this.masktxtSenha.Name = "masktxtSenha";
-			this.masktxtSenha.Size = new System.Drawing.Size(183, 29);
+			this.masktxtSenha.Size = new System.Drawing.Size(225, 29);
 			this.masktxtSenha.TabIndex = 12;
 			this.masktxtSenha.UseSystemPasswordChar = true;
 			// 
@@ -137,12 +138,33 @@
 			this.cbMostrarSenha.UseVisualStyleBackColor = true;
 			this.cbMostrarSenha.CheckedChanged += new System.EventHandler(this.cbMostrarSenha_CheckedChanged);
 			// 
+			// timerMostrarSenha
+			// 
+			this.timerMostrarSenha.Tick += new System.EventHandler(this.timerMostrarSenha_Tick);
+			// 
+			// btnCancelar
+			// 
+			this.btnCancelar.BackColor = System.Drawing.Color.Honeydew;
+			this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+			this.btnCancelar.Location = new System.Drawing.Point(407, 210);
+			this.btnCancelar.Name = "btnCancelar";
+			this.btnCancelar.Size = new System.Drawing.Size(100, 40);
+			this.btnCancelar.TabIndex = 9;
+			this.btnCancelar.Text = "Cancelar";
+			this.btnCancelar.UseVisualStyleBackColor = false;
+			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+			// 
 			// frmLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.ClientSize = new System.Drawing.Size(519, 262);
+			this.Controls.Add(this.btnCancelar);
 			this.Controls.Add(this.cbMostrarSenha);
 			this.Controls.Add(this.masktxtSenha);
 			this.Controls.Add(this.pictureBox);
@@ -150,10 +172,12 @@
 			this.Controls.Add(this.txtUsuario);
 			this.Controls.Add(this.lblSenha);
 			this.Controls.Add(this.lblUsuario);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmLogin";
 			this.ShowIcon = false;
 			this.Text = "Menu de Login";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.errErro)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
@@ -174,5 +198,6 @@
 		private Dados.dsPrincipal dsPrincipal;
 		private System.Windows.Forms.CheckBox cbMostrarSenha;
 		private System.Windows.Forms.Timer timerMostrarSenha;
+		private System.Windows.Forms.Button btnCancelar;
 	}
 }

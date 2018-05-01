@@ -50,9 +50,31 @@
 			this.tpLista = new System.Windows.Forms.TabPage();
 			this.dgvLista = new System.Windows.Forms.DataGridView();
 			this.dsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dsPrincipal = new Dados.dsPrincipal();
+			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
 			this.tpCadastrar = new System.Windows.Forms.TabPage();
+			this.grpCamposCadastrar = new System.Windows.Forms.GroupBox();
+			this.lblCad5 = new System.Windows.Forms.Label();
+			this.lblCad6 = new System.Windows.Forms.Label();
+			this.lblCad4 = new System.Windows.Forms.Label();
+			this.lblCad3 = new System.Windows.Forms.Label();
+			this.lblCad1 = new System.Windows.Forms.Label();
+			this.lblCad2 = new System.Windows.Forms.Label();
+			this.lblCadNome = new System.Windows.Forms.Label();
+			this.txtCad6 = new System.Windows.Forms.TextBox();
+			this.txtCad5 = new System.Windows.Forms.TextBox();
+			this.txtCad4 = new System.Windows.Forms.TextBox();
+			this.txtCad3 = new System.Windows.Forms.TextBox();
+			this.txtCad2 = new System.Windows.Forms.TextBox();
+			this.txtCad1 = new System.Windows.Forms.TextBox();
+			this.txtCadNome = new System.Windows.Forms.TextBox();
+			this.lblCadID = new System.Windows.Forms.Label();
+			this.txtCadId = new System.Windows.Forms.TextBox();
+			this.btnLimparCampos = new System.Windows.Forms.Button();
+			this.btnConfirmarCadastro = new System.Windows.Forms.Button();
 			this.tpEditar = new System.Windows.Forms.TabPage();
+			this.btnConfirmarEditar = new System.Windows.Forms.Button();
+			this.btnLimparEditar = new System.Windows.Forms.Button();
+			this.grpCamposEditar = new System.Windows.Forms.GroupBox();
 			this.lblEd5 = new System.Windows.Forms.Label();
 			this.lblEd6 = new System.Windows.Forms.Label();
 			this.lblEd4 = new System.Windows.Forms.Label();
@@ -71,28 +93,6 @@
 			this.txtEdId = new System.Windows.Forms.TextBox();
 			this.lblTarefas = new System.Windows.Forms.Label();
 			this.dgvTarefas = new System.Windows.Forms.DataGridView();
-			this.btnConfirmarCadastro = new System.Windows.Forms.Button();
-			this.btnLimparCampos = new System.Windows.Forms.Button();
-			this.txtCadId = new System.Windows.Forms.TextBox();
-			this.lblCadID = new System.Windows.Forms.Label();
-			this.txtCadNome = new System.Windows.Forms.TextBox();
-			this.txtCad1 = new System.Windows.Forms.TextBox();
-			this.txtCad2 = new System.Windows.Forms.TextBox();
-			this.txtCad3 = new System.Windows.Forms.TextBox();
-			this.txtCad4 = new System.Windows.Forms.TextBox();
-			this.txtCad5 = new System.Windows.Forms.TextBox();
-			this.txtCad6 = new System.Windows.Forms.TextBox();
-			this.lblCadNome = new System.Windows.Forms.Label();
-			this.lblCad2 = new System.Windows.Forms.Label();
-			this.lblCad1 = new System.Windows.Forms.Label();
-			this.lblCad3 = new System.Windows.Forms.Label();
-			this.lblCad4 = new System.Windows.Forms.Label();
-			this.lblCad6 = new System.Windows.Forms.Label();
-			this.lblCad5 = new System.Windows.Forms.Label();
-			this.grpCamposCadastrar = new System.Windows.Forms.GroupBox();
-			this.grpCamposEditar = new System.Windows.Forms.GroupBox();
-			this.btnLimparEditar = new System.Windows.Forms.Button();
-			this.btnConfirmarEditar = new System.Windows.Forms.Button();
 			this.msMenu.SuspendLayout();
 			this.tsMenuPrincipal.SuspendLayout();
 			this.grpBotões.SuspendLayout();
@@ -102,10 +102,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipalBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
 			this.tpCadastrar.SuspendLayout();
-			this.tpEditar.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
 			this.grpCamposCadastrar.SuspendLayout();
+			this.tpEditar.SuspendLayout();
 			this.grpCamposEditar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// msMenu
@@ -131,13 +131,13 @@
 			// relatórioToolStripMenuItem
 			// 
 			this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-			this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
 			this.relatórioToolStripMenuItem.Text = "Relatório";
 			// 
 			// sairToolStripMenuItem
 			// 
 			this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-			this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.sairToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
 			this.sairToolStripMenuItem.Text = "Sair";
 			// 
 			// ajudaToolStripMenuItem
@@ -152,13 +152,13 @@
 			// manualToolStripMenuItem
 			// 
 			this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-			this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
 			this.manualToolStripMenuItem.Text = "Manual";
 			// 
 			// sobreToolStripMenuItem
 			// 
 			this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-			this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.sobreToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
 			this.sobreToolStripMenuItem.Text = "Sobre";
 			// 
 			// tsMenuPrincipal
@@ -188,6 +188,7 @@
 			this.tsbtnSair.Name = "tsbtnSair";
 			this.tsbtnSair.Size = new System.Drawing.Size(23, 22);
 			this.tsbtnSair.Text = "toolStripButton1";
+			this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
 			// 
 			// grpBotões
 			// 
@@ -211,6 +212,7 @@
 			this.btnProduto.TabIndex = 5;
 			this.btnProduto.Text = "PRODUTO";
 			this.btnProduto.UseVisualStyleBackColor = true;
+			this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
 			// 
 			// btnServico
 			// 
@@ -221,6 +223,7 @@
 			this.btnServico.TabIndex = 4;
 			this.btnServico.Text = "SERVIÇO";
 			this.btnServico.UseVisualStyleBackColor = true;
+			this.btnServico.Click += new System.EventHandler(this.btnServico_Click);
 			// 
 			// btnFornecedor
 			// 
@@ -231,6 +234,7 @@
 			this.btnFornecedor.TabIndex = 3;
 			this.btnFornecedor.Text = "FORNECEDOR";
 			this.btnFornecedor.UseVisualStyleBackColor = true;
+			this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
 			// 
 			// btnFuncionario
 			// 
@@ -241,6 +245,7 @@
 			this.btnFuncionario.TabIndex = 1;
 			this.btnFuncionario.Text = "FUNCIONÁRIO";
 			this.btnFuncionario.UseVisualStyleBackColor = true;
+			this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
 			// 
 			// btnCliente
 			// 
@@ -251,6 +256,7 @@
 			this.btnCliente.TabIndex = 0;
 			this.btnCliente.Text = "CLIENTE";
 			this.btnCliente.UseVisualStyleBackColor = true;
+			this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
 			// 
 			// tcPrincipal
 			// 
@@ -310,6 +316,177 @@
 			this.tpCadastrar.Text = "Cadastrar";
 			this.tpCadastrar.UseVisualStyleBackColor = true;
 			// 
+			// grpCamposCadastrar
+			// 
+			this.grpCamposCadastrar.Controls.Add(this.lblCad5);
+			this.grpCamposCadastrar.Controls.Add(this.lblCad6);
+			this.grpCamposCadastrar.Controls.Add(this.lblCad4);
+			this.grpCamposCadastrar.Controls.Add(this.lblCad3);
+			this.grpCamposCadastrar.Controls.Add(this.lblCad1);
+			this.grpCamposCadastrar.Controls.Add(this.lblCad2);
+			this.grpCamposCadastrar.Controls.Add(this.lblCadNome);
+			this.grpCamposCadastrar.Controls.Add(this.txtCad6);
+			this.grpCamposCadastrar.Controls.Add(this.txtCad5);
+			this.grpCamposCadastrar.Controls.Add(this.txtCad4);
+			this.grpCamposCadastrar.Controls.Add(this.txtCad3);
+			this.grpCamposCadastrar.Controls.Add(this.txtCad2);
+			this.grpCamposCadastrar.Controls.Add(this.txtCad1);
+			this.grpCamposCadastrar.Controls.Add(this.txtCadNome);
+			this.grpCamposCadastrar.Controls.Add(this.lblCadID);
+			this.grpCamposCadastrar.Controls.Add(this.txtCadId);
+			this.grpCamposCadastrar.Location = new System.Drawing.Point(70, 38);
+			this.grpCamposCadastrar.Name = "grpCamposCadastrar";
+			this.grpCamposCadastrar.Size = new System.Drawing.Size(181, 225);
+			this.grpCamposCadastrar.TabIndex = 18;
+			this.grpCamposCadastrar.TabStop = false;
+			// 
+			// lblCad5
+			// 
+			this.lblCad5.AutoSize = true;
+			this.lblCad5.Location = new System.Drawing.Point(6, 175);
+			this.lblCad5.Name = "lblCad5";
+			this.lblCad5.Size = new System.Drawing.Size(29, 13);
+			this.lblCad5.TabIndex = 15;
+			this.lblCad5.Text = "label";
+			// 
+			// lblCad6
+			// 
+			this.lblCad6.AutoSize = true;
+			this.lblCad6.Location = new System.Drawing.Point(6, 201);
+			this.lblCad6.Name = "lblCad6";
+			this.lblCad6.Size = new System.Drawing.Size(29, 13);
+			this.lblCad6.TabIndex = 14;
+			this.lblCad6.Text = "label";
+			// 
+			// lblCad4
+			// 
+			this.lblCad4.AutoSize = true;
+			this.lblCad4.Location = new System.Drawing.Point(6, 149);
+			this.lblCad4.Name = "lblCad4";
+			this.lblCad4.Size = new System.Drawing.Size(29, 13);
+			this.lblCad4.TabIndex = 13;
+			this.lblCad4.Text = "label";
+			// 
+			// lblCad3
+			// 
+			this.lblCad3.AutoSize = true;
+			this.lblCad3.Location = new System.Drawing.Point(6, 122);
+			this.lblCad3.Name = "lblCad3";
+			this.lblCad3.Size = new System.Drawing.Size(29, 13);
+			this.lblCad3.TabIndex = 12;
+			this.lblCad3.Text = "label";
+			// 
+			// lblCad1
+			// 
+			this.lblCad1.AutoSize = true;
+			this.lblCad1.Location = new System.Drawing.Point(6, 70);
+			this.lblCad1.Name = "lblCad1";
+			this.lblCad1.Size = new System.Drawing.Size(29, 13);
+			this.lblCad1.TabIndex = 11;
+			this.lblCad1.Text = "label";
+			// 
+			// lblCad2
+			// 
+			this.lblCad2.AutoSize = true;
+			this.lblCad2.Location = new System.Drawing.Point(6, 96);
+			this.lblCad2.Name = "lblCad2";
+			this.lblCad2.Size = new System.Drawing.Size(29, 13);
+			this.lblCad2.TabIndex = 10;
+			this.lblCad2.Text = "label";
+			// 
+			// lblCadNome
+			// 
+			this.lblCadNome.AutoSize = true;
+			this.lblCadNome.Location = new System.Drawing.Point(6, 44);
+			this.lblCadNome.Name = "lblCadNome";
+			this.lblCadNome.Size = new System.Drawing.Size(35, 13);
+			this.lblCadNome.TabIndex = 9;
+			this.lblCadNome.Text = "Nome";
+			// 
+			// txtCad6
+			// 
+			this.txtCad6.Location = new System.Drawing.Point(71, 197);
+			this.txtCad6.Name = "txtCad6";
+			this.txtCad6.Size = new System.Drawing.Size(100, 20);
+			this.txtCad6.TabIndex = 8;
+			// 
+			// txtCad5
+			// 
+			this.txtCad5.Location = new System.Drawing.Point(71, 171);
+			this.txtCad5.Name = "txtCad5";
+			this.txtCad5.Size = new System.Drawing.Size(100, 20);
+			this.txtCad5.TabIndex = 7;
+			// 
+			// txtCad4
+			// 
+			this.txtCad4.Location = new System.Drawing.Point(71, 145);
+			this.txtCad4.Name = "txtCad4";
+			this.txtCad4.Size = new System.Drawing.Size(100, 20);
+			this.txtCad4.TabIndex = 6;
+			// 
+			// txtCad3
+			// 
+			this.txtCad3.Location = new System.Drawing.Point(71, 119);
+			this.txtCad3.Name = "txtCad3";
+			this.txtCad3.Size = new System.Drawing.Size(100, 20);
+			this.txtCad3.TabIndex = 5;
+			// 
+			// txtCad2
+			// 
+			this.txtCad2.Location = new System.Drawing.Point(71, 93);
+			this.txtCad2.Name = "txtCad2";
+			this.txtCad2.Size = new System.Drawing.Size(100, 20);
+			this.txtCad2.TabIndex = 4;
+			// 
+			// txtCad1
+			// 
+			this.txtCad1.Location = new System.Drawing.Point(71, 67);
+			this.txtCad1.Name = "txtCad1";
+			this.txtCad1.Size = new System.Drawing.Size(100, 20);
+			this.txtCad1.TabIndex = 3;
+			// 
+			// txtCadNome
+			// 
+			this.txtCadNome.Location = new System.Drawing.Point(71, 41);
+			this.txtCadNome.Name = "txtCadNome";
+			this.txtCadNome.Size = new System.Drawing.Size(100, 20);
+			this.txtCadNome.TabIndex = 2;
+			// 
+			// lblCadID
+			// 
+			this.lblCadID.AutoSize = true;
+			this.lblCadID.Location = new System.Drawing.Point(6, 17);
+			this.lblCadID.Name = "lblCadID";
+			this.lblCadID.Size = new System.Drawing.Size(18, 13);
+			this.lblCadID.TabIndex = 1;
+			this.lblCadID.Text = "ID";
+			// 
+			// txtCadId
+			// 
+			this.txtCadId.Enabled = false;
+			this.txtCadId.Location = new System.Drawing.Point(71, 14);
+			this.txtCadId.Name = "txtCadId";
+			this.txtCadId.Size = new System.Drawing.Size(100, 20);
+			this.txtCadId.TabIndex = 0;
+			// 
+			// btnLimparCampos
+			// 
+			this.btnLimparCampos.Location = new System.Drawing.Point(6, 291);
+			this.btnLimparCampos.Name = "btnLimparCampos";
+			this.btnLimparCampos.Size = new System.Drawing.Size(91, 23);
+			this.btnLimparCampos.TabIndex = 17;
+			this.btnLimparCampos.Text = "Limpar Campos";
+			this.btnLimparCampos.UseVisualStyleBackColor = true;
+			// 
+			// btnConfirmarCadastro
+			// 
+			this.btnConfirmarCadastro.Location = new System.Drawing.Point(316, 291);
+			this.btnConfirmarCadastro.Name = "btnConfirmarCadastro";
+			this.btnConfirmarCadastro.Size = new System.Drawing.Size(105, 23);
+			this.btnConfirmarCadastro.TabIndex = 16;
+			this.btnConfirmarCadastro.Text = "Confirmar Cadastro";
+			this.btnConfirmarCadastro.UseVisualStyleBackColor = true;
+			// 
 			// tpEditar
 			// 
 			this.tpEditar.Controls.Add(this.btnConfirmarEditar);
@@ -321,6 +498,48 @@
 			this.tpEditar.TabIndex = 2;
 			this.tpEditar.Text = "Editar";
 			this.tpEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnConfirmarEditar
+			// 
+			this.btnConfirmarEditar.Location = new System.Drawing.Point(316, 291);
+			this.btnConfirmarEditar.Name = "btnConfirmarEditar";
+			this.btnConfirmarEditar.Size = new System.Drawing.Size(105, 23);
+			this.btnConfirmarEditar.TabIndex = 34;
+			this.btnConfirmarEditar.Text = "Confirmar Cadastro";
+			this.btnConfirmarEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnLimparEditar
+			// 
+			this.btnLimparEditar.Location = new System.Drawing.Point(6, 291);
+			this.btnLimparEditar.Name = "btnLimparEditar";
+			this.btnLimparEditar.Size = new System.Drawing.Size(91, 23);
+			this.btnLimparEditar.TabIndex = 33;
+			this.btnLimparEditar.Text = "Limpar Campos";
+			this.btnLimparEditar.UseVisualStyleBackColor = true;
+			// 
+			// grpCamposEditar
+			// 
+			this.grpCamposEditar.Controls.Add(this.lblEd5);
+			this.grpCamposEditar.Controls.Add(this.lblEd6);
+			this.grpCamposEditar.Controls.Add(this.lblEd4);
+			this.grpCamposEditar.Controls.Add(this.lblEd3);
+			this.grpCamposEditar.Controls.Add(this.lblEd1);
+			this.grpCamposEditar.Controls.Add(this.lblEd2);
+			this.grpCamposEditar.Controls.Add(this.lblEdNome);
+			this.grpCamposEditar.Controls.Add(this.txtEd6);
+			this.grpCamposEditar.Controls.Add(this.txtEd5);
+			this.grpCamposEditar.Controls.Add(this.txtEd4);
+			this.grpCamposEditar.Controls.Add(this.txtEd3);
+			this.grpCamposEditar.Controls.Add(this.txtEd2);
+			this.grpCamposEditar.Controls.Add(this.txtEd1);
+			this.grpCamposEditar.Controls.Add(this.txtEdNome);
+			this.grpCamposEditar.Controls.Add(this.lblEdId);
+			this.grpCamposEditar.Controls.Add(this.txtEdId);
+			this.grpCamposEditar.Location = new System.Drawing.Point(70, 38);
+			this.grpCamposEditar.Name = "grpCamposEditar";
+			this.grpCamposEditar.Size = new System.Drawing.Size(181, 225);
+			this.grpCamposEditar.TabIndex = 32;
+			this.grpCamposEditar.TabStop = false;
 			// 
 			// lblEd5
 			// 
@@ -468,219 +687,6 @@
 			this.dgvTarefas.Size = new System.Drawing.Size(247, 320);
 			this.dgvTarefas.TabIndex = 5;
 			// 
-			// btnConfirmarCadastro
-			// 
-			this.btnConfirmarCadastro.Location = new System.Drawing.Point(316, 291);
-			this.btnConfirmarCadastro.Name = "btnConfirmarCadastro";
-			this.btnConfirmarCadastro.Size = new System.Drawing.Size(105, 23);
-			this.btnConfirmarCadastro.TabIndex = 16;
-			this.btnConfirmarCadastro.Text = "Confirmar Cadastro";
-			this.btnConfirmarCadastro.UseVisualStyleBackColor = true;
-			// 
-			// btnLimparCampos
-			// 
-			this.btnLimparCampos.Location = new System.Drawing.Point(6, 291);
-			this.btnLimparCampos.Name = "btnLimparCampos";
-			this.btnLimparCampos.Size = new System.Drawing.Size(91, 23);
-			this.btnLimparCampos.TabIndex = 17;
-			this.btnLimparCampos.Text = "Limpar Campos";
-			this.btnLimparCampos.UseVisualStyleBackColor = true;
-			// 
-			// txtCadId
-			// 
-			this.txtCadId.Enabled = false;
-			this.txtCadId.Location = new System.Drawing.Point(71, 14);
-			this.txtCadId.Name = "txtCadId";
-			this.txtCadId.Size = new System.Drawing.Size(100, 20);
-			this.txtCadId.TabIndex = 0;
-			// 
-			// lblCadID
-			// 
-			this.lblCadID.AutoSize = true;
-			this.lblCadID.Location = new System.Drawing.Point(6, 17);
-			this.lblCadID.Name = "lblCadID";
-			this.lblCadID.Size = new System.Drawing.Size(18, 13);
-			this.lblCadID.TabIndex = 1;
-			this.lblCadID.Text = "ID";
-			// 
-			// txtCadNome
-			// 
-			this.txtCadNome.Location = new System.Drawing.Point(71, 41);
-			this.txtCadNome.Name = "txtCadNome";
-			this.txtCadNome.Size = new System.Drawing.Size(100, 20);
-			this.txtCadNome.TabIndex = 2;
-			// 
-			// txtCad1
-			// 
-			this.txtCad1.Location = new System.Drawing.Point(71, 67);
-			this.txtCad1.Name = "txtCad1";
-			this.txtCad1.Size = new System.Drawing.Size(100, 20);
-			this.txtCad1.TabIndex = 3;
-			// 
-			// txtCad2
-			// 
-			this.txtCad2.Location = new System.Drawing.Point(71, 93);
-			this.txtCad2.Name = "txtCad2";
-			this.txtCad2.Size = new System.Drawing.Size(100, 20);
-			this.txtCad2.TabIndex = 4;
-			// 
-			// txtCad3
-			// 
-			this.txtCad3.Location = new System.Drawing.Point(71, 119);
-			this.txtCad3.Name = "txtCad3";
-			this.txtCad3.Size = new System.Drawing.Size(100, 20);
-			this.txtCad3.TabIndex = 5;
-			// 
-			// txtCad4
-			// 
-			this.txtCad4.Location = new System.Drawing.Point(71, 145);
-			this.txtCad4.Name = "txtCad4";
-			this.txtCad4.Size = new System.Drawing.Size(100, 20);
-			this.txtCad4.TabIndex = 6;
-			// 
-			// txtCad5
-			// 
-			this.txtCad5.Location = new System.Drawing.Point(71, 171);
-			this.txtCad5.Name = "txtCad5";
-			this.txtCad5.Size = new System.Drawing.Size(100, 20);
-			this.txtCad5.TabIndex = 7;
-			// 
-			// txtCad6
-			// 
-			this.txtCad6.Location = new System.Drawing.Point(71, 197);
-			this.txtCad6.Name = "txtCad6";
-			this.txtCad6.Size = new System.Drawing.Size(100, 20);
-			this.txtCad6.TabIndex = 8;
-			// 
-			// lblCadNome
-			// 
-			this.lblCadNome.AutoSize = true;
-			this.lblCadNome.Location = new System.Drawing.Point(6, 44);
-			this.lblCadNome.Name = "lblCadNome";
-			this.lblCadNome.Size = new System.Drawing.Size(35, 13);
-			this.lblCadNome.TabIndex = 9;
-			this.lblCadNome.Text = "Nome";
-			// 
-			// lblCad2
-			// 
-			this.lblCad2.AutoSize = true;
-			this.lblCad2.Location = new System.Drawing.Point(6, 96);
-			this.lblCad2.Name = "lblCad2";
-			this.lblCad2.Size = new System.Drawing.Size(29, 13);
-			this.lblCad2.TabIndex = 10;
-			this.lblCad2.Text = "label";
-			// 
-			// lblCad1
-			// 
-			this.lblCad1.AutoSize = true;
-			this.lblCad1.Location = new System.Drawing.Point(6, 70);
-			this.lblCad1.Name = "lblCad1";
-			this.lblCad1.Size = new System.Drawing.Size(29, 13);
-			this.lblCad1.TabIndex = 11;
-			this.lblCad1.Text = "label";
-			// 
-			// lblCad3
-			// 
-			this.lblCad3.AutoSize = true;
-			this.lblCad3.Location = new System.Drawing.Point(6, 122);
-			this.lblCad3.Name = "lblCad3";
-			this.lblCad3.Size = new System.Drawing.Size(29, 13);
-			this.lblCad3.TabIndex = 12;
-			this.lblCad3.Text = "label";
-			// 
-			// lblCad4
-			// 
-			this.lblCad4.AutoSize = true;
-			this.lblCad4.Location = new System.Drawing.Point(6, 149);
-			this.lblCad4.Name = "lblCad4";
-			this.lblCad4.Size = new System.Drawing.Size(29, 13);
-			this.lblCad4.TabIndex = 13;
-			this.lblCad4.Text = "label";
-			// 
-			// lblCad6
-			// 
-			this.lblCad6.AutoSize = true;
-			this.lblCad6.Location = new System.Drawing.Point(6, 201);
-			this.lblCad6.Name = "lblCad6";
-			this.lblCad6.Size = new System.Drawing.Size(29, 13);
-			this.lblCad6.TabIndex = 14;
-			this.lblCad6.Text = "label";
-			// 
-			// lblCad5
-			// 
-			this.lblCad5.AutoSize = true;
-			this.lblCad5.Location = new System.Drawing.Point(6, 175);
-			this.lblCad5.Name = "lblCad5";
-			this.lblCad5.Size = new System.Drawing.Size(29, 13);
-			this.lblCad5.TabIndex = 15;
-			this.lblCad5.Text = "label";
-			// 
-			// grpCamposCadastrar
-			// 
-			this.grpCamposCadastrar.Controls.Add(this.lblCad5);
-			this.grpCamposCadastrar.Controls.Add(this.lblCad6);
-			this.grpCamposCadastrar.Controls.Add(this.lblCad4);
-			this.grpCamposCadastrar.Controls.Add(this.lblCad3);
-			this.grpCamposCadastrar.Controls.Add(this.lblCad1);
-			this.grpCamposCadastrar.Controls.Add(this.lblCad2);
-			this.grpCamposCadastrar.Controls.Add(this.lblCadNome);
-			this.grpCamposCadastrar.Controls.Add(this.txtCad6);
-			this.grpCamposCadastrar.Controls.Add(this.txtCad5);
-			this.grpCamposCadastrar.Controls.Add(this.txtCad4);
-			this.grpCamposCadastrar.Controls.Add(this.txtCad3);
-			this.grpCamposCadastrar.Controls.Add(this.txtCad2);
-			this.grpCamposCadastrar.Controls.Add(this.txtCad1);
-			this.grpCamposCadastrar.Controls.Add(this.txtCadNome);
-			this.grpCamposCadastrar.Controls.Add(this.lblCadID);
-			this.grpCamposCadastrar.Controls.Add(this.txtCadId);
-			this.grpCamposCadastrar.Location = new System.Drawing.Point(70, 38);
-			this.grpCamposCadastrar.Name = "grpCamposCadastrar";
-			this.grpCamposCadastrar.Size = new System.Drawing.Size(181, 225);
-			this.grpCamposCadastrar.TabIndex = 18;
-			this.grpCamposCadastrar.TabStop = false;
-			// 
-			// grpCamposEditar
-			// 
-			this.grpCamposEditar.Controls.Add(this.lblEd5);
-			this.grpCamposEditar.Controls.Add(this.lblEd6);
-			this.grpCamposEditar.Controls.Add(this.lblEd4);
-			this.grpCamposEditar.Controls.Add(this.lblEd3);
-			this.grpCamposEditar.Controls.Add(this.lblEd1);
-			this.grpCamposEditar.Controls.Add(this.lblEd2);
-			this.grpCamposEditar.Controls.Add(this.lblEdNome);
-			this.grpCamposEditar.Controls.Add(this.txtEd6);
-			this.grpCamposEditar.Controls.Add(this.txtEd5);
-			this.grpCamposEditar.Controls.Add(this.txtEd4);
-			this.grpCamposEditar.Controls.Add(this.txtEd3);
-			this.grpCamposEditar.Controls.Add(this.txtEd2);
-			this.grpCamposEditar.Controls.Add(this.txtEd1);
-			this.grpCamposEditar.Controls.Add(this.txtEdNome);
-			this.grpCamposEditar.Controls.Add(this.lblEdId);
-			this.grpCamposEditar.Controls.Add(this.txtEdId);
-			this.grpCamposEditar.Location = new System.Drawing.Point(70, 38);
-			this.grpCamposEditar.Name = "grpCamposEditar";
-			this.grpCamposEditar.Size = new System.Drawing.Size(181, 225);
-			this.grpCamposEditar.TabIndex = 32;
-			this.grpCamposEditar.TabStop = false;
-			// 
-			// btnLimparEditar
-			// 
-			this.btnLimparEditar.Location = new System.Drawing.Point(6, 291);
-			this.btnLimparEditar.Name = "btnLimparEditar";
-			this.btnLimparEditar.Size = new System.Drawing.Size(91, 23);
-			this.btnLimparEditar.TabIndex = 33;
-			this.btnLimparEditar.Text = "Limpar Campos";
-			this.btnLimparEditar.UseVisualStyleBackColor = true;
-			// 
-			// btnConfirmarEditar
-			// 
-			this.btnConfirmarEditar.Location = new System.Drawing.Point(316, 291);
-			this.btnConfirmarEditar.Name = "btnConfirmarEditar";
-			this.btnConfirmarEditar.Size = new System.Drawing.Size(105, 23);
-			this.btnConfirmarEditar.TabIndex = 34;
-			this.btnConfirmarEditar.Text = "Confirmar Cadastro";
-			this.btnConfirmarEditar.UseVisualStyleBackColor = true;
-			// 
 			// frmMenuPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,6 +701,8 @@
 			this.MainMenuStrip = this.msMenu;
 			this.Name = "frmMenuPrincipal";
 			this.Text = "Menu Principal";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
+			this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
 			this.msMenu.ResumeLayout(false);
 			this.msMenu.PerformLayout();
 			this.tsMenuPrincipal.ResumeLayout(false);
@@ -706,12 +714,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipalBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
 			this.tpCadastrar.ResumeLayout(false);
-			this.tpEditar.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
 			this.grpCamposCadastrar.ResumeLayout(false);
 			this.grpCamposCadastrar.PerformLayout();
+			this.tpEditar.ResumeLayout(false);
 			this.grpCamposEditar.ResumeLayout(false);
 			this.grpCamposEditar.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
