@@ -4374,12 +4374,19 @@ SELECT idUsuario, loginUsuario, senhaUsuario, nivelUsuario, dataInfo FROM Usuari
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idUsuario, loginUsuario, senhaUsuario, nivelUsuario, dataInfo FROM dbo.Usu" +
                 "ario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT loginUsuario, senhaUsuario\r\nFROM dbo.Usuario\r\nWHERE loginUsuario = @loginU" +
+                "suario AND senhaUsuario = @senhaUsuario";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@loginUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "loginUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@senhaUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "senhaUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4401,6 +4408,54 @@ SELECT idUsuario, loginUsuario, senhaUsuario, nivelUsuario, dataInfo FROM Usuari
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual dsPrincipal.UsuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsPrincipal.UsuarioDataTable dataTable = new dsPrincipal.UsuarioDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillDataNivelUsuario(dsPrincipal.UsuarioDataTable dataTable, string loginUsuario, string senhaUsuario) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((loginUsuario == null)) {
+                throw new global::System.ArgumentNullException("loginUsuario");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(loginUsuario));
+            }
+            if ((senhaUsuario == null)) {
+                throw new global::System.ArgumentNullException("senhaUsuario");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(senhaUsuario));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsPrincipal.UsuarioDataTable GetDataNivelUsuario(string loginUsuario, string senhaUsuario) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((loginUsuario == null)) {
+                throw new global::System.ArgumentNullException("loginUsuario");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(loginUsuario));
+            }
+            if ((senhaUsuario == null)) {
+                throw new global::System.ArgumentNullException("senhaUsuario");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(senhaUsuario));
+            }
             dsPrincipal.UsuarioDataTable dataTable = new dsPrincipal.UsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

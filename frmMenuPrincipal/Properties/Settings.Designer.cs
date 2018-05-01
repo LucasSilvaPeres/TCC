@@ -32,5 +32,29 @@ namespace frmMenuPrincipal.Properties {
                 return ((string)(this["TCCConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int NivelUsuarioLogado {
+            get {
+                return ((int)(this["NivelUsuarioLogado"]));
+            }
+            set {
+                this["NivelUsuarioLogado"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NomeUsuarioLogado {
+            get {
+                return ((string)(this["NomeUsuarioLogado"]));
+            }
+            set {
+                this["NomeUsuarioLogado"] = value;
+            }
+        }
     }
 }

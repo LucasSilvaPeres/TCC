@@ -50,7 +50,7 @@
 			this.tpLista = new System.Windows.Forms.TabPage();
 			this.dgvLista = new System.Windows.Forms.DataGridView();
 			this.dsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.dsPrincipal = new Dados.dsPrincipal();
 			this.tpCadastrar = new System.Windows.Forms.TabPage();
 			this.tpEditar = new System.Windows.Forms.TabPage();
 			this.lblEd5 = new System.Windows.Forms.Label();
