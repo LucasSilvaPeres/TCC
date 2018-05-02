@@ -129,10 +129,11 @@
 			// cbMostrarSenha
 			// 
 			this.cbMostrarSenha.AutoSize = true;
+			this.cbMostrarSenha.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbMostrarSenha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.cbMostrarSenha.Location = new System.Drawing.Point(282, 172);
 			this.cbMostrarSenha.Name = "cbMostrarSenha";
-			this.cbMostrarSenha.Size = new System.Drawing.Size(95, 17);
+			this.cbMostrarSenha.Size = new System.Drawing.Size(102, 17);
 			this.cbMostrarSenha.TabIndex = 13;
 			this.cbMostrarSenha.Text = "Mostrar Senha";
 			this.cbMostrarSenha.UseVisualStyleBackColor = true;
@@ -177,7 +178,6 @@
 			this.Name = "frmLogin";
 			this.ShowIcon = false;
 			this.Text = "Menu de Login";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.errErro)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();

@@ -109,14 +109,10 @@ namespace frmMenuPrincipal.Formulários
 			//}
 		}
 
-		private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
-		{
-			Close();
-		}
 
 		private void btnCancelar_Click(object sender, EventArgs e)
 		{
-			Close();
+			Application.ExitThread();
 		}
 	}
 }
