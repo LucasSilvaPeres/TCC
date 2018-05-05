@@ -37,8 +37,8 @@
 			this.btnOK = new System.Windows.Forms.Button();
 			this.errErro = new System.Windows.Forms.ErrorProvider(this.components);
 			this.masktxtSenha = new System.Windows.Forms.MaskedTextBox();
-			this.taUsuario = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.UsuarioTableAdapter();
-			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.taUsuario = new Dados.dsPrincipalTableAdapters.UsuarioTableAdapter();
+			this.dsPrincipal = new Dados.dsPrincipal();
 			this.cbMostrarSenha = new System.Windows.Forms.CheckBox();
 			this.timerMostrarSenha = new System.Windows.Forms.Timer(this.components);
 			this.btnCancelar = new System.Windows.Forms.Button();
