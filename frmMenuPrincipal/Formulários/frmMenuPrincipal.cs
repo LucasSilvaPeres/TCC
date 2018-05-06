@@ -21,7 +21,7 @@ namespace frmMenuPrincipal
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
 			tslUsuario.Text += Properties.Settings.Default.NomeUsuarioLogado.ToUpper();
-
+			
 		}
 
 		private void tsbtnSair_Click(object sender, EventArgs e)
@@ -98,7 +98,10 @@ namespace frmMenuPrincipal
 					lblEd5.Text = "Endereço";
 					lblEd6.Text = "Bairro";
 					//
-					
+					if (!tcPrincipal.Visible == true)
+					{
+						tcPrincipal.Visible = true;
+					}
 					break;
 				#endregion
 				#region Funcionario
@@ -118,6 +121,11 @@ namespace frmMenuPrincipal
 					lblEd5.Text = "Bairro";
 					lblEd6.Text = "Pagamento";
 					//
+					if (!tcPrincipal.Visible == true)
+					{
+						tcPrincipal.Visible = true;
+					}
+
 					break;
 				#endregion
 				#region Fornecedor
@@ -137,6 +145,11 @@ namespace frmMenuPrincipal
 					lblEd5.Text = "Pagamento";
 					lblEd6.Visible = false;
 					//
+					if (!tcPrincipal.Visible == true)
+					{
+						tcPrincipal.Visible = true;
+					}
+
 					break;
 				#endregion
 				#region Serviço
@@ -155,6 +168,11 @@ namespace frmMenuPrincipal
 					lblCad4.Visible = false;
 					lblCad5.Visible = false;
 					lblCad6.Visible = false;
+					//
+					if (!tcPrincipal.Visible == true)
+					{
+						tcPrincipal.Visible = true;
+					}
 					break;
 				#endregion
 				#region Produto
@@ -173,10 +191,17 @@ namespace frmMenuPrincipal
 					lblEd4.Visible = false;
 					lblEd5.Visible = false;
 					lblEd6.Visible = false;
+					//
+					if(!tcPrincipal.Visible == true)
+					{
+						tcPrincipal.Visible = true;
+					}
 					break;
 				#endregion
+				#region Default
 				default:
 					break;
+					#endregion
 			}
 		}
 	}

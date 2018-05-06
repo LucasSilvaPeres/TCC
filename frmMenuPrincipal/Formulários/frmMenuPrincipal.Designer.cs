@@ -71,6 +71,7 @@
 			this.dsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dsPrincipal = new Dados.dsPrincipal();
 			this.tpCadastrar = new System.Windows.Forms.TabPage();
+			this.btnConfirmarCadastrar = new System.Windows.Forms.Button();
 			this.grpCamposCadastrar = new System.Windows.Forms.GroupBox();
 			this.lblCad5 = new System.Windows.Forms.Label();
 			this.lblCad6 = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@
 			this.txtCadId = new System.Windows.Forms.TextBox();
 			this.btnLimparCadastrar = new System.Windows.Forms.Button();
 			this.tpEditar = new System.Windows.Forms.TabPage();
+			this.btnConfirmarEditar = new System.Windows.Forms.Button();
 			this.btnLimparEditar = new System.Windows.Forms.Button();
 			this.grpCamposEditar = new System.Windows.Forms.GroupBox();
 			this.lblEd5 = new System.Windows.Forms.Label();
@@ -123,8 +125,6 @@
 			this.lblTarefas = new System.Windows.Forms.Label();
 			this.dgvTarefas = new System.Windows.Forms.DataGridView();
 			this.lblStatus = new System.Windows.Forms.Label();
-			this.btnConfirmarEditar = new System.Windows.Forms.Button();
-			this.btnConfirmarCadastrar = new System.Windows.Forms.Button();
 			this.msMenu.SuspendLayout();
 			this.tsMenuPrincipal.SuspendLayout();
 			this.grpBotões.SuspendLayout();
@@ -438,11 +438,13 @@
 			this.tcPrincipal.Controls.Add(this.tpCadastrar);
 			this.tcPrincipal.Controls.Add(this.tpEditar);
 			this.tcPrincipal.Controls.Add(this.tpFornecimento);
+			this.tcPrincipal.Enabled = false;
 			this.tcPrincipal.Location = new System.Drawing.Point(219, 142);
 			this.tcPrincipal.Name = "tcPrincipal";
 			this.tcPrincipal.SelectedIndex = 0;
 			this.tcPrincipal.Size = new System.Drawing.Size(435, 346);
 			this.tcPrincipal.TabIndex = 3;
+			this.tcPrincipal.Visible = false;
 			this.tcPrincipal.SelectedIndexChanged += new System.EventHandler(this.tcPrincipal_SelectedIndexChanged);
 			// 
 			// tpLista
@@ -491,6 +493,17 @@
 			this.tpCadastrar.TabIndex = 1;
 			this.tpCadastrar.Text = "Cadastrar";
 			this.tpCadastrar.UseVisualStyleBackColor = true;
+			// 
+			// btnConfirmarCadastrar
+			// 
+			this.btnConfirmarCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConfirmarCadastrar.Location = new System.Drawing.Point(322, 276);
+			this.btnConfirmarCadastrar.Name = "btnConfirmarCadastrar";
+			this.btnConfirmarCadastrar.Size = new System.Drawing.Size(99, 38);
+			this.btnConfirmarCadastrar.TabIndex = 36;
+			this.btnConfirmarCadastrar.Text = "Confirmar";
+			this.btnConfirmarCadastrar.UseVisualStyleBackColor = true;
+			this.btnConfirmarCadastrar.Click += new System.EventHandler(this.btnConfirmarCadastrar_Click);
 			// 
 			// grpCamposCadastrar
 			// 
@@ -665,6 +678,16 @@
 			this.tpEditar.TabIndex = 2;
 			this.tpEditar.Text = "Editar";
 			this.tpEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnConfirmarEditar
+			// 
+			this.btnConfirmarEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConfirmarEditar.Location = new System.Drawing.Point(322, 276);
+			this.btnConfirmarEditar.Name = "btnConfirmarEditar";
+			this.btnConfirmarEditar.Size = new System.Drawing.Size(99, 38);
+			this.btnConfirmarEditar.TabIndex = 35;
+			this.btnConfirmarEditar.Text = "Confirmar";
+			this.btnConfirmarEditar.UseVisualStyleBackColor = true;
 			// 
 			// btnLimparEditar
 			// 
@@ -966,27 +989,6 @@
 			this.lblStatus.Size = new System.Drawing.Size(226, 39);
 			this.lblStatus.TabIndex = 6;
 			this.lblStatus.Text = "Pesquisando";
-			// 
-			// btnConfirmarEditar
-			// 
-			this.btnConfirmarEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConfirmarEditar.Location = new System.Drawing.Point(322, 276);
-			this.btnConfirmarEditar.Name = "btnConfirmarEditar";
-			this.btnConfirmarEditar.Size = new System.Drawing.Size(99, 38);
-			this.btnConfirmarEditar.TabIndex = 35;
-			this.btnConfirmarEditar.Text = "Confirmar";
-			this.btnConfirmarEditar.UseVisualStyleBackColor = true;
-			// 
-			// btnConfirmarCadastrar
-			// 
-			this.btnConfirmarCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConfirmarCadastrar.Location = new System.Drawing.Point(322, 276);
-			this.btnConfirmarCadastrar.Name = "btnConfirmarCadastrar";
-			this.btnConfirmarCadastrar.Size = new System.Drawing.Size(99, 38);
-			this.btnConfirmarCadastrar.TabIndex = 36;
-			this.btnConfirmarCadastrar.Text = "Confirmar";
-			this.btnConfirmarCadastrar.UseVisualStyleBackColor = true;
-			this.btnConfirmarCadastrar.Click += new System.EventHandler(this.btnConfirmarCadastrar_Click);
 			// 
 			// frmMenuPrincipal
 			// 
