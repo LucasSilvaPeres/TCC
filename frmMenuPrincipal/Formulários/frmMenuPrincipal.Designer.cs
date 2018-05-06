@@ -33,6 +33,25 @@
 			this.msMenu = new System.Windows.Forms.MenuStrip();
 			this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.fornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+			this.serviçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+			this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+			this.fornecimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.geralToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+			this.personalizadoToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,10 +88,8 @@
 			this.txtCadNome = new System.Windows.Forms.TextBox();
 			this.lblCadID = new System.Windows.Forms.Label();
 			this.txtCadId = new System.Windows.Forms.TextBox();
-			this.btnLimparCampos = new System.Windows.Forms.Button();
-			this.btnConfirmarCadastro = new System.Windows.Forms.Button();
+			this.btnLimparCadastrar = new System.Windows.Forms.Button();
 			this.tpEditar = new System.Windows.Forms.TabPage();
-			this.btnConfirmarEditar = new System.Windows.Forms.Button();
 			this.btnLimparEditar = new System.Windows.Forms.Button();
 			this.grpCamposEditar = new System.Windows.Forms.GroupBox();
 			this.lblEd5 = new System.Windows.Forms.Label();
@@ -91,40 +108,23 @@
 			this.txtEdNome = new System.Windows.Forms.TextBox();
 			this.lblEdId = new System.Windows.Forms.Label();
 			this.txtEdId = new System.Windows.Forms.TextBox();
-			this.lblTarefas = new System.Windows.Forms.Label();
-			this.dgvTarefas = new System.Windows.Forms.DataGridView();
 			this.tpFornecimento = new System.Windows.Forms.TabPage();
-			this.lblStatus = new System.Windows.Forms.Label();
+			this.btnLimparFornecimento = new System.Windows.Forms.Button();
+			this.btnConfirmarFornecimento = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.lblQuantidade = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.txtQuantidade = new System.Windows.Forms.TextBox();
+			this.txtQuantidadeFornecimento = new System.Windows.Forms.TextBox();
 			this.txtNomeFornecedor = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.txtIdFornecimento = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.serviçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fornecimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.geralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.geralToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.geralToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-			this.geralToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-			this.geralToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-			this.geralToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-			this.personalizadoToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+			this.lblTarefas = new System.Windows.Forms.Label();
+			this.dgvTarefas = new System.Windows.Forms.DataGridView();
+			this.lblStatus = new System.Windows.Forms.Label();
+			this.btnConfirmarEditar = new System.Windows.Forms.Button();
+			this.btnConfirmarCadastrar = new System.Windows.Forms.Button();
 			this.msMenu.SuspendLayout();
 			this.tsMenuPrincipal.SuspendLayout();
 			this.grpBotões.SuspendLayout();
@@ -137,9 +137,9 @@
 			this.grpCamposCadastrar.SuspendLayout();
 			this.tpEditar.SuspendLayout();
 			this.grpCamposEditar.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
 			this.tpFornecimento.SuspendLayout();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// msMenu
@@ -173,13 +173,145 @@
             this.fornecimentoToolStripMenuItem,
             this.personalizadoToolStripMenuItem6});
 			this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-			this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
 			this.relatórioToolStripMenuItem.Text = "Relatórios";
+			// 
+			// clienteToolStripMenuItem
+			// 
+			this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geralToolStripMenuItem,
+            this.personalizadoToolStripMenuItem});
+			this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+			this.clienteToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.clienteToolStripMenuItem.Text = "Cliente";
+			// 
+			// geralToolStripMenuItem
+			// 
+			this.geralToolStripMenuItem.Name = "geralToolStripMenuItem";
+			this.geralToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.geralToolStripMenuItem.Text = "Geral";
+			// 
+			// personalizadoToolStripMenuItem
+			// 
+			this.personalizadoToolStripMenuItem.Name = "personalizadoToolStripMenuItem";
+			this.personalizadoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.personalizadoToolStripMenuItem.Text = "Personalizado";
+			// 
+			// funcionárioToolStripMenuItem
+			// 
+			this.funcionárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geralToolStripMenuItem1,
+            this.personalizadoToolStripMenuItem1});
+			this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
+			this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.funcionárioToolStripMenuItem.Text = "Funcionário";
+			// 
+			// geralToolStripMenuItem1
+			// 
+			this.geralToolStripMenuItem1.Name = "geralToolStripMenuItem1";
+			this.geralToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+			this.geralToolStripMenuItem1.Text = "Geral";
+			// 
+			// personalizadoToolStripMenuItem1
+			// 
+			this.personalizadoToolStripMenuItem1.Name = "personalizadoToolStripMenuItem1";
+			this.personalizadoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+			this.personalizadoToolStripMenuItem1.Text = "Personalizado";
+			// 
+			// fornecedorToolStripMenuItem
+			// 
+			this.fornecedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geralToolStripMenuItem2,
+            this.personalizadoToolStripMenuItem2});
+			this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
+			this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.fornecedorToolStripMenuItem.Text = "Fornecedor";
+			// 
+			// geralToolStripMenuItem2
+			// 
+			this.geralToolStripMenuItem2.Name = "geralToolStripMenuItem2";
+			this.geralToolStripMenuItem2.Size = new System.Drawing.Size(147, 22);
+			this.geralToolStripMenuItem2.Text = "Geral";
+			// 
+			// personalizadoToolStripMenuItem2
+			// 
+			this.personalizadoToolStripMenuItem2.Name = "personalizadoToolStripMenuItem2";
+			this.personalizadoToolStripMenuItem2.Size = new System.Drawing.Size(147, 22);
+			this.personalizadoToolStripMenuItem2.Text = "Personalizado";
+			// 
+			// serviçoToolStripMenuItem
+			// 
+			this.serviçoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geralToolStripMenuItem3,
+            this.personalizadoToolStripMenuItem3});
+			this.serviçoToolStripMenuItem.Name = "serviçoToolStripMenuItem";
+			this.serviçoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.serviçoToolStripMenuItem.Text = "Serviço";
+			// 
+			// geralToolStripMenuItem3
+			// 
+			this.geralToolStripMenuItem3.Name = "geralToolStripMenuItem3";
+			this.geralToolStripMenuItem3.Size = new System.Drawing.Size(147, 22);
+			this.geralToolStripMenuItem3.Text = "Geral";
+			// 
+			// personalizadoToolStripMenuItem3
+			// 
+			this.personalizadoToolStripMenuItem3.Name = "personalizadoToolStripMenuItem3";
+			this.personalizadoToolStripMenuItem3.Size = new System.Drawing.Size(147, 22);
+			this.personalizadoToolStripMenuItem3.Text = "Personalizado";
+			// 
+			// produtoToolStripMenuItem
+			// 
+			this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geralToolStripMenuItem4,
+            this.personalizadoToolStripMenuItem4});
+			this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
+			this.produtoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.produtoToolStripMenuItem.Text = "Produto";
+			// 
+			// geralToolStripMenuItem4
+			// 
+			this.geralToolStripMenuItem4.Name = "geralToolStripMenuItem4";
+			this.geralToolStripMenuItem4.Size = new System.Drawing.Size(147, 22);
+			this.geralToolStripMenuItem4.Text = "Geral";
+			// 
+			// personalizadoToolStripMenuItem4
+			// 
+			this.personalizadoToolStripMenuItem4.Name = "personalizadoToolStripMenuItem4";
+			this.personalizadoToolStripMenuItem4.Size = new System.Drawing.Size(147, 22);
+			this.personalizadoToolStripMenuItem4.Text = "Personalizado";
+			// 
+			// fornecimentoToolStripMenuItem
+			// 
+			this.fornecimentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geralToolStripMenuItem5,
+            this.personalizadoToolStripMenuItem5});
+			this.fornecimentoToolStripMenuItem.Name = "fornecimentoToolStripMenuItem";
+			this.fornecimentoToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.fornecimentoToolStripMenuItem.Text = "Fornecimento";
+			// 
+			// geralToolStripMenuItem5
+			// 
+			this.geralToolStripMenuItem5.Name = "geralToolStripMenuItem5";
+			this.geralToolStripMenuItem5.Size = new System.Drawing.Size(147, 22);
+			this.geralToolStripMenuItem5.Text = "Geral";
+			// 
+			// personalizadoToolStripMenuItem5
+			// 
+			this.personalizadoToolStripMenuItem5.Name = "personalizadoToolStripMenuItem5";
+			this.personalizadoToolStripMenuItem5.Size = new System.Drawing.Size(147, 22);
+			this.personalizadoToolStripMenuItem5.Text = "Personalizado";
+			// 
+			// personalizadoToolStripMenuItem6
+			// 
+			this.personalizadoToolStripMenuItem6.Name = "personalizadoToolStripMenuItem6";
+			this.personalizadoToolStripMenuItem6.Size = new System.Drawing.Size(148, 22);
+			this.personalizadoToolStripMenuItem6.Text = "Personalizado";
 			// 
 			// sairToolStripMenuItem
 			// 
 			this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-			this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.sairToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
 			this.sairToolStripMenuItem.Text = "Sair";
 			// 
 			// ajudaToolStripMenuItem
@@ -311,6 +443,7 @@
 			this.tcPrincipal.SelectedIndex = 0;
 			this.tcPrincipal.Size = new System.Drawing.Size(435, 346);
 			this.tcPrincipal.TabIndex = 3;
+			this.tcPrincipal.SelectedIndexChanged += new System.EventHandler(this.tcPrincipal_SelectedIndexChanged);
 			// 
 			// tpLista
 			// 
@@ -348,9 +481,9 @@
 			// 
 			// tpCadastrar
 			// 
+			this.tpCadastrar.Controls.Add(this.btnConfirmarCadastrar);
 			this.tpCadastrar.Controls.Add(this.grpCamposCadastrar);
-			this.tpCadastrar.Controls.Add(this.btnLimparCampos);
-			this.tpCadastrar.Controls.Add(this.btnConfirmarCadastro);
+			this.tpCadastrar.Controls.Add(this.btnLimparCadastrar);
 			this.tpCadastrar.Location = new System.Drawing.Point(4, 22);
 			this.tpCadastrar.Name = "tpCadastrar";
 			this.tpCadastrar.Padding = new System.Windows.Forms.Padding(3);
@@ -512,23 +645,14 @@
 			this.txtCadId.Size = new System.Drawing.Size(100, 20);
 			this.txtCadId.TabIndex = 0;
 			// 
-			// btnLimparCampos
+			// btnLimparCadastrar
 			// 
-			this.btnLimparCampos.Location = new System.Drawing.Point(6, 291);
-			this.btnLimparCampos.Name = "btnLimparCampos";
-			this.btnLimparCampos.Size = new System.Drawing.Size(91, 23);
-			this.btnLimparCampos.TabIndex = 17;
-			this.btnLimparCampos.Text = "Limpar Campos";
-			this.btnLimparCampos.UseVisualStyleBackColor = true;
-			// 
-			// btnConfirmarCadastro
-			// 
-			this.btnConfirmarCadastro.Location = new System.Drawing.Point(316, 291);
-			this.btnConfirmarCadastro.Name = "btnConfirmarCadastro";
-			this.btnConfirmarCadastro.Size = new System.Drawing.Size(105, 23);
-			this.btnConfirmarCadastro.TabIndex = 16;
-			this.btnConfirmarCadastro.Text = "Confirmar Cadastro";
-			this.btnConfirmarCadastro.UseVisualStyleBackColor = true;
+			this.btnLimparCadastrar.Location = new System.Drawing.Point(6, 291);
+			this.btnLimparCadastrar.Name = "btnLimparCadastrar";
+			this.btnLimparCadastrar.Size = new System.Drawing.Size(91, 23);
+			this.btnLimparCadastrar.TabIndex = 17;
+			this.btnLimparCadastrar.Text = "Limpar Campos";
+			this.btnLimparCadastrar.UseVisualStyleBackColor = true;
 			// 
 			// tpEditar
 			// 
@@ -541,15 +665,6 @@
 			this.tpEditar.TabIndex = 2;
 			this.tpEditar.Text = "Editar";
 			this.tpEditar.UseVisualStyleBackColor = true;
-			// 
-			// btnConfirmarEditar
-			// 
-			this.btnConfirmarEditar.Location = new System.Drawing.Point(316, 291);
-			this.btnConfirmarEditar.Name = "btnConfirmarEditar";
-			this.btnConfirmarEditar.Size = new System.Drawing.Size(105, 23);
-			this.btnConfirmarEditar.TabIndex = 34;
-			this.btnConfirmarEditar.Text = "Confirmar Cadastro";
-			this.btnConfirmarEditar.UseVisualStyleBackColor = true;
 			// 
 			// btnLimparEditar
 			// 
@@ -713,27 +828,10 @@
 			this.txtEdId.Size = new System.Drawing.Size(100, 20);
 			this.txtEdId.TabIndex = 16;
 			// 
-			// lblTarefas
-			// 
-			this.lblTarefas.AutoSize = true;
-			this.lblTarefas.Location = new System.Drawing.Point(688, 142);
-			this.lblTarefas.Name = "lblTarefas";
-			this.lblTarefas.Size = new System.Drawing.Size(79, 13);
-			this.lblTarefas.TabIndex = 4;
-			this.lblTarefas.Text = "Ultimas tarefas:";
-			// 
-			// dgvTarefas
-			// 
-			this.dgvTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvTarefas.Location = new System.Drawing.Point(691, 164);
-			this.dgvTarefas.Name = "dgvTarefas";
-			this.dgvTarefas.Size = new System.Drawing.Size(247, 320);
-			this.dgvTarefas.TabIndex = 5;
-			// 
 			// tpFornecimento
 			// 
-			this.tpFornecimento.Controls.Add(this.button2);
-			this.tpFornecimento.Controls.Add(this.button1);
+			this.tpFornecimento.Controls.Add(this.btnLimparFornecimento);
+			this.tpFornecimento.Controls.Add(this.btnConfirmarFornecimento);
 			this.tpFornecimento.Controls.Add(this.groupBox1);
 			this.tpFornecimento.Location = new System.Drawing.Point(4, 22);
 			this.tpFornecimento.Name = "tpFornecimento";
@@ -742,15 +840,24 @@
 			this.tpFornecimento.Text = "Fornecimento";
 			this.tpFornecimento.UseVisualStyleBackColor = true;
 			// 
-			// lblStatus
+			// btnLimparFornecimento
 			// 
-			this.lblStatus.AutoSize = true;
-			this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStatus.Location = new System.Drawing.Point(352, 55);
-			this.lblStatus.Name = "lblStatus";
-			this.lblStatus.Size = new System.Drawing.Size(226, 39);
-			this.lblStatus.TabIndex = 6;
-			this.lblStatus.Text = "Pesquisando";
+			this.btnLimparFornecimento.Location = new System.Drawing.Point(6, 291);
+			this.btnLimparFornecimento.Name = "btnLimparFornecimento";
+			this.btnLimparFornecimento.Size = new System.Drawing.Size(91, 23);
+			this.btnLimparFornecimento.TabIndex = 35;
+			this.btnLimparFornecimento.Text = "Limpar Campos";
+			this.btnLimparFornecimento.UseVisualStyleBackColor = true;
+			// 
+			// btnConfirmarFornecimento
+			// 
+			this.btnConfirmarFornecimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConfirmarFornecimento.Location = new System.Drawing.Point(322, 276);
+			this.btnConfirmarFornecimento.Name = "btnConfirmarFornecimento";
+			this.btnConfirmarFornecimento.Size = new System.Drawing.Size(99, 38);
+			this.btnConfirmarFornecimento.TabIndex = 34;
+			this.btnConfirmarFornecimento.Text = "Confirmar";
+			this.btnConfirmarFornecimento.UseVisualStyleBackColor = true;
 			// 
 			// groupBox1
 			// 
@@ -758,7 +865,7 @@
 			this.groupBox1.Controls.Add(this.label6);
 			this.groupBox1.Controls.Add(this.label7);
 			this.groupBox1.Controls.Add(this.textBox5);
-			this.groupBox1.Controls.Add(this.txtQuantidade);
+			this.groupBox1.Controls.Add(this.txtQuantidadeFornecimento);
 			this.groupBox1.Controls.Add(this.txtNomeFornecedor);
 			this.groupBox1.Controls.Add(this.label8);
 			this.groupBox1.Controls.Add(this.txtIdFornecimento);
@@ -802,12 +909,12 @@
 			this.textBox5.Size = new System.Drawing.Size(100, 20);
 			this.textBox5.TabIndex = 20;
 			// 
-			// txtQuantidade
+			// txtQuantidadeFornecimento
 			// 
-			this.txtQuantidade.Location = new System.Drawing.Point(119, 67);
-			this.txtQuantidade.Name = "txtQuantidade";
-			this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
-			this.txtQuantidade.TabIndex = 19;
+			this.txtQuantidadeFornecimento.Location = new System.Drawing.Point(119, 67);
+			this.txtQuantidadeFornecimento.Name = "txtQuantidadeFornecimento";
+			this.txtQuantidadeFornecimento.Size = new System.Drawing.Size(100, 20);
+			this.txtQuantidadeFornecimento.TabIndex = 19;
 			// 
 			// txtNomeFornecedor
 			// 
@@ -833,155 +940,53 @@
 			this.txtIdFornecimento.Size = new System.Drawing.Size(100, 20);
 			this.txtIdFornecimento.TabIndex = 16;
 			// 
-			// button1
+			// lblTarefas
 			// 
-			this.button1.Location = new System.Drawing.Point(316, 291);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(105, 23);
-			this.button1.TabIndex = 34;
-			this.button1.Text = "Confirmar Cadastro";
-			this.button1.UseVisualStyleBackColor = true;
+			this.lblTarefas.AutoSize = true;
+			this.lblTarefas.Location = new System.Drawing.Point(688, 142);
+			this.lblTarefas.Name = "lblTarefas";
+			this.lblTarefas.Size = new System.Drawing.Size(79, 13);
+			this.lblTarefas.TabIndex = 4;
+			this.lblTarefas.Text = "Ultimas tarefas:";
 			// 
-			// button2
+			// dgvTarefas
 			// 
-			this.button2.Location = new System.Drawing.Point(6, 291);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(91, 23);
-			this.button2.TabIndex = 35;
-			this.button2.Text = "Limpar Campos";
-			this.button2.UseVisualStyleBackColor = true;
+			this.dgvTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvTarefas.Location = new System.Drawing.Point(691, 164);
+			this.dgvTarefas.Name = "dgvTarefas";
+			this.dgvTarefas.Size = new System.Drawing.Size(247, 320);
+			this.dgvTarefas.TabIndex = 5;
 			// 
-			// clienteToolStripMenuItem
+			// lblStatus
 			// 
-			this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geralToolStripMenuItem,
-            this.personalizadoToolStripMenuItem});
-			this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-			this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.clienteToolStripMenuItem.Text = "Cliente";
+			this.lblStatus.AutoSize = true;
+			this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStatus.Location = new System.Drawing.Point(352, 55);
+			this.lblStatus.Name = "lblStatus";
+			this.lblStatus.Size = new System.Drawing.Size(226, 39);
+			this.lblStatus.TabIndex = 6;
+			this.lblStatus.Text = "Pesquisando";
 			// 
-			// funcionárioToolStripMenuItem
+			// btnConfirmarEditar
 			// 
-			this.funcionárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geralToolStripMenuItem1,
-            this.personalizadoToolStripMenuItem1});
-			this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-			this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.funcionárioToolStripMenuItem.Text = "Funcionário";
+			this.btnConfirmarEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConfirmarEditar.Location = new System.Drawing.Point(322, 276);
+			this.btnConfirmarEditar.Name = "btnConfirmarEditar";
+			this.btnConfirmarEditar.Size = new System.Drawing.Size(99, 38);
+			this.btnConfirmarEditar.TabIndex = 35;
+			this.btnConfirmarEditar.Text = "Confirmar";
+			this.btnConfirmarEditar.UseVisualStyleBackColor = true;
 			// 
-			// fornecedorToolStripMenuItem
+			// btnConfirmarCadastrar
 			// 
-			this.fornecedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geralToolStripMenuItem2,
-            this.personalizadoToolStripMenuItem2});
-			this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
-			this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.fornecedorToolStripMenuItem.Text = "Fornecedor";
-			// 
-			// serviçoToolStripMenuItem
-			// 
-			this.serviçoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geralToolStripMenuItem3,
-            this.personalizadoToolStripMenuItem3});
-			this.serviçoToolStripMenuItem.Name = "serviçoToolStripMenuItem";
-			this.serviçoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.serviçoToolStripMenuItem.Text = "Serviço";
-			// 
-			// produtoToolStripMenuItem
-			// 
-			this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geralToolStripMenuItem4,
-            this.personalizadoToolStripMenuItem4});
-			this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-			this.produtoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.produtoToolStripMenuItem.Text = "Produto";
-			// 
-			// fornecimentoToolStripMenuItem
-			// 
-			this.fornecimentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geralToolStripMenuItem5,
-            this.personalizadoToolStripMenuItem5});
-			this.fornecimentoToolStripMenuItem.Name = "fornecimentoToolStripMenuItem";
-			this.fornecimentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.fornecimentoToolStripMenuItem.Text = "Fornecimento";
-			// 
-			// geralToolStripMenuItem
-			// 
-			this.geralToolStripMenuItem.Name = "geralToolStripMenuItem";
-			this.geralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.geralToolStripMenuItem.Text = "Geral";
-			// 
-			// personalizadoToolStripMenuItem
-			// 
-			this.personalizadoToolStripMenuItem.Name = "personalizadoToolStripMenuItem";
-			this.personalizadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem.Text = "Personalizado";
-			// 
-			// geralToolStripMenuItem1
-			// 
-			this.geralToolStripMenuItem1.Name = "geralToolStripMenuItem1";
-			this.geralToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-			this.geralToolStripMenuItem1.Text = "Geral";
-			// 
-			// personalizadoToolStripMenuItem1
-			// 
-			this.personalizadoToolStripMenuItem1.Name = "personalizadoToolStripMenuItem1";
-			this.personalizadoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem1.Text = "Personalizado";
-			// 
-			// geralToolStripMenuItem2
-			// 
-			this.geralToolStripMenuItem2.Name = "geralToolStripMenuItem2";
-			this.geralToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-			this.geralToolStripMenuItem2.Text = "Geral";
-			// 
-			// personalizadoToolStripMenuItem2
-			// 
-			this.personalizadoToolStripMenuItem2.Name = "personalizadoToolStripMenuItem2";
-			this.personalizadoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem2.Text = "Personalizado";
-			// 
-			// geralToolStripMenuItem3
-			// 
-			this.geralToolStripMenuItem3.Name = "geralToolStripMenuItem3";
-			this.geralToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-			this.geralToolStripMenuItem3.Text = "Geral";
-			// 
-			// personalizadoToolStripMenuItem3
-			// 
-			this.personalizadoToolStripMenuItem3.Name = "personalizadoToolStripMenuItem3";
-			this.personalizadoToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem3.Text = "Personalizado";
-			// 
-			// geralToolStripMenuItem4
-			// 
-			this.geralToolStripMenuItem4.Name = "geralToolStripMenuItem4";
-			this.geralToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-			this.geralToolStripMenuItem4.Text = "Geral";
-			// 
-			// personalizadoToolStripMenuItem4
-			// 
-			this.personalizadoToolStripMenuItem4.Name = "personalizadoToolStripMenuItem4";
-			this.personalizadoToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem4.Text = "Personalizado";
-			// 
-			// geralToolStripMenuItem5
-			// 
-			this.geralToolStripMenuItem5.Name = "geralToolStripMenuItem5";
-			this.geralToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
-			this.geralToolStripMenuItem5.Text = "Geral";
-			// 
-			// personalizadoToolStripMenuItem5
-			// 
-			this.personalizadoToolStripMenuItem5.Name = "personalizadoToolStripMenuItem5";
-			this.personalizadoToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem5.Text = "Personalizado";
-			// 
-			// personalizadoToolStripMenuItem6
-			// 
-			this.personalizadoToolStripMenuItem6.Name = "personalizadoToolStripMenuItem6";
-			this.personalizadoToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
-			this.personalizadoToolStripMenuItem6.Text = "Personalizado";
+			this.btnConfirmarCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConfirmarCadastrar.Location = new System.Drawing.Point(322, 276);
+			this.btnConfirmarCadastrar.Name = "btnConfirmarCadastrar";
+			this.btnConfirmarCadastrar.Size = new System.Drawing.Size(99, 38);
+			this.btnConfirmarCadastrar.TabIndex = 36;
+			this.btnConfirmarCadastrar.Text = "Confirmar";
+			this.btnConfirmarCadastrar.UseVisualStyleBackColor = true;
+			this.btnConfirmarCadastrar.Click += new System.EventHandler(this.btnConfirmarCadastrar_Click);
 			// 
 			// frmMenuPrincipal
 			// 
@@ -1016,10 +1021,10 @@
 			this.tpEditar.ResumeLayout(false);
 			this.grpCamposEditar.ResumeLayout(false);
 			this.grpCamposEditar.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
 			this.tpFornecimento.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1085,20 +1090,18 @@
 		private System.Windows.Forms.TextBox txtCadNome;
 		private System.Windows.Forms.Label lblCadID;
 		private System.Windows.Forms.TextBox txtCadId;
-		private System.Windows.Forms.Button btnLimparCampos;
-		private System.Windows.Forms.Button btnConfirmarCadastro;
+		private System.Windows.Forms.Button btnLimparCadastrar;
 		private System.Windows.Forms.GroupBox grpCamposEditar;
-		private System.Windows.Forms.Button btnConfirmarEditar;
 		private System.Windows.Forms.Button btnLimparEditar;
 		private System.Windows.Forms.TabPage tpFornecimento;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnLimparFornecimento;
+		private System.Windows.Forms.Button btnConfirmarFornecimento;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label lblQuantidade;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox txtQuantidade;
+		private System.Windows.Forms.TextBox txtQuantidadeFornecimento;
 		private System.Windows.Forms.TextBox txtNomeFornecedor;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox txtIdFornecimento;
@@ -1122,6 +1125,8 @@
 		private System.Windows.Forms.ToolStripMenuItem geralToolStripMenuItem5;
 		private System.Windows.Forms.ToolStripMenuItem personalizadoToolStripMenuItem5;
 		private System.Windows.Forms.ToolStripMenuItem personalizadoToolStripMenuItem6;
+		private System.Windows.Forms.Button btnConfirmarCadastrar;
+		private System.Windows.Forms.Button btnConfirmarEditar;
 	}
 }
 
