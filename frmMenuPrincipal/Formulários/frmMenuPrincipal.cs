@@ -30,46 +30,63 @@ namespace frmMenuPrincipal
 			Properties.Settings.Default.NivelUsuarioLogado = 0;
 			frmLogin frmlogin = new frmLogin();
 			frmlogin.Show();
-			Hide();
+			Close();
 		}
 
 		private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
 		{
+			Properties.Settings.Default.NomeUsuarioLogado = "";
+			Properties.Settings.Default.NivelUsuarioLogado = 0;
 			frmLogin frmlogin = new frmLogin();
 			frmlogin.Show();
-
+			Close();
 		}
 		
 
 		private void btnCliente_Click(object sender, EventArgs e)
 		{
+			if (tcPrincipal.Visible != true)
+			{
+				tcPrincipal.Visible = true;
+			}
 			tpLista.Text = "Clientes";
-			
 
 		}
 
 		private void btnFuncionario_Click(object sender, EventArgs e)
 		{
+			if (tcPrincipal.Visible != true)
+			{
+				tcPrincipal.Visible = true;
+			}
 			tpLista.Text = "Funcionários";
-
 		}
 
 		private void btnFornecedor_Click(object sender, EventArgs e)
 		{
+			if (tcPrincipal.Visible != true)
+			{
+				tcPrincipal.Visible = true;
+			}
 			tpLista.Text = "Fornecedores";
-
 		}
 
 		private void btnServico_Click(object sender, EventArgs e)
 		{
+			if (tcPrincipal.Visible != true)
+			{
+				tcPrincipal.Visible = true;
+			}
 			tpLista.Text = "Serviços";
-
 		}
 
 		private void btnProduto_Click(object sender, EventArgs e)
 		{
+			if (tcPrincipal.Visible != true)
+			{
+				tcPrincipal.Visible = true;
+			}
 			tpLista.Text = "Produtos";
-
 		}
 
 		private void btnConfirmarCadastrar_Click(object sender, EventArgs e)
@@ -98,10 +115,7 @@ namespace frmMenuPrincipal
 					lblEd5.Text = "Endereço";
 					lblEd6.Text = "Bairro";
 					//
-					if (!tcPrincipal.Visible == true)
-					{
-						tcPrincipal.Visible = true;
-					}
+					
 					break;
 				#endregion
 				#region Funcionario
@@ -121,10 +135,7 @@ namespace frmMenuPrincipal
 					lblEd5.Text = "Bairro";
 					lblEd6.Text = "Pagamento";
 					//
-					if (!tcPrincipal.Visible == true)
-					{
-						tcPrincipal.Visible = true;
-					}
+					
 
 					break;
 				#endregion
@@ -145,10 +156,7 @@ namespace frmMenuPrincipal
 					lblEd5.Text = "Pagamento";
 					lblEd6.Visible = false;
 					//
-					if (!tcPrincipal.Visible == true)
-					{
-						tcPrincipal.Visible = true;
-					}
+					
 
 					break;
 				#endregion
@@ -169,10 +177,7 @@ namespace frmMenuPrincipal
 					lblCad5.Visible = false;
 					lblCad6.Visible = false;
 					//
-					if (!tcPrincipal.Visible == true)
-					{
-						tcPrincipal.Visible = true;
-					}
+					
 					break;
 				#endregion
 				#region Produto
@@ -192,10 +197,7 @@ namespace frmMenuPrincipal
 					lblEd5.Visible = false;
 					lblEd6.Visible = false;
 					//
-					if(!tcPrincipal.Visible == true)
-					{
-						tcPrincipal.Visible = true;
-					}
+					
 					break;
 				#endregion
 				#region Default
