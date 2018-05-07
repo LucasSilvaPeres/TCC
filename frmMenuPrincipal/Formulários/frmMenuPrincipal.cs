@@ -30,7 +30,7 @@ namespace frmMenuPrincipal
 			Properties.Settings.Default.NivelUsuarioLogado = 0;
 			frmLogin frmlogin = new frmLogin();
 			frmlogin.Show();
-			Close();
+			Hide();
 		}
 
 		private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,7 +39,7 @@ namespace frmMenuPrincipal
 			Properties.Settings.Default.NivelUsuarioLogado = 0;
 			frmLogin frmlogin = new frmLogin();
 			frmlogin.Show();
-			Close();
+			Hide();
 		}
 		
 
