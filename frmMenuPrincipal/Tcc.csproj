@@ -50,6 +50,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmCadFornecimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadFornecimento.Designer.cs">
+      <DependentUpon>frmCadFornecimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frmCadFornecimento.resx">
+      <DependentUpon>frmCadFornecimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

@@ -41,65 +41,86 @@ namespace frmMenuPrincipal.Formulários
 			}
 			return true;
 		}
+        //private void Login()
+        //{
+        //        //Enquanto não temos o banco de dados
+                
+        //        if (txtUsuario.Text.ToUpper() != "EU" || masktxtSenha.Text != "123")
+        //        {
+        //            MessageBox.Show("Usuário ou Senha inválidos");
+        //            vErros++;
+        //            if (vErros == 3)
+        //            {
+        //                MessageBox.Show("Número de Tentativas esgotado...");
+        //                Close();
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Properties.Settings.Default.NivelUsuarioLogado = 1;
+        //            Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
+        //            frmMenuPrincipal frmMP = new frmMenuPrincipal();
+        //            frmMP.Show();
+        //            Hide();
+        //        }
+        //}
 
         private void btnOK_Click(object sender, EventArgs e)
         {
 
             if (CaixasOK())
             {
-				//Enquanto não temos o banco de dados
+                if (txtUsuario.Text.ToUpper() != "EU" || masktxtSenha.Text != "123")
+                {
+                    MessageBox.Show("Usuário ou Senha inválidos");
+                    vErros++;
+                    if (vErros == 3)
+                    {
+                        MessageBox.Show("Número de Tentativas esgotado...");
+                        Close();
+                    }
+                }
+                else
+                {
+                    Properties.Settings.Default.NivelUsuarioLogado = 1;
+                    Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
+                    frmMenuPrincipal frmMP = new frmMenuPrincipal();
+                    frmMP.Show();
+                    Hide();
+                }
 
-				if (txtUsuario.Text.ToUpper() != "EU" || masktxtSenha.Text != "123")
-				{
-					MessageBox.Show("Usuário ou Senha inválidos");
-					vErros++;
-					if (vErros == 3)
-					{
-						MessageBox.Show("Número de Tentativas esgotado...");
-						Close();
-					}
-				}
-				else
-				{
-					Properties.Settings.Default.NivelUsuarioLogado = 1;
-					Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
-					frmMenuPrincipal frmMP = new frmMenuPrincipal();
-					frmMP.Show();
-					Hide();
-				}
+                //if (CaixasOK())
+                //{
+                //    string usuario = txtUsuario.Text;
+                //    string senha = masktxtSenha.Text;
+                //    int tanana;
 
-				//if (CaixasOK())
-				//{
-				//    string usuario = txtUsuario.Text;
-				//    string senha = masktxtSenha.Text;
-				//    int tanana;
-
-				//    DataTable dtUsuario;
-				//    dtUsuario = new DataTable();
-				//    UsuarioTableAdapter usuarioTA = new UsuarioTableAdapter();
-				//    dtUsuario = usuarioTA.VAAAAAAAAAAAAAI(usuario, senha);
-				//    MessageBox.Show(DT);
-				//    if (tanana < 1 )
-				//    {
-				//        MessageBox.Show("Usuário ou Senha inválidos");
-				//        vErros++;
-				//        if (vErros == 3)
-				//        {
-				//            MessageBox.Show("Número de Tentativas esgotado...");
-				//            this.Close();
-				//        }
-				//    }
-				//    else
-				//    {
-				//        Properties.Settings.Default.NivelUsuarioLogado = (int)dtUsuario.Rows[0]["Nivel"];
-				//        Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
-				//        frmMenuPrincipal frmMP = new frmMenuPrincipal();
-				//        frmMP.Show();
-				//        Hide();
-				//    }
-				//}
-			}
-		}
+                //    DataTable dtUsuario;
+                //    dtUsuario = new DataTable();
+                //    UsuarioTableAdapter usuarioTA = new UsuarioTableAdapter();
+                //    dtUsuario = usuarioTA.VAAAAAAAAAAAAAI(usuario, senha);
+                //    MessageBox.Show(DT);
+                //    if (tanana < 1 )
+                //    {
+                //        MessageBox.Show("Usuário ou Senha inválidos");
+                //        vErros++;
+                //        if (vErros == 3)
+                //        {
+                //            MessageBox.Show("Número de Tentativas esgotado...");
+                //            this.Close();
+                //        }
+                //    }
+                //    else
+                //    {
+                //        Properties.Settings.Default.NivelUsuarioLogado = (int)dtUsuario.Rows[0]["Nivel"];
+                //        Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
+                //        frmMenuPrincipal frmMP = new frmMenuPrincipal();
+                //        frmMP.Show();
+                //        Hide();
+                //    }
+                //}
+            }
+        }
 
 		private void cbMostrarSenha_CheckedChanged(object sender, EventArgs e)
 		{
@@ -116,5 +137,25 @@ namespace frmMenuPrincipal.Formulários
 
 			//}
 		}
-	}
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Login();
+        }
+
+        private void masktxtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Login();
+        }
+
+        private void frmLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Login();
+        }
+    }
 }

@@ -21,8 +21,9 @@ namespace frmMenuPrincipal
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
 			tslUsuario.Text += Properties.Settings.Default.NomeUsuarioLogado.ToUpper();
-			
-		}
+            Location = new Point(0, 0);
+            Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
 
 		private void tsbtnSair_Click(object sender, EventArgs e)
 		{
