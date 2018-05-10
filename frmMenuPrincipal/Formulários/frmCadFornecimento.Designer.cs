@@ -44,6 +44,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.fornecimentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // idFornecimentoLabel
+            // 
+            idFornecimentoLabel.AutoSize = true;
+            idFornecimentoLabel.Location = new System.Drawing.Point(179, 94);
+            idFornecimentoLabel.Name = "idFornecimentoLabel";
+            idFornecimentoLabel.Size = new System.Drawing.Size(85, 13);
+            idFornecimentoLabel.TabIndex = 0;
+            idFornecimentoLabel.Text = "id Fornecimento:";
+            // 
+            // idFornecedorLabel
+            // 
+            idFornecedorLabel.AutoSize = true;
+            idFornecedorLabel.Location = new System.Drawing.Point(179, 120);
+            idFornecedorLabel.Name = "idFornecedorLabel";
+            idFornecedorLabel.Size = new System.Drawing.Size(75, 13);
+            idFornecedorLabel.TabIndex = 2;
+            idFornecedorLabel.Text = "id Fornecedor:";
+            // 
             // dsPrincipal
             // 
             this.dsPrincipal.DataSetName = "dsPrincipal";
@@ -71,15 +89,6 @@
             this.tableAdapterManager.UpdateOrder = Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
-            // idFornecimentoLabel
-            // 
-            idFornecimentoLabel.AutoSize = true;
-            idFornecimentoLabel.Location = new System.Drawing.Point(179, 94);
-            idFornecimentoLabel.Name = "idFornecimentoLabel";
-            idFornecimentoLabel.Size = new System.Drawing.Size(85, 13);
-            idFornecimentoLabel.TabIndex = 0;
-            idFornecimentoLabel.Text = "id Fornecimento:";
-            // 
             // idFornecimentoTextBox
             // 
             this.idFornecimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecimentoBindingSource, "idFornecimento", true));
@@ -87,15 +96,6 @@
             this.idFornecimentoTextBox.Name = "idFornecimentoTextBox";
             this.idFornecimentoTextBox.Size = new System.Drawing.Size(200, 20);
             this.idFornecimentoTextBox.TabIndex = 1;
-            // 
-            // idFornecedorLabel
-            // 
-            idFornecedorLabel.AutoSize = true;
-            idFornecedorLabel.Location = new System.Drawing.Point(179, 120);
-            idFornecedorLabel.Name = "idFornecedorLabel";
-            idFornecedorLabel.Size = new System.Drawing.Size(75, 13);
-            idFornecedorLabel.TabIndex = 2;
-            idFornecedorLabel.Text = "id Fornecedor:";
             // 
             // idFornecedorTextBox
             // 
@@ -125,7 +125,7 @@
             this.Controls.Add(idFornecedorLabel);
             this.Controls.Add(this.idFornecedorTextBox);
             this.Name = "frmCadFornecimento";
-            this.Text = "frmCadFornecimento";
+            this.Text = "a";
             this.Load += new System.EventHandler(this.frmCadFornecimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecimentoBindingSource)).EndInit();

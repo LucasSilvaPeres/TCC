@@ -142,20 +142,5 @@ namespace frmMenuPrincipal.Formulários
         {
             Application.ExitThread();
         }
-
-        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Login();
-        }
-
-        private void masktxtSenha_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Login();
-        }
-
-        private void frmLogin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Login();
-        }
     }
 }

@@ -50,6 +50,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmCadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadastros.Designer.cs">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmCadFornecimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frmCadastros.resx">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadFornecimento.resx">
       <DependentUpon>frmCadFornecimento.cs</DependentUpon>
     </EmbeddedResource>

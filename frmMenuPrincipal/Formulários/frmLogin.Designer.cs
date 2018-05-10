@@ -53,7 +53,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(225, 29);
             this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // lblSenha
             // 
@@ -116,7 +115,6 @@
             this.masktxtSenha.Size = new System.Drawing.Size(225, 29);
             this.masktxtSenha.TabIndex = 2;
             this.masktxtSenha.UseSystemPasswordChar = true;
-            this.masktxtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.masktxtSenha_KeyPress);
             // 
             // taUsuario
             // 
@@ -164,7 +162,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Enter += new System.EventHandler(this.btnOK_Click);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errErro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
