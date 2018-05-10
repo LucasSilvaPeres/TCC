@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastros));
             this.grpBotões = new System.Windows.Forms.GroupBox();
             this.btnProduto = new System.Windows.Forms.Button();
-            this.dgvTarefas = new System.Windows.Forms.DataGridView();
             this.btnServico = new System.Windows.Forms.Button();
-            this.lblTarefas = new System.Windows.Forms.Label();
             this.btnFornecedor = new System.Windows.Forms.Button();
+            this.btnFuncionario = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.dgvTarefas = new System.Windows.Forms.DataGridView();
+            this.lblTarefas = new System.Windows.Forms.Label();
             this.tcPrincipal = new System.Windows.Forms.TabControl();
             this.tpLista = new System.Windows.Forms.TabPage();
             this.dgvLista = new System.Windows.Forms.DataGridView();
@@ -77,9 +80,10 @@
             this.txtEdNome = new System.Windows.Forms.TextBox();
             this.lblEdId = new System.Windows.Forms.Label();
             this.txtEdId = new System.Windows.Forms.TextBox();
-            this.btnFuncionario = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tsMenuPrincipal = new System.Windows.Forms.ToolStrip();
+            this.tslUsuario = new System.Windows.Forms.ToolStripLabel();
+            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.grpBotões.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
             this.tcPrincipal.SuspendLayout();
@@ -90,10 +94,13 @@
             this.tpEditar.SuspendLayout();
             this.grpCamposEditar.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tsMenuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBotões
             // 
+            this.grpBotões.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.grpBotões.Controls.Add(this.btnProduto);
             this.grpBotões.Controls.Add(this.btnServico);
             this.grpBotões.Controls.Add(this.btnFornecedor);
@@ -101,7 +108,7 @@
             this.grpBotões.Controls.Add(this.btnCliente);
             this.grpBotões.Location = new System.Drawing.Point(12, 37);
             this.grpBotões.Name = "grpBotões";
-            this.grpBotões.Size = new System.Drawing.Size(162, 352);
+            this.grpBotões.Size = new System.Drawing.Size(162, 355);
             this.grpBotões.TabIndex = 3;
             this.grpBotões.TabStop = false;
             // 
@@ -115,17 +122,6 @@
             this.btnProduto.Text = "PRODUTO";
             this.btnProduto.UseVisualStyleBackColor = true;
             // 
-            // dgvTarefas
-            // 
-            this.dgvTarefas.AllowUserToAddRows = false;
-            this.dgvTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTarefas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTarefas.Location = new System.Drawing.Point(0, 0);
-            this.dgvTarefas.Name = "dgvTarefas";
-            this.dgvTarefas.ReadOnly = true;
-            this.dgvTarefas.Size = new System.Drawing.Size(256, 324);
-            this.dgvTarefas.TabIndex = 5;
-            // 
             // btnServico
             // 
             this.btnServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,15 +132,6 @@
             this.btnServico.Text = "SERVIÇO";
             this.btnServico.UseVisualStyleBackColor = true;
             // 
-            // lblTarefas
-            // 
-            this.lblTarefas.AutoSize = true;
-            this.lblTarefas.Location = new System.Drawing.Point(653, 53);
-            this.lblTarefas.Name = "lblTarefas";
-            this.lblTarefas.Size = new System.Drawing.Size(79, 13);
-            this.lblTarefas.TabIndex = 4;
-            this.lblTarefas.Text = "Ultimas tarefas:";
-            // 
             // btnFornecedor
             // 
             this.btnFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +141,47 @@
             this.btnFornecedor.TabIndex = 3;
             this.btnFornecedor.Text = "FORNECEDOR";
             this.btnFornecedor.UseVisualStyleBackColor = true;
+            // 
+            // btnFuncionario
+            // 
+            this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionario.Location = new System.Drawing.Point(6, 79);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(149, 63);
+            this.btnFuncionario.TabIndex = 1;
+            this.btnFuncionario.Text = "FUNCIONÁRIO";
+            this.btnFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Location = new System.Drawing.Point(6, 10);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(149, 63);
+            this.btnCliente.TabIndex = 0;
+            this.btnCliente.Text = "CLIENTE";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            // 
+            // dgvTarefas
+            // 
+            this.dgvTarefas.AllowUserToAddRows = false;
+            this.dgvTarefas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTarefas.Location = new System.Drawing.Point(0, 0);
+            this.dgvTarefas.Name = "dgvTarefas";
+            this.dgvTarefas.ReadOnly = true;
+            this.dgvTarefas.Size = new System.Drawing.Size(256, 324);
+            this.dgvTarefas.TabIndex = 5;
+            // 
+            // lblTarefas
+            // 
+            this.lblTarefas.AutoSize = true;
+            this.lblTarefas.Location = new System.Drawing.Point(653, 53);
+            this.lblTarefas.Name = "lblTarefas";
+            this.lblTarefas.Size = new System.Drawing.Size(79, 13);
+            this.lblTarefas.TabIndex = 4;
+            this.lblTarefas.Text = "Ultimas tarefas:";
             // 
             // tcPrincipal
             // 
@@ -557,40 +585,49 @@
             this.txtEdId.Size = new System.Drawing.Size(100, 20);
             this.txtEdId.TabIndex = 16;
             // 
-            // btnFuncionario
-            // 
-            this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuncionario.Location = new System.Drawing.Point(6, 79);
-            this.btnFuncionario.Name = "btnFuncionario";
-            this.btnFuncionario.Size = new System.Drawing.Size(149, 63);
-            this.btnFuncionario.TabIndex = 1;
-            this.btnFuncionario.Text = "FUNCIONÁRIO";
-            this.btnFuncionario.UseVisualStyleBackColor = true;
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.Location = new System.Drawing.Point(6, 10);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(149, 63);
-            this.btnCliente.TabIndex = 0;
-            this.btnCliente.Text = "CLIENTE";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dgvTarefas);
-            this.panel1.Location = new System.Drawing.Point(653, 69);
+            this.panel1.Location = new System.Drawing.Point(657, 69);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(256, 324);
             this.panel1.TabIndex = 6;
+            // 
+            // tsMenuPrincipal
+            // 
+            this.tsMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tsMenuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tslUsuario,
+            this.tsbtnSair});
+            this.tsMenuPrincipal.Location = new System.Drawing.Point(0, 431);
+            this.tsMenuPrincipal.Name = "tsMenuPrincipal";
+            this.tsMenuPrincipal.Size = new System.Drawing.Size(981, 25);
+            this.tsMenuPrincipal.TabIndex = 7;
+            this.tsMenuPrincipal.Text = "toolStrip1";
+            // 
+            // tslUsuario
+            // 
+            this.tslUsuario.Name = "tslUsuario";
+            this.tslUsuario.Size = new System.Drawing.Size(90, 22);
+            this.tslUsuario.Text = "Usuário logado:";
+            // 
+            // tsbtnSair
+            // 
+            this.tsbtnSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbtnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSair.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSair.Image")));
+            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSair.Name = "tsbtnSair";
+            this.tsbtnSair.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnSair.Text = "toolStripButton1";
             // 
             // frmCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 407);
+            this.ClientSize = new System.Drawing.Size(981, 456);
+            this.Controls.Add(this.tsMenuPrincipal);
             this.Controls.Add(this.lblTarefas);
             this.Controls.Add(this.grpBotões);
             this.Controls.Add(this.tcPrincipal);
@@ -598,7 +635,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastros";
             this.Text = "frmCadastros";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.grpBotões.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
             this.tcPrincipal.ResumeLayout(false);
@@ -611,6 +647,8 @@
             this.grpCamposEditar.ResumeLayout(false);
             this.grpCamposEditar.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.tsMenuPrincipal.ResumeLayout(false);
+            this.tsMenuPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -670,5 +708,8 @@
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStrip tsMenuPrincipal;
+        private System.Windows.Forms.ToolStripLabel tslUsuario;
+        private System.Windows.Forms.ToolStripButton tsbtnSair;
     }
 }
