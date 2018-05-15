@@ -108,6 +108,7 @@
     <None Include="Dados\dsPrincipal.xss">
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </None>
+    <None Include="Docs\ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
