@@ -24,9 +24,11 @@ namespace frmMenuPrincipal
             frmCadastros frmcadastros = new frmCadastros();
             frmcadastros.MdiParent = this;
             frmcadastros.Show();
+            frmcadastros.Anchor = AnchorStyles.Bottom;
+
         }
 
-		private void tsbtnSair_Click(object sender, EventArgs e)
+        private void tsbtnSair_Click(object sender, EventArgs e)
 		{
 			Properties.Settings.Default.NomeUsuarioLogado = "";
 			Properties.Settings.Default.NivelUsuarioLogado = 0;
