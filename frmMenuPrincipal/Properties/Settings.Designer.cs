@@ -59,7 +59,6 @@ namespace frmMenuPrincipal.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.168.255.252;User ID=05041_1_C_1_2017;Password=Markto1@")]
         public string Etec {
             get {
@@ -69,7 +68,6 @@ namespace frmMenuPrincipal.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-LUCAS\\sqlexpress;Initial Catalog=TCC;Integrated Security=True")]
         public string Casa {
             get {

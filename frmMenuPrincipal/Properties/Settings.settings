@@ -16,18 +16,10 @@
     <Setting Name="NomeUsuarioLogado" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Etec" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=172.168.255.252;User ID=05041_1_C_1_2017;Password=Markto1@&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+    <Setting Name="Etec" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Data Source=172.168.255.252;User ID=05041_1_C_1_2017;Password=Markto1@</Value>
     </Setting>
-    <Setting Name="Casa" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=PC-LUCAS\sqlexpress;Initial Catalog=TCC;Integrated Security=True&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+    <Setting Name="Casa" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Data Source=PC-LUCAS\sqlexpress;Initial Catalog=TCC;Integrated Security=True</Value>
     </Setting>
   </Settings>
