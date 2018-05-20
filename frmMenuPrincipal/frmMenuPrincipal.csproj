@@ -74,6 +74,13 @@
     <Compile Include="Formulários\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Atendimento.cs" />
+    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\Fornecimento.cs" />
+    <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Serviço.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários\frmCadastros.resx">
