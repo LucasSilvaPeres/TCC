@@ -26,9 +26,10 @@ namespace frmMenuPrincipal
             frmcadastros.Show();
             frmcadastros.Anchor = AnchorStyles.Bottom;
 
-        }
+			this.reportViewer1.RefreshReport();
+		}
 
-        private void tsbtnSair_Click(object sender, EventArgs e)
+		private void tsbtnSair_Click(object sender, EventArgs e)
 		{
 			Properties.Settings.Default.NomeUsuarioLogado = "";
 			Properties.Settings.Default.NivelUsuarioLogado = 0;
