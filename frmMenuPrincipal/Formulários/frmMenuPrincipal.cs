@@ -26,7 +26,6 @@ namespace frmMenuPrincipal
             frmcadastros.Show();
             frmcadastros.Anchor = AnchorStyles.Bottom;
 
-			this.reportViewer1.RefreshReport();
 		}
 
 		private void tsbtnSair_Click(object sender, EventArgs e)

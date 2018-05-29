@@ -21,23 +21,14 @@ namespace frmMenuPrincipal.Formulários
 		int vErros = 0;
 		private bool CaixasOK()
 		{
-			if (txtUsuario.Text == "")
+			switch (masktxtSenha.Text)
 			{
-				errErro.SetError(txtUsuario, "Informar o usuário");
-				return false;
-			}
-			else
-			{
-				errErro.SetError(txtUsuario, "");
-			}
-			if (masktxtSenha.Text == "")
-			{
-				errErro.SetError(masktxtSenha, "Informar a Senha");
-				return false;
-			}
-			else
-			{
-				errErro.SetError(masktxtSenha, "");
+				case "":
+					errErro.SetError(masktxtSenha, "Informar a Senha");
+					return false;
+				default:
+					errErro.SetError(masktxtSenha, "");
+					break;
 			}
 			return true;
 		}
@@ -70,9 +61,9 @@ namespace frmMenuPrincipal.Formulários
 
             if (CaixasOK())
             {
-                if (txtUsuario.Text.ToUpper() != "EU" || masktxtSenha.Text != "123")
+                if (masktxtSenha.Text != "123")
                 {
-                    MessageBox.Show("Usuário ou Senha inválidos");
+                    MessageBox.Show("Senha inválida");
                     vErros++;
                     if (vErros == 3)
                     {
@@ -83,42 +74,11 @@ namespace frmMenuPrincipal.Formulários
                 else
                 {
                     Properties.Settings.Default.NivelUsuarioLogado = 1;
-                    Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
                     frmMenuPrincipal frmMP = new frmMenuPrincipal();
                     frmMP.Show();
                     Hide();
                 }
 
-                //if (CaixasOK())
-                //{
-                //    string usuario = txtUsuario.Text;
-                //    string senha = masktxtSenha.Text;
-                //    int tanana;
-
-                //    DataTable dtUsuario;
-                //    dtUsuario = new DataTable();
-                //    UsuarioTableAdapter usuarioTA = new UsuarioTableAdapter();
-                //    dtUsuario = usuarioTA.VAAAAAAAAAAAAAI(usuario, senha);
-                //    MessageBox.Show(DT);
-                //    if (tanana < 1 )
-                //    {
-                //        MessageBox.Show("Usuário ou Senha inválidos");
-                //        vErros++;
-                //        if (vErros == 3)
-                //        {
-                //            MessageBox.Show("Número de Tentativas esgotado...");
-                //            this.Close();
-                //        }
-                //    }
-                //    else
-                //    {
-                //        Properties.Settings.Default.NivelUsuarioLogado = (int)dtUsuario.Rows[0]["Nivel"];
-                //        Properties.Settings.Default.NomeUsuarioLogado = txtUsuario.Text;
-                //        frmMenuPrincipal frmMP = new frmMenuPrincipal();
-                //        frmMP.Show();
-                //        Hide();
-                //    }
-                //}
             }
         }
 

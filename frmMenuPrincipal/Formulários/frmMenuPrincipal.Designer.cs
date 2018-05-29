@@ -64,7 +64,7 @@
 			this.tslUsuario = new System.Windows.Forms.ToolStripLabel();
 			this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
 			this.dsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.dsPrincipal = new Dados.dsPrincipal();
 			this.msMenu.SuspendLayout();
 			this.tsMenuPrincipal.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipalBindingSource)).BeginInit();
