@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpBotões = new System.Windows.Forms.GroupBox();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnServico = new System.Windows.Forms.Button();
@@ -80,6 +81,12 @@
             this.lblEdId = new System.Windows.Forms.Label();
             this.txtEdId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+            this.serviçosAtendimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviços_AtendimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter();
+            this.idAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicoAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBotões.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
             this.tcPrincipal.SuspendLayout();
@@ -90,6 +97,8 @@
             this.tpEditar.SuspendLayout();
             this.grpCamposEditar.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviçosAtendimentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBotões
@@ -164,12 +173,12 @@
             // dgvTarefas
             // 
             this.dgvTarefas.AllowUserToAddRows = false;
-            this.dgvTarefas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dgvTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTarefas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTarefas.Location = new System.Drawing.Point(0, 0);
             this.dgvTarefas.Name = "dgvTarefas";
             this.dgvTarefas.ReadOnly = true;
-            this.dgvTarefas.Size = new System.Drawing.Size(256, 324);
+            this.dgvTarefas.Size = new System.Drawing.Size(256, 320);
             this.dgvTarefas.TabIndex = 5;
             // 
             // lblTarefas
@@ -211,7 +220,13 @@
             // dgvLista
             // 
             this.dgvLista.AllowUserToAddRows = false;
+            this.dgvLista.AutoGenerateColumns = false;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAtendimentoDataGridViewTextBoxColumn,
+            this.idServicoAtendimentoDataGridViewTextBoxColumn,
+            this.idServicoDataGridViewTextBoxColumn});
+            this.dgvLista.DataSource = this.serviçosAtendimentoBindingSource;
             this.dgvLista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLista.Location = new System.Drawing.Point(3, 3);
             this.dgvLista.Name = "dgvLista";
@@ -595,8 +610,43 @@
             this.panel1.Controls.Add(this.dgvTarefas);
             this.panel1.Location = new System.Drawing.Point(657, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 324);
+            this.panel1.Size = new System.Drawing.Size(256, 320);
             this.panel1.TabIndex = 6;
+            // 
+            // dsPrincipal
+            // 
+            this.dsPrincipal.DataSetName = "dsPrincipal";
+            this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // serviçosAtendimentoBindingSource
+            // 
+            this.serviçosAtendimentoBindingSource.DataMember = "Serviços_Atendimento";
+            this.serviçosAtendimentoBindingSource.DataSource = this.dsPrincipal;
+            // 
+            // serviços_AtendimentoTableAdapter
+            // 
+            this.serviços_AtendimentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idAtendimentoDataGridViewTextBoxColumn
+            // 
+            this.idAtendimentoDataGridViewTextBoxColumn.DataPropertyName = "idAtendimento";
+            this.idAtendimentoDataGridViewTextBoxColumn.HeaderText = "idAtendimento";
+            this.idAtendimentoDataGridViewTextBoxColumn.Name = "idAtendimentoDataGridViewTextBoxColumn";
+            this.idAtendimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idServicoAtendimentoDataGridViewTextBoxColumn
+            // 
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.DataPropertyName = "idServico_Atendimento";
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.HeaderText = "idServico_Atendimento";
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.Name = "idServicoAtendimentoDataGridViewTextBoxColumn";
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idServicoDataGridViewTextBoxColumn
+            // 
+            this.idServicoDataGridViewTextBoxColumn.DataPropertyName = "idServico";
+            this.idServicoDataGridViewTextBoxColumn.HeaderText = "idServico";
+            this.idServicoDataGridViewTextBoxColumn.Name = "idServicoDataGridViewTextBoxColumn";
+            this.idServicoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmCadastros
             // 
@@ -607,10 +657,12 @@
             this.Controls.Add(this.grpBotões);
             this.Controls.Add(this.tcPrincipal);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadastros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCadastros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmCadastros_Load);
             this.grpBotões.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
             this.tcPrincipal.ResumeLayout(false);
@@ -623,6 +675,8 @@
             this.grpCamposEditar.ResumeLayout(false);
             this.grpCamposEditar.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviçosAtendimentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -682,5 +736,11 @@
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Panel panel1;
+        private frmMenuPrincipal.Dados.dsPrincipal dsPrincipal;
+        private System.Windows.Forms.BindingSource serviçosAtendimentoBindingSource;
+        private frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter serviços_AtendimentoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAtendimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServicoAtendimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServicoDataGridViewTextBoxColumn;
     }
 }

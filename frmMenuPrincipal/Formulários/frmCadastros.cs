@@ -180,5 +180,12 @@ namespace frmMenuPrincipal.Formulários
                     #endregion
             }
         }
+
+        private void frmCadastros_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsPrincipal.Serviços_Atendimento' table. You can move, or remove it, as needed.
+            this.serviços_AtendimentoTableAdapter.Fill(this.dsPrincipal.Serviços_Atendimento);
+
+        }
     }
 }
