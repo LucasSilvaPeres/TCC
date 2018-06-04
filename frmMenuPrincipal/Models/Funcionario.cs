@@ -25,12 +25,103 @@ namespace frmMenuPrincipal.Models
 			PagamentoFuncionario = pagamentoFuncionario;
 		}
 
-		public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
-		public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
-		public string CelularFuncionario { get => celularFuncionario; set => celularFuncionario = value; }
-		public string TelefoneFuncionario { get => telefoneFuncionario; set => telefoneFuncionario = value; }
-		public string BairroFuncionario { get => bairroFuncionario; set => bairroFuncionario = value; }
-		public string EnderecoFuncionario { get => enderecoFuncionario; set => enderecoFuncionario = value; }
-		public decimal PagamentoFuncionario { get => pagamentoFuncionario; set => pagamentoFuncionario = value; }
-	}
+        public string BairroFuncionario
+        {
+            get
+            {
+                return bairroFuncionario;
+            }
+
+            set
+            {
+                bairroFuncionario = value;
+            }
+        }
+
+        public string CelularFuncionario
+        {
+            get
+            {
+                return celularFuncionario;
+            }
+
+            set
+            {
+                celularFuncionario = value;
+            }
+        }
+
+        public string EnderecoFuncionario
+        {
+            get
+            {
+                return enderecoFuncionario;
+            }
+
+            set
+            {
+                enderecoFuncionario = value;
+            }
+        }
+
+        public string IdentidadeFuncionario
+        {
+            get
+            {
+                return identidadeFuncionario;
+            }
+
+            set
+            {
+                identidadeFuncionario = value;
+            }
+        }
+
+        public string NomeFuncionario
+        {
+            get
+            {
+                return nomeFuncionario;
+            }
+
+            set
+            {
+                nomeFuncionario = value;
+            }
+        }
+
+        public decimal PagamentoFuncionario
+        {
+            get
+            {
+                return pagamentoFuncionario;
+            }
+
+            set
+            {
+                pagamentoFuncionario = value;
+            }
+        }
+
+        public string TelefoneFuncionario
+        {
+            get
+            {
+                return telefoneFuncionario;
+            }
+
+            set
+            {
+                telefoneFuncionario = value;
+            }
+        }
+
+        //public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
+        //public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
+        //public string CelularFuncionario { get => celularFuncionario; set => celularFuncionario = value; }
+        //public string TelefoneFuncionario { get => telefoneFuncionario; set => telefoneFuncionario = value; }
+        //public string BairroFuncionario { get => bairroFuncionario; set => bairroFuncionario = value; }
+        //public string EnderecoFuncionario { get => enderecoFuncionario; set => enderecoFuncionario = value; }
+        //public decimal PagamentoFuncionario { get => pagamentoFuncionario; set => pagamentoFuncionario = value; }
+    }
 }

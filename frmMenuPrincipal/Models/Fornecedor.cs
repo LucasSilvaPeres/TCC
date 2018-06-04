@@ -12,7 +12,98 @@ namespace frmMenuPrincipal.Models
 			emailFornecedor, enderecoFornecedor, bairroFornecedor, identidadeFornedor;
 		private DateTime dataInfo;
 
-		public Fornecedor(string nomeFornecedor, string telefoneFornecedor,
+        public string NomeFornecedor
+        {
+            get
+            {
+                return nomeFornecedor;
+            }
+
+            set
+            {
+                nomeFornecedor = value;
+            }
+        }
+
+        public string TelefoneFornecedor
+        {
+            get
+            {
+                return telefoneFornecedor;
+            }
+
+            set
+            {
+                telefoneFornecedor = value;
+            }
+        }
+
+        public string EmailFornecedor
+        {
+            get
+            {
+                return emailFornecedor;
+            }
+
+            set
+            {
+                emailFornecedor = value;
+            }
+        }
+
+        public string EnderecoFornecedor
+        {
+            get
+            {
+                return enderecoFornecedor;
+            }
+
+            set
+            {
+                enderecoFornecedor = value;
+            }
+        }
+
+        public string BairroFornecedor
+        {
+            get
+            {
+                return bairroFornecedor;
+            }
+
+            set
+            {
+                bairroFornecedor = value;
+            }
+        }
+
+        public string IdentidadeFornedor
+        {
+            get
+            {
+                return identidadeFornedor;
+            }
+
+            set
+            {
+                identidadeFornedor = value;
+            }
+        }
+
+        public DateTime DataInfo
+        {
+            get
+            {
+                return dataInfo;
+            }
+
+            set
+            {
+                dataInfo = value;
+            }
+        }
+
+        public Fornecedor(string nomeFornecedor, string telefoneFornecedor,
 			string emailFornecedor, string enderecoFornecedor, string bairroFornecedor, string identidadeFornedor, DateTime dataInfo)
 		{
 			NomeFornecedor = nomeFornecedor;
@@ -24,12 +115,12 @@ namespace frmMenuPrincipal.Models
 			DataInfo = dataInfo;
 		}
 
-		public string NomeFornecedor { get => nomeFornecedor; set => nomeFornecedor = value; }
-		public string TelefoneFornecedor { get => telefoneFornecedor; set => telefoneFornecedor = value; }
-		public string EmailFornecedor { get => emailFornecedor; set => emailFornecedor = value; }
-		public string EnderecoFornecedor { get => enderecoFornecedor; set => enderecoFornecedor = value; }
-		public string BairroFornecedor { get => bairroFornecedor; set => bairroFornecedor = value; }
-		public string IdentidadeFornedor { get => identidadeFornedor; set => identidadeFornedor = value; }
-		public DateTime DataInfo { get => dataInfo; set => dataInfo = value; }
+		//public string NomeFornecedor { get => nomeFornecedor; set => nomeFornecedor = value; }
+		//public string TelefoneFornecedor { get => telefoneFornecedor; set => telefoneFornecedor = value; }
+		//public string EmailFornecedor { get => emailFornecedor; set => emailFornecedor = value; }
+		//public string EnderecoFornecedor { get => enderecoFornecedor; set => enderecoFornecedor = value; }
+		//public string BairroFornecedor { get => bairroFornecedor; set => bairroFornecedor = value; }
+		//public string IdentidadeFornedor { get => identidadeFornedor; set => identidadeFornedor = value; }
+		//public DateTime DataInfo { get => dataInfo; set => dataInfo = value; }
 	}
 }

@@ -34,7 +34,7 @@
 			this.btnOK = new System.Windows.Forms.Button();
 			this.errErro = new System.Windows.Forms.ErrorProvider(this.components);
 			this.masktxtSenha = new System.Windows.Forms.MaskedTextBox();
-			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.dsPrincipal = new Dados.dsPrincipal();
 			this.cbMostrarSenha = new System.Windows.Forms.CheckBox();
 			this.timerMostrarSenha = new System.Windows.Forms.Timer(this.components);
 			this.lblSenha = new System.Windows.Forms.Label();

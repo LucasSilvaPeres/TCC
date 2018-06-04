@@ -11,13 +11,39 @@ namespace frmMenuPrincipal.Models
 		private int idFornecedor;
 		private DateTime dataFornecimento;
 
-		public Fornecimento(int idFornecedor, DateTime dataFornecimento)
+        public int IdFornecedor
+        {
+            get
+            {
+                return idFornecedor;
+            }
+
+            set
+            {
+                idFornecedor = value;
+            }
+        }
+
+        public DateTime DataFornecimento
+        {
+            get
+            {
+                return dataFornecimento;
+            }
+
+            set
+            {
+                dataFornecimento = value;
+            }
+        }
+
+        public Fornecimento(int idFornecedor, DateTime dataFornecimento)
 		{
 			IdFornecedor = idFornecedor;
 			DataFornecimento = dataFornecimento;
 		}
 
-		public int IdFornecedor { get => idFornecedor; set => idFornecedor = value; }
-		public DateTime DataFornecimento { get => dataFornecimento; set => dataFornecimento = value; }
+		//public int IdFornecedor { get => idFornecedor; set => idFornecedor = value; }
+		//public DateTime DataFornecimento { get => dataFornecimento; set => dataFornecimento = value; }
 	}
 }

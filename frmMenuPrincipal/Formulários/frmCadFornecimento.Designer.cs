@@ -87,7 +87,6 @@
             this.tableAdapterManager.ProdutoTableAdapter = null;
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
             // idFornecimentoTextBox
             // 
