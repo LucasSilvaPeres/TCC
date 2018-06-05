@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal
 {
-	public partial class frmMenuPrincipal : Form
+	public partial class frmMenuPrincip : Form
 	{
-		public frmMenuPrincipal()
+		public frmMenuPrincip()
 		{
 			InitializeComponent();
 		}

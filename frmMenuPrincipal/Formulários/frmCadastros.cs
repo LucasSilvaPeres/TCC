@@ -185,6 +185,8 @@ namespace frmMenuPrincipal.Formulários
         {
             // TODO: This line of code loads data into the 'dsPrincipal.Serviços_Atendimento' table. You can move, or remove it, as needed.
             this.serviços_AtendimentoTableAdapter.Fill(this.dsPrincipal.Serviços_Atendimento);
+            WindowState = FormWindowState.Maximized;
+
 
         }
     }

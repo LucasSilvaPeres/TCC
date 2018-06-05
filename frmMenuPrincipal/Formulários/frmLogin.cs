@@ -74,7 +74,7 @@ namespace frmMenuPrincipal.Formulários
                 else
                 {
                     Properties.Settings.Default.NivelUsuarioLogado = 1;
-                    frmMenuPrincipal frmMP = new frmMenuPrincipal();
+                    frmMenuPrincip frmMP = new frmMenuPrincip();
                     frmMP.Show();
                     Hide();
                 }

@@ -40,6 +40,11 @@
             this.tcPrincipal = new System.Windows.Forms.TabControl();
             this.tpLista = new System.Windows.Forms.TabPage();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.idAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicoAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviçosAtendimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsPrincipal = new Dados.dsPrincipal();
             this.tpCadastrar = new System.Windows.Forms.TabPage();
             this.btnConfirmarCadastrar = new System.Windows.Forms.Button();
             this.grpCamposCadastrar = new System.Windows.Forms.GroupBox();
@@ -81,24 +86,19 @@
             this.lblEdId = new System.Windows.Forms.Label();
             this.txtEdId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
-            this.serviçosAtendimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.serviços_AtendimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter();
-            this.idAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idServicoAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviços_AtendimentoTableAdapter = new Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter();
             this.grpBotões.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
             this.tcPrincipal.SuspendLayout();
             this.tpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviçosAtendimentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.tpCadastrar.SuspendLayout();
             this.grpCamposCadastrar.SuspendLayout();
             this.tpEditar.SuspendLayout();
             this.grpCamposEditar.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviçosAtendimentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBotões
@@ -234,6 +234,37 @@
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLista.Size = new System.Drawing.Size(421, 314);
             this.dgvLista.TabIndex = 0;
+            // 
+            // idAtendimentoDataGridViewTextBoxColumn
+            // 
+            this.idAtendimentoDataGridViewTextBoxColumn.DataPropertyName = "idAtendimento";
+            this.idAtendimentoDataGridViewTextBoxColumn.HeaderText = "idAtendimento";
+            this.idAtendimentoDataGridViewTextBoxColumn.Name = "idAtendimentoDataGridViewTextBoxColumn";
+            this.idAtendimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idServicoAtendimentoDataGridViewTextBoxColumn
+            // 
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.DataPropertyName = "idServico_Atendimento";
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.HeaderText = "idServico_Atendimento";
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.Name = "idServicoAtendimentoDataGridViewTextBoxColumn";
+            this.idServicoAtendimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idServicoDataGridViewTextBoxColumn
+            // 
+            this.idServicoDataGridViewTextBoxColumn.DataPropertyName = "idServico";
+            this.idServicoDataGridViewTextBoxColumn.HeaderText = "idServico";
+            this.idServicoDataGridViewTextBoxColumn.Name = "idServicoDataGridViewTextBoxColumn";
+            this.idServicoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serviçosAtendimentoBindingSource
+            // 
+            this.serviçosAtendimentoBindingSource.DataMember = "Serviços_Atendimento";
+            this.serviçosAtendimentoBindingSource.DataSource = this.dsPrincipal;
+            // 
+            // dsPrincipal
+            // 
+            this.dsPrincipal.DataSetName = "dsPrincipal";
+            this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tpCadastrar
             // 
@@ -613,40 +644,9 @@
             this.panel1.Size = new System.Drawing.Size(256, 320);
             this.panel1.TabIndex = 6;
             // 
-            // dsPrincipal
-            // 
-            this.dsPrincipal.DataSetName = "dsPrincipal";
-            this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // serviçosAtendimentoBindingSource
-            // 
-            this.serviçosAtendimentoBindingSource.DataMember = "Serviços_Atendimento";
-            this.serviçosAtendimentoBindingSource.DataSource = this.dsPrincipal;
-            // 
             // serviços_AtendimentoTableAdapter
             // 
             this.serviços_AtendimentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // idAtendimentoDataGridViewTextBoxColumn
-            // 
-            this.idAtendimentoDataGridViewTextBoxColumn.DataPropertyName = "idAtendimento";
-            this.idAtendimentoDataGridViewTextBoxColumn.HeaderText = "idAtendimento";
-            this.idAtendimentoDataGridViewTextBoxColumn.Name = "idAtendimentoDataGridViewTextBoxColumn";
-            this.idAtendimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idServicoAtendimentoDataGridViewTextBoxColumn
-            // 
-            this.idServicoAtendimentoDataGridViewTextBoxColumn.DataPropertyName = "idServico_Atendimento";
-            this.idServicoAtendimentoDataGridViewTextBoxColumn.HeaderText = "idServico_Atendimento";
-            this.idServicoAtendimentoDataGridViewTextBoxColumn.Name = "idServicoAtendimentoDataGridViewTextBoxColumn";
-            this.idServicoAtendimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idServicoDataGridViewTextBoxColumn
-            // 
-            this.idServicoDataGridViewTextBoxColumn.DataPropertyName = "idServico";
-            this.idServicoDataGridViewTextBoxColumn.HeaderText = "idServico";
-            this.idServicoDataGridViewTextBoxColumn.Name = "idServicoDataGridViewTextBoxColumn";
-            this.idServicoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmCadastros
             // 
@@ -657,17 +657,18 @@
             this.Controls.Add(this.grpBotões);
             this.Controls.Add(this.tcPrincipal);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCadastros";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCadastros_Load);
             this.grpBotões.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
             this.tcPrincipal.ResumeLayout(false);
             this.tpLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviçosAtendimentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             this.tpCadastrar.ResumeLayout(false);
             this.grpCamposCadastrar.ResumeLayout(false);
             this.grpCamposCadastrar.PerformLayout();
@@ -675,8 +676,6 @@
             this.grpCamposEditar.ResumeLayout(false);
             this.grpCamposEditar.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviçosAtendimentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -736,9 +735,9 @@
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Panel panel1;
-        private frmMenuPrincipal.Dados.dsPrincipal dsPrincipal;
+        private Dados.dsPrincipal dsPrincipal;
         private System.Windows.Forms.BindingSource serviçosAtendimentoBindingSource;
-        private frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter serviços_AtendimentoTableAdapter;
+        private Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter serviços_AtendimentoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAtendimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idServicoAtendimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idServicoDataGridViewTextBoxColumn;
