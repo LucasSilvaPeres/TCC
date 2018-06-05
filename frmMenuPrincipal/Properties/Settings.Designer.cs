@@ -74,5 +74,50 @@ namespace frmMenuPrincipal.Properties {
                 return ((string)(this["Casa"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("172.168.255.252")]
+        public string ServerName {
+            get {
+                return ((string)(this["ServerName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data")]
+        public string ServerInstance {
+            get {
+                return ((string)(this["ServerInstance"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("db_05041_1_C_1_2017")]
+        public string DBName {
+            get {
+                return ((string)(this["DBName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("05041_1_C_1_2017")]
+        public string LoginServer {
+            get {
+                return ((string)(this["LoginServer"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Markto1@")]
+        public string PwdServer {
+            get {
+                return ((string)(this["PwdServer"]));
+            }
+        }
     }
 }

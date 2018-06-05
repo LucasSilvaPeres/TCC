@@ -22,5 +22,20 @@
     <Setting Name="Casa" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Data Source=PC-LUCAS\sqlexpress;Initial Catalog=TCC;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="ServerName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.168.255.252</Value>
+    </Setting>
+    <Setting Name="ServerInstance" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">data</Value>
+    </Setting>
+    <Setting Name="DBName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">db_05041_1_C_1_2017</Value>
+    </Setting>
+    <Setting Name="LoginServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">05041_1_C_1_2017</Value>
+    </Setting>
+    <Setting Name="PwdServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Markto1@</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
