@@ -20,8 +20,7 @@ namespace frmMenuPrincipal
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-			tslUsuario.Text += Properties.Settings.Default.NomeUsuarioLogado.ToUpper();
-            frmCadastros frmcadastros = new frmCadastros();
+            frmCadastrosPrincipais frmcadastros = new frmCadastrosPrincipais();
             frmcadastros.MdiParent = this;
             frmcadastros.Show();
             frmcadastros.Anchor = AnchorStyles.Bottom;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal.Formulários
 {
-    public partial class frmCadastros : Form
+    public partial class frmCadastrosPrincipais : Form
     {
-        public frmCadastros()
+        public frmCadastrosPrincipais()
         {
             InitializeComponent();
         }

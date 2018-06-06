@@ -1,6 +1,6 @@
 ﻿namespace frmMenuPrincipal.Formulários
 {
-    partial class frmCadastros
+    partial class frmCadastrosPrincipais
     {
         /// <summary>
         /// Required designer variable.

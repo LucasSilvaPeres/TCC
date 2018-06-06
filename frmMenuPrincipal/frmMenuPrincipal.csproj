@@ -165,6 +165,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dados\dsPrincipal.cs">
+      <DependentUpon>dsPrincipal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dados\dsPrincipal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,11 +179,11 @@
     <Compile Include="Formulários\Backup.Designer.cs">
       <DependentUpon>Backup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frmCadastros.cs">
+    <Compile Include="Formulários\frmCadastrosPrincipais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\frmCadastros.Designer.cs">
-      <DependentUpon>frmCadastros.cs</DependentUpon>
+    <Compile Include="Formulários\frmCadastrosPrincipais.Designer.cs">
+      <DependentUpon>frmCadastrosPrincipais.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\frmCadFornecimento.cs">
       <SubType>Form</SubType>
@@ -212,8 +215,8 @@
     <EmbeddedResource Include="Formulários\Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frmCadastros.resx">
-      <DependentUpon>frmCadastros.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frmCadastrosPrincipais.resx">
+      <DependentUpon>frmCadastrosPrincipais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadFornecimento.resx">
       <DependentUpon>frmCadFornecimento.cs</DependentUpon>
