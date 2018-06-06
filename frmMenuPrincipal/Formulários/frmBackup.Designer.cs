@@ -1,6 +1,6 @@
 ﻿namespace frmMenuPrincipal.Formulários
 {
-    partial class Backup
+    partial class frmBackup
     {
         /// <summary>
         /// Required designer variable.

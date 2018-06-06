@@ -173,11 +173,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Backup.cs">
+    <Compile Include="Formulários\frmBackup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Backup.Designer.cs">
-      <DependentUpon>Backup.cs</DependentUpon>
+    <Compile Include="Formulários\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\frmCadastrosPrincipais.cs">
       <SubType>Form</SubType>
@@ -212,8 +212,8 @@
     <Compile Include="Models\Serviço.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formulários\Backup.resx">
-      <DependentUpon>Backup.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadastrosPrincipais.resx">
       <DependentUpon>frmCadastrosPrincipais.cs</DependentUpon>

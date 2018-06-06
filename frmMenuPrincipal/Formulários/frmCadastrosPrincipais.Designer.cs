@@ -1,6 +1,6 @@
 ﻿namespace frmMenuPrincipal.Formulários
 {
-    partial class frmCadastrosPrincipais
+    partial class frmCadPrincipais
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             this.idServicoAtendimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviçosAtendimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsPrincipal = new Dados.dsPrincipal();
+            this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
             this.tpCadastrar = new System.Windows.Forms.TabPage();
             this.btnConfirmarCadastrar = new System.Windows.Forms.Button();
             this.grpCamposCadastrar = new System.Windows.Forms.GroupBox();
@@ -86,7 +86,7 @@
             this.lblEdId = new System.Windows.Forms.Label();
             this.txtEdId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.serviços_AtendimentoTableAdapter = new Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter();
+            this.serviços_AtendimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Serviços_AtendimentoTableAdapter();
             this.grpBotões.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
             this.tcPrincipal.SuspendLayout();
@@ -648,7 +648,7 @@
             // 
             this.serviços_AtendimentoTableAdapter.ClearBeforeFill = true;
             // 
-            // frmCadastros
+            // frmCadPrincipais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -658,7 +658,7 @@
             this.Controls.Add(this.tcPrincipal);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCadastros";
+            this.Name = "frmCadPrincipais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCadastros";
             this.Load += new System.EventHandler(this.frmCadastros_Load);

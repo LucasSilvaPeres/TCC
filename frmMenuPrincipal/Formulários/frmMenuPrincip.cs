@@ -20,7 +20,7 @@ namespace frmMenuPrincipal
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-            frmCadastrosPrincipais frmcadastros = new frmCadastrosPrincipais();
+            frmCadPrincipais frmcadastros = new frmCadPrincipais();
             frmcadastros.MdiParent = this;
             frmcadastros.Show();
             frmcadastros.Anchor = AnchorStyles.Bottom;
@@ -44,8 +44,29 @@ namespace frmMenuPrincipal
 			frmlogin.Show();
 			Hide();
 		}
-		
 
-		
-	}
+        private void tsmCadastrosPrincipais_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["frmCadPrincipais"] == null)
+            {
+                frmCadPrincipais frmCadastros = new frmCadPrincipais { MdiParent = this };
+                frmCadastros.Show();
+            }
+        }
+
+        private void tsmCadastroFornecimento_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["frmCadFornecimento"] == null) 
+            {
+                frmCadFornecimento FrmCadFornecimento = new frmCadFornecimento { MdiParent = this };
+                FrmCadFornecimento.Show();
+            }
+
+        }
+
+        private void tsmBackup_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal.Formulários
 {
-    public partial class Backup : Form
+    public partial class frmBackup : Form
     {
         string path = Application.StartupPath;
         string filename = "Backup.bak";
@@ -25,7 +25,7 @@ namespace frmMenuPrincipal.Formulários
         private string dbName;
 
 
-        public Backup()
+        public frmBackup()
         {
             InitializeComponent();
         }
