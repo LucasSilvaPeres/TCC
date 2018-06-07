@@ -45,29 +45,32 @@
             // btnChangePath
             // 
             this.btnChangePath.Image = global::frmMenuPrincipal.Properties.Resources.Folder_Open_icon1;
-            this.btnChangePath.Location = new System.Drawing.Point(320, 89);
+            this.btnChangePath.Location = new System.Drawing.Point(368, 110);
             this.btnChangePath.Name = "btnChangePath";
             this.btnChangePath.Size = new System.Drawing.Size(27, 27);
             this.btnChangePath.TabIndex = 9;
             this.btnChangePath.UseVisualStyleBackColor = true;
+            this.btnChangePath.Click += new System.EventHandler(this.BtnChangePath_Click);
             // 
             // btnRestore
             // 
-            this.btnRestore.Location = new System.Drawing.Point(92, 89);
+            this.btnRestore.Location = new System.Drawing.Point(92, 114);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(75, 23);
             this.btnRestore.TabIndex = 8;
             this.btnRestore.Text = "Restaurar";
             this.btnRestore.UseVisualStyleBackColor = true;
+            this.btnRestore.Click += new System.EventHandler(this.BtnRestore_Click);
             // 
             // btnBackup
             // 
-            this.btnBackup.Location = new System.Drawing.Point(11, 89);
+            this.btnBackup.Location = new System.Drawing.Point(11, 114);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(75, 23);
             this.btnBackup.TabIndex = 7;
             this.btnBackup.Text = "Backup";
             this.btnBackup.UseVisualStyleBackColor = true;
+            this.btnBackup.Click += new System.EventHandler(this.BtnBackup_Click);
             // 
             // groupBox1
             // 
@@ -78,7 +81,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(2, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 71);
+            this.groupBox1.Size = new System.Drawing.Size(393, 92);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Infomações";
@@ -86,24 +89,25 @@
             // btnChange
             // 
             this.btnChange.Image = global::frmMenuPrincipal.Properties.Resources.Refresh_icon;
-            this.btnChange.Location = new System.Drawing.Point(318, 19);
+            this.btnChange.Location = new System.Drawing.Point(364, 25);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(27, 27);
             this.btnChange.TabIndex = 4;
             this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.BtnChange_Click);
             // 
             // txtFileName
             // 
             this.txtFileName.Enabled = false;
-            this.txtFileName.Location = new System.Drawing.Point(66, 23);
+            this.txtFileName.Location = new System.Drawing.Point(70, 29);
             this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(246, 20);
+            this.txtFileName.Size = new System.Drawing.Size(288, 20);
             this.txtFileName.TabIndex = 3;
             // 
             // lblPath
             // 
             this.lblPath.AutoSize = true;
-            this.lblPath.Location = new System.Drawing.Point(63, 48);
+            this.lblPath.Location = new System.Drawing.Point(63, 62);
             this.lblPath.Name = "lblPath";
             this.lblPath.Size = new System.Drawing.Size(29, 13);
             this.lblPath.TabIndex = 2;
@@ -112,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 48);
+            this.label2.Location = new System.Drawing.Point(6, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 1;
@@ -121,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(10, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -131,17 +135,18 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // Backup
+            // frmBackup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 124);
+            this.ClientSize = new System.Drawing.Size(407, 149);
             this.Controls.Add(this.btnChangePath);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Backup";
+            this.Name = "frmBackup";
             this.Text = "Backup";
+            this.Load += new System.EventHandler(this.FrmBackup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

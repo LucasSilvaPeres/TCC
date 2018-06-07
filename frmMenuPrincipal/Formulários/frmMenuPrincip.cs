@@ -66,7 +66,11 @@ namespace frmMenuPrincipal
 
         private void tsmBackup_Click(object sender, EventArgs e)
         {
-
+            if (Application.OpenForms["frmBackup"] == null)
+            {
+                frmBackup FrmBackup = new frmBackup();
+                FrmBackup.Show();
+            }
         }
     }
 }
