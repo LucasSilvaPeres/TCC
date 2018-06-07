@@ -63,6 +63,16 @@ namespace frmMenuPrincipal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b52bbf17929c8da830fed3f2705d123c {
+            get {
+                object obj = ResourceManager.GetObject("b52bbf17929c8da830fed3f2705d123c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Folder_Open_icon {
             get {
                 object obj = ResourceManager.GetObject("Folder_Open_icon", resourceCulture);

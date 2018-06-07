@@ -104,7 +104,7 @@
             this.tsmCadastrosPrincipais,
             this.tsmCadastroFornecimento});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // tsmCadastrosPrincipais
@@ -119,12 +119,11 @@
             this.tsmCadastroFornecimento.Name = "tsmCadastroFornecimento";
             this.tsmCadastroFornecimento.Size = new System.Drawing.Size(148, 22);
             this.tsmCadastroFornecimento.Text = "Fornecimento";
-            this.tsmCadastroFornecimento.Click += new System.EventHandler(this.tsmCadastroFornecimento_Click);
             // 
             // tsmBackup
             // 
             this.tsmBackup.Name = "tsmBackup";
-            this.tsmBackup.Size = new System.Drawing.Size(152, 22);
+            this.tsmBackup.Size = new System.Drawing.Size(126, 22);
             this.tsmBackup.Text = "Backup";
             this.tsmBackup.Click += new System.EventHandler(this.tsmBackup_Click);
             // 
@@ -141,7 +140,7 @@
             this.toolStripMenuItem1,
             this.personalizadoToolStripMenuItem6});
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.relatórioToolStripMenuItem.Text = "Relatórios";
             this.relatórioToolStripMenuItem.Visible = false;
             // 
@@ -306,12 +305,12 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(123, 6);
             // 
             // tsmSair
             // 
             this.tsmSair.Name = "tsmSair";
-            this.tsmSair.Size = new System.Drawing.Size(152, 22);
+            this.tsmSair.Size = new System.Drawing.Size(126, 22);
             this.tsmSair.Text = "Sair";
             this.tsmSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
@@ -372,6 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(964, 556);
             this.Controls.Add(this.tsMenuPrincipal);
             this.Controls.Add(this.msMenu);

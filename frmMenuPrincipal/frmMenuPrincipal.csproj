@@ -269,6 +269,7 @@
     <None Include="Resources\Refresh-icon.png" />
     <None Include="Resources\Folder-Open-icon.png" />
     <None Include="Resources\Folder-Open-icon1.png" />
+    <None Include="Resources\b52bbf17929c8da830fed3f2705d123c.jpg" />
     <Content Include="Resources\login238.png" />
   </ItemGroup>
   <ItemGroup>
