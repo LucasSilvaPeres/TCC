@@ -16,5 +16,12 @@ namespace frmMenuPrincipal.Formulários
         {
             InitializeComponent();
         }
+
+        private void frmBase_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
