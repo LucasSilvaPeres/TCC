@@ -197,6 +197,12 @@
     <Compile Include="Formulários\frmCadastroClientes.Designer.cs">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmCadastroFuncionários.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadastroFuncionários.Designer.cs">
+      <DependentUpon>frmCadastroFuncionários.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmCadastrosPrincipais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmCadastroFuncionários.resx">
+      <DependentUpon>frmCadastroFuncionários.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadastrosPrincipais.resx">
       <DependentUpon>frmCadastrosPrincipais.cs</DependentUpon>

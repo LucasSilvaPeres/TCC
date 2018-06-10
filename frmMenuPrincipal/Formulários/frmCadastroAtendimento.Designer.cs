@@ -83,7 +83,7 @@
 			// lblIdAtendimento
 			// 
 			lblIdAtendimento.AutoSize = true;
-			lblIdAtendimento.Location = new System.Drawing.Point(15, 15);
+			lblIdAtendimento.Location = new System.Drawing.Point(23, 15);
 			lblIdAtendimento.Name = "lblIdAtendimento";
 			lblIdAtendimento.Size = new System.Drawing.Size(81, 13);
 			lblIdAtendimento.TabIndex = 0;
@@ -92,7 +92,7 @@
 			// lblPrecoAtendimento
 			// 
 			lblPrecoAtendimento.AutoSize = true;
-			lblPrecoAtendimento.Location = new System.Drawing.Point(33, 267);
+			lblPrecoAtendimento.Location = new System.Drawing.Point(41, 283);
 			lblPrecoAtendimento.Name = "lblPrecoAtendimento";
 			lblPrecoAtendimento.Size = new System.Drawing.Size(100, 13);
 			lblPrecoAtendimento.TabIndex = 6;
@@ -102,7 +102,7 @@
 			// 
 			this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.panel1.Controls.Add(this.dgvBancoForm);
-			this.panel1.Location = new System.Drawing.Point(12, 352);
+			this.panel1.Location = new System.Drawing.Point(20, 370);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(924, 248);
 			this.panel1.TabIndex = 7;
@@ -206,7 +206,7 @@
 			// 
 			this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.panel4.Controls.Add(this.btnConfirmar);
-			this.panel4.Location = new System.Drawing.Point(814, 310);
+			this.panel4.Location = new System.Drawing.Point(822, 328);
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(122, 32);
 			this.panel4.TabIndex = 10;
@@ -222,9 +222,9 @@
 			this.pnlCampos.Controls.Add(this.idAtendimentoTextBox);
 			this.pnlCampos.Controls.Add(lblPrecoAtendimento);
 			this.pnlCampos.Controls.Add(this.precoAtendimentoTextBox);
-			this.pnlCampos.Location = new System.Drawing.Point(12, 12);
+			this.pnlCampos.Location = new System.Drawing.Point(20, 12);
 			this.pnlCampos.Name = "pnlCampos";
-			this.pnlCampos.Size = new System.Drawing.Size(924, 292);
+			this.pnlCampos.Size = new System.Drawing.Size(924, 310);
 			this.pnlCampos.TabIndex = 9;
 			// 
 			// pnlServicos
@@ -234,7 +234,7 @@
 			this.pnlServicos.Controls.Add(this.dataGridView2);
 			this.pnlServicos.Location = new System.Drawing.Point(465, 42);
 			this.pnlServicos.Name = "pnlServicos";
-			this.pnlServicos.Size = new System.Drawing.Size(424, 208);
+			this.pnlServicos.Size = new System.Drawing.Size(424, 226);
 			this.pnlServicos.TabIndex = 9;
 			// 
 			// dataGridView2
@@ -252,7 +252,7 @@
 			this.dataGridView2.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView2.Name = "dataGridView2";
 			this.dataGridView2.ReadOnly = true;
-			this.dataGridView2.Size = new System.Drawing.Size(424, 208);
+			this.dataGridView2.Size = new System.Drawing.Size(424, 226);
 			this.dataGridView2.TabIndex = 1;
 			// 
 			// idServicoDataGridViewTextBoxColumn1
@@ -294,7 +294,7 @@
 			this.pnlProdutos.Controls.Add(this.dataGridView1);
 			this.pnlProdutos.Location = new System.Drawing.Point(35, 42);
 			this.pnlProdutos.Name = "pnlProdutos";
-			this.pnlProdutos.Size = new System.Drawing.Size(424, 208);
+			this.pnlProdutos.Size = new System.Drawing.Size(424, 226);
 			this.pnlProdutos.TabIndex = 8;
 			// 
 			// dataGridView1
@@ -312,7 +312,7 @@
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(424, 208);
+			this.dataGridView1.Size = new System.Drawing.Size(424, 226);
 			this.dataGridView1.TabIndex = 0;
 			// 
 			// idProdutoDataGridViewTextBoxColumn
@@ -351,7 +351,7 @@
 			// 
 			this.idAtendimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.atendimentoBindingSource, "idAtendimento", true));
 			this.idAtendimentoTextBox.Enabled = false;
-			this.idAtendimentoTextBox.Location = new System.Drawing.Point(120, 12);
+			this.idAtendimentoTextBox.Location = new System.Drawing.Point(128, 12);
 			this.idAtendimentoTextBox.Name = "idAtendimentoTextBox";
 			this.idAtendimentoTextBox.Size = new System.Drawing.Size(789, 20);
 			this.idAtendimentoTextBox.TabIndex = 1;
@@ -360,7 +360,7 @@
 			// precoAtendimentoTextBox
 			// 
 			this.precoAtendimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.atendimentoBindingSource, "precoAtendimento", true));
-			this.precoAtendimentoTextBox.Location = new System.Drawing.Point(138, 263);
+			this.precoAtendimentoTextBox.Location = new System.Drawing.Point(146, 279);
 			this.precoAtendimentoTextBox.Name = "precoAtendimentoTextBox";
 			this.precoAtendimentoTextBox.Size = new System.Drawing.Size(754, 20);
 			this.precoAtendimentoTextBox.TabIndex = 7;
@@ -369,7 +369,7 @@
 			// 
 			this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.panel2.Controls.Add(this.btnLimparCampos);
-			this.panel2.Location = new System.Drawing.Point(12, 310);
+			this.panel2.Location = new System.Drawing.Point(20, 328);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(126, 36);
 			this.panel2.TabIndex = 8;
@@ -406,7 +406,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(948, 612);
+			this.ClientSize = new System.Drawing.Size(964, 649);
 			this.ControlBox = false;
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel4);

@@ -17,6 +17,11 @@ namespace frmMenuPrincipal.Formulários
             InitializeComponent();
         }
 
-        
-    }
+		private void frmCadastroClientes_Load(object sender, EventArgs e)
+		{
+			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Cliente'. Você pode movê-la ou removê-la conforme necessário.
+			this.clienteTableAdapter.Fill(this.dsPrincipal.Cliente);
+
+		}
+	}
 }
