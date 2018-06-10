@@ -20,10 +20,10 @@ namespace frmMenuPrincipal
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-            frmCadPrincipais frmcadastros = new frmCadPrincipais();
-            frmcadastros.MdiParent = this;
-            frmcadastros.Show();
-            frmcadastros.Anchor = AnchorStyles.Bottom;
+            frmCadastroAtendimento frmatendimento = new frmCadastroAtendimento();
+			frmatendimento.MdiParent = this;
+			frmatendimento.Show();
+			frmatendimento.Anchor = AnchorStyles.Bottom;
 
 		}
 
@@ -72,5 +72,6 @@ namespace frmMenuPrincipal
                 FrmBackup.Show();
             }
         }
-    }
+
+	}
 }
