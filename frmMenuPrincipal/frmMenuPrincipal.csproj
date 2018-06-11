@@ -215,6 +215,12 @@
     <Compile Include="Formulários\frmCadastroFuncionários.Designer.cs">
       <DependentUpon>frmCadastroFuncionários.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmCadastroServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadastroServico.Designer.cs">
+      <DependentUpon>frmCadastroServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmCadastrosPrincipais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,7 @@
     <Compile Include="Models\Serviço.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ValidarIdentidade.cs" />
     <EmbeddedResource Include="Formulários\frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadastroFuncionários.resx">
       <DependentUpon>frmCadastroFuncionários.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmCadastroServico.resx">
+      <DependentUpon>frmCadastroServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadastrosPrincipais.resx">
       <DependentUpon>frmCadastrosPrincipais.cs</DependentUpon>
@@ -328,7 +338,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Relatórios\" />
-    <Folder Include="Util\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -55,18 +55,18 @@
             this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlCampos = new System.Windows.Forms.Panel();
-            this.idFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.telefoneFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.enderecoFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.nomeFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.bairroFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.celularFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.pagamentoFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.identidadeFuncionarioTextBox = new System.Windows.Forms.TextBox();
-            this.nascFuncionarioTextBox = new System.Windows.Forms.TextBox();
+            this.txtIdFuncionario = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtSalário = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.funcionarioTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.FuncionarioTableAdapter();
             this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
+            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             idFuncionarioLabel = new System.Windows.Forms.Label();
             telefoneFuncionarioLabel = new System.Windows.Forms.Label();
             enderecoFuncionarioLabel = new System.Windows.Forms.Label();
@@ -321,101 +321,93 @@
             this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCampos.Controls.Add(this.dtpDataNascimento);
             this.pnlCampos.Controls.Add(idFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.idFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtIdFuncionario);
             this.pnlCampos.Controls.Add(telefoneFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.telefoneFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtTelefone);
             this.pnlCampos.Controls.Add(enderecoFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.enderecoFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtEndereco);
             this.pnlCampos.Controls.Add(nomeFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.nomeFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtNome);
             this.pnlCampos.Controls.Add(bairroFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.bairroFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtBairro);
             this.pnlCampos.Controls.Add(celularFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.celularFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtCelular);
             this.pnlCampos.Controls.Add(pagamentoFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.pagamentoFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtSalário);
             this.pnlCampos.Controls.Add(identidadeFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.identidadeFuncionarioTextBox);
+            this.pnlCampos.Controls.Add(this.txtCPF);
             this.pnlCampos.Controls.Add(nascFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.nascFuncionarioTextBox);
             this.pnlCampos.Location = new System.Drawing.Point(4, 5);
             this.pnlCampos.Name = "pnlCampos";
             this.pnlCampos.Size = new System.Drawing.Size(940, 299);
             this.pnlCampos.TabIndex = 9;
             // 
-            // idFuncionarioTextBox
+            // txtIdFuncionario
             // 
-            this.idFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "idFuncionario", true));
-            this.idFuncionarioTextBox.Enabled = false;
-            this.idFuncionarioTextBox.Location = new System.Drawing.Point(150, 5);
-            this.idFuncionarioTextBox.Name = "idFuncionarioTextBox";
-            this.idFuncionarioTextBox.Size = new System.Drawing.Size(782, 20);
-            this.idFuncionarioTextBox.TabIndex = 1;
+            this.txtIdFuncionario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "idFuncionario", true));
+            this.txtIdFuncionario.Enabled = false;
+            this.txtIdFuncionario.Location = new System.Drawing.Point(150, 5);
+            this.txtIdFuncionario.Name = "txtIdFuncionario";
+            this.txtIdFuncionario.Size = new System.Drawing.Size(782, 20);
+            this.txtIdFuncionario.TabIndex = 1;
             // 
-            // telefoneFuncionarioTextBox
+            // txtTelefone
             // 
-            this.telefoneFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "telefoneFuncionario", true));
-            this.telefoneFuncionarioTextBox.Location = new System.Drawing.Point(150, 206);
-            this.telefoneFuncionarioTextBox.Name = "telefoneFuncionarioTextBox";
-            this.telefoneFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.telefoneFuncionarioTextBox.TabIndex = 3;
+            this.txtTelefone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "telefoneFuncionario", true));
+            this.txtTelefone.Location = new System.Drawing.Point(150, 206);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(200, 20);
+            this.txtTelefone.TabIndex = 3;
             // 
-            // enderecoFuncionarioTextBox
+            // txtEndereco
             // 
-            this.enderecoFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "enderecoFuncionario", true));
-            this.enderecoFuncionarioTextBox.Location = new System.Drawing.Point(150, 144);
-            this.enderecoFuncionarioTextBox.Name = "enderecoFuncionarioTextBox";
-            this.enderecoFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.enderecoFuncionarioTextBox.TabIndex = 5;
+            this.txtEndereco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "enderecoFuncionario", true));
+            this.txtEndereco.Location = new System.Drawing.Point(150, 144);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(200, 20);
+            this.txtEndereco.TabIndex = 5;
             // 
-            // nomeFuncionarioTextBox
+            // txtNome
             // 
-            this.nomeFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nomeFuncionario", true));
-            this.nomeFuncionarioTextBox.Location = new System.Drawing.Point(150, 51);
-            this.nomeFuncionarioTextBox.Name = "nomeFuncionarioTextBox";
-            this.nomeFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.nomeFuncionarioTextBox.TabIndex = 7;
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nomeFuncionario", true));
+            this.txtNome.Location = new System.Drawing.Point(150, 51);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(200, 20);
+            this.txtNome.TabIndex = 7;
             // 
-            // bairroFuncionarioTextBox
+            // txtBairro
             // 
-            this.bairroFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "bairroFuncionario", true));
-            this.bairroFuncionarioTextBox.Location = new System.Drawing.Point(151, 175);
-            this.bairroFuncionarioTextBox.Name = "bairroFuncionarioTextBox";
-            this.bairroFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.bairroFuncionarioTextBox.TabIndex = 9;
+            this.txtBairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "bairroFuncionario", true));
+            this.txtBairro.Location = new System.Drawing.Point(151, 175);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(200, 20);
+            this.txtBairro.TabIndex = 9;
             // 
-            // celularFuncionarioTextBox
+            // txtCelular
             // 
-            this.celularFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "celularFuncionario", true));
-            this.celularFuncionarioTextBox.Location = new System.Drawing.Point(151, 237);
-            this.celularFuncionarioTextBox.Name = "celularFuncionarioTextBox";
-            this.celularFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.celularFuncionarioTextBox.TabIndex = 11;
+            this.txtCelular.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "celularFuncionario", true));
+            this.txtCelular.Location = new System.Drawing.Point(151, 237);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(200, 20);
+            this.txtCelular.TabIndex = 11;
             // 
-            // pagamentoFuncionarioTextBox
+            // txtSalário
             // 
-            this.pagamentoFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "pagamentoFuncionario", true));
-            this.pagamentoFuncionarioTextBox.Location = new System.Drawing.Point(610, 51);
-            this.pagamentoFuncionarioTextBox.Name = "pagamentoFuncionarioTextBox";
-            this.pagamentoFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.pagamentoFuncionarioTextBox.TabIndex = 13;
+            this.txtSalário.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "pagamentoFuncionario", true));
+            this.txtSalário.Location = new System.Drawing.Point(610, 51);
+            this.txtSalário.Name = "txtSalário";
+            this.txtSalário.Size = new System.Drawing.Size(200, 20);
+            this.txtSalário.TabIndex = 13;
             // 
-            // identidadeFuncionarioTextBox
+            // txtCPF
             // 
-            this.identidadeFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "identidadeFuncionario", true));
-            this.identidadeFuncionarioTextBox.Location = new System.Drawing.Point(150, 82);
-            this.identidadeFuncionarioTextBox.Name = "identidadeFuncionarioTextBox";
-            this.identidadeFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.identidadeFuncionarioTextBox.TabIndex = 15;
-            // 
-            // nascFuncionarioTextBox
-            // 
-            this.nascFuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nascFuncionario", true));
-            this.nascFuncionarioTextBox.Location = new System.Drawing.Point(151, 113);
-            this.nascFuncionarioTextBox.Name = "nascFuncionarioTextBox";
-            this.nascFuncionarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.nascFuncionarioTextBox.TabIndex = 17;
+            this.txtCPF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "identidadeFuncionario", true));
+            this.txtCPF.Location = new System.Drawing.Point(150, 82);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(200, 20);
+            this.txtCPF.TabIndex = 15;
             // 
             // panel2
             // 
@@ -445,6 +437,14 @@
             this.tableAdapterManager.Serviços_AtendimentoTableAdapter = null;
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dtpDataNascimento
+            // 
+            this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNascimento.Location = new System.Drawing.Point(273, 111);
+            this.dtpDataNascimento.Name = "dtpDataNascimento";
+            this.dtpDataNascimento.Size = new System.Drawing.Size(77, 20);
+            this.dtpDataNascimento.TabIndex = 17;
             // 
             // frmCadastroFuncionários
             // 
@@ -492,15 +492,15 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn telefoneFuncionarioDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn celularFuncionarioDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn pagamentoFuncionarioDataGridViewTextBoxColumn;
-		private System.Windows.Forms.TextBox idFuncionarioTextBox;
-		private System.Windows.Forms.TextBox telefoneFuncionarioTextBox;
-		private System.Windows.Forms.TextBox enderecoFuncionarioTextBox;
-		private System.Windows.Forms.TextBox nomeFuncionarioTextBox;
-		private System.Windows.Forms.TextBox bairroFuncionarioTextBox;
-		private System.Windows.Forms.TextBox celularFuncionarioTextBox;
-		private System.Windows.Forms.TextBox pagamentoFuncionarioTextBox;
-		private System.Windows.Forms.TextBox identidadeFuncionarioTextBox;
-		private System.Windows.Forms.TextBox nascFuncionarioTextBox;
+		private System.Windows.Forms.TextBox txtIdFuncionario;
+		private System.Windows.Forms.TextBox txtTelefone;
+		private System.Windows.Forms.TextBox txtEndereco;
+		private System.Windows.Forms.TextBox txtNome;
+		private System.Windows.Forms.TextBox txtBairro;
+		private System.Windows.Forms.TextBox txtCelular;
+		private System.Windows.Forms.TextBox txtSalário;
+		private System.Windows.Forms.TextBox txtCPF;
 		private Dados.dsPrincipalTableAdapters.TableAdapterManager tableAdapterManager;
-	}
+        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
+    }
 }

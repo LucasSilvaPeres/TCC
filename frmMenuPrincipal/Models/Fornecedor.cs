@@ -1,4 +1,5 @@
-﻿using System;
+﻿using frmMenuPrincipal.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace frmMenuPrincipal.Models
 	class Fornecedor
 	{
 		private string nomeFornecedor, telefoneFornecedor,
-			emailFornecedor, enderecoFornecedor, bairroFornecedor, identidadeFornedor;
+			emailFornecedor, enderecoFornecedor, bairroFornecedor, identidadeFornecedor;
 		private DateTime dataInfo;
 
         public string NomeFornecedor
@@ -77,16 +78,24 @@ namespace frmMenuPrincipal.Models
             }
         }
 
-        public string IdentidadeFornedor
+        public string IdentidadeFornecedor
         {
             get
             {
-                return identidadeFornedor;
+                return identidadeFornecedor;
             }
 
             set
             {
-                identidadeFornedor = value;
+                if (ValidarIdentidade.Validar(value))
+                {
+                    identidadeFornecedor = value;
+                }
+                else
+                {
+                    throw new Exception("Identidade Inválida");
+
+                }
             }
         }
 
@@ -111,7 +120,7 @@ namespace frmMenuPrincipal.Models
 			EmailFornecedor = emailFornecedor;
 			EnderecoFornecedor = enderecoFornecedor;
 			BairroFornecedor = bairroFornecedor;
-			IdentidadeFornedor = identidadeFornedor;
+			IdentidadeFornecedor = identidadeFornedor;
 			DataInfo = dataInfo;
 		}
 

@@ -31,5 +31,7 @@ namespace frmMenuPrincipal.Formulários
             this.produtoTableAdapter.Fill(this.dsPrincipal.Produto);
 
         }
+
+        
     }
 }

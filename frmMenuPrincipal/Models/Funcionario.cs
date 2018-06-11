@@ -1,4 +1,5 @@
-﻿using System;
+﻿using frmMenuPrincipal.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -73,7 +74,14 @@ namespace frmMenuPrincipal.Models
 
             set
             {
-                identidadeFuncionario = value;
+                if (ValidarIdentidade.Validar(value))
+                {
+                    identidadeFuncionario = value;
+                }
+                else
+                {
+                    throw new Exception("Identidade Inválida");
+                }
             }
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label lblIdFornecimento;
+            System.Windows.Forms.Label lblId;
             System.Windows.Forms.Label lblIdFornecedor;
             System.Windows.Forms.Label lblDataFornecimento;
             System.Windows.Forms.Label lblIdProduto;
@@ -40,27 +40,27 @@
             this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvFornecimento = new System.Windows.Forms.DataGridView();
+            this.idFornecimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataFornecimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlBotaoConfirmar = new System.Windows.Forms.Panel();
             this.pnlCampos = new System.Windows.Forms.Panel();
-            this.pnlBotaoLimparCampos = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.produtos_FornecimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtIdFornecimento = new System.Windows.Forms.TextBox();
             this.txtIdFornecedor = new System.Windows.Forms.TextBox();
             this.dtpDataFornecimento = new System.Windows.Forms.DateTimePicker();
-            this.idFornecimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataFornecimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtos_FornecimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pnlBotaoLimparCampos = new System.Windows.Forms.Panel();
             this.produtos_FornecimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Produtos_FornecimentoTableAdapter();
-            this.txtIdProduto = new System.Windows.Forms.TextBox();
-            this.txtQuantidadeProduto = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            lblIdFornecimento = new System.Windows.Forms.Label();
+            this.pnlDgvFornecedor = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idFornecimentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            lblId = new System.Windows.Forms.Label();
             lblIdFornecedor = new System.Windows.Forms.Label();
             lblDataFornecimento = new System.Windows.Forms.Label();
             lblIdProduto = new System.Windows.Forms.Label();
@@ -71,11 +71,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecimento)).BeginInit();
             this.pnlBotaoConfirmar.SuspendLayout();
             this.pnlCampos.SuspendLayout();
-            this.pnlBotaoLimparCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtos_FornecimentoBindingSource)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            this.pnlBotaoLimparCampos.SuspendLayout();
+            this.pnlDgvFornecedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Location = new System.Drawing.Point(157, 150);
+            lblId.Name = "lblId";
+            lblId.Size = new System.Drawing.Size(83, 13);
+            lblId.TabIndex = 0;
+            lblId.Text = "Id Fornecimento";
+            // 
+            // lblIdFornecedor
+            // 
+            lblIdFornecedor.AutoSize = true;
+            lblIdFornecedor.Location = new System.Drawing.Point(157, 176);
+            lblIdFornecedor.Name = "lblIdFornecedor";
+            lblIdFornecedor.Size = new System.Drawing.Size(73, 13);
+            lblIdFornecedor.TabIndex = 2;
+            lblIdFornecedor.Text = "Id Fornecedor";
+            // 
+            // lblDataFornecimento
+            // 
+            lblDataFornecimento.AutoSize = true;
+            lblDataFornecimento.Location = new System.Drawing.Point(157, 203);
+            lblDataFornecimento.Name = "lblDataFornecimento";
+            lblDataFornecimento.Size = new System.Drawing.Size(109, 13);
+            lblDataFornecimento.TabIndex = 4;
+            lblDataFornecimento.Text = "Data do fornecimento";
+            // 
+            // lblIdProduto
+            // 
+            lblIdProduto.AutoSize = true;
+            lblIdProduto.Location = new System.Drawing.Point(586, 147);
+            lblIdProduto.Name = "lblIdProduto";
+            lblIdProduto.Size = new System.Drawing.Size(56, 13);
+            lblIdProduto.TabIndex = 8;
+            lblIdProduto.Text = "Id Produto";
+            // 
+            // lblQuantidadeProduto
+            // 
+            lblQuantidadeProduto.AutoSize = true;
+            lblQuantidadeProduto.Location = new System.Drawing.Point(586, 199);
+            lblQuantidadeProduto.Name = "lblQuantidadeProduto";
+            lblQuantidadeProduto.Size = new System.Drawing.Size(62, 13);
+            lblQuantidadeProduto.TabIndex = 12;
+            lblQuantidadeProduto.Text = "Quantidade";
             // 
             // dsPrincipal
             // 
@@ -134,6 +179,30 @@
             this.dgvFornecimento.Size = new System.Drawing.Size(465, 265);
             this.dgvFornecimento.TabIndex = 0;
             // 
+            // idFornecimentoDataGridViewTextBoxColumn
+            // 
+            this.idFornecimentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idFornecimentoDataGridViewTextBoxColumn.DataPropertyName = "idFornecimento";
+            this.idFornecimentoDataGridViewTextBoxColumn.HeaderText = "Id do fornecimento";
+            this.idFornecimentoDataGridViewTextBoxColumn.Name = "idFornecimentoDataGridViewTextBoxColumn";
+            this.idFornecimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idFornecedorDataGridViewTextBoxColumn
+            // 
+            this.idFornecedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idFornecedorDataGridViewTextBoxColumn.DataPropertyName = "idFornecedor";
+            this.idFornecedorDataGridViewTextBoxColumn.HeaderText = "Id do fornecedor";
+            this.idFornecedorDataGridViewTextBoxColumn.Name = "idFornecedorDataGridViewTextBoxColumn";
+            this.idFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataFornecimentoDataGridViewTextBoxColumn
+            // 
+            this.dataFornecimentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataFornecimentoDataGridViewTextBoxColumn.DataPropertyName = "dataFornecimento";
+            this.dataFornecimentoDataGridViewTextBoxColumn.HeaderText = "Data do fornecimento";
+            this.dataFornecimentoDataGridViewTextBoxColumn.Name = "dataFornecimentoDataGridViewTextBoxColumn";
+            this.dataFornecimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // btnLimparCampos
             // 
             this.btnLimparCampos.Depth = 0;
@@ -175,10 +244,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCampos.Controls.Add(lblIdProduto);
-            this.pnlCampos.Controls.Add(this.txtIdProduto);
+            this.pnlCampos.Controls.Add(this.txtId);
             this.pnlCampos.Controls.Add(lblQuantidadeProduto);
-            this.pnlCampos.Controls.Add(this.txtQuantidadeProduto);
-            this.pnlCampos.Controls.Add(lblIdFornecimento);
+            this.pnlCampos.Controls.Add(this.txtQuantidade);
+            this.pnlCampos.Controls.Add(lblId);
             this.pnlCampos.Controls.Add(this.txtIdFornecimento);
             this.pnlCampos.Controls.Add(lblIdFornecedor);
             this.pnlCampos.Controls.Add(this.txtIdFornecedor);
@@ -189,23 +258,26 @@
             this.pnlCampos.Size = new System.Drawing.Size(940, 311);
             this.pnlCampos.TabIndex = 9;
             // 
-            // pnlBotaoLimparCampos
+            // txtId
             // 
-            this.pnlBotaoLimparCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnlBotaoLimparCampos.Controls.Add(this.btnLimparCampos);
-            this.pnlBotaoLimparCampos.Location = new System.Drawing.Point(12, 333);
-            this.pnlBotaoLimparCampos.Name = "pnlBotaoLimparCampos";
-            this.pnlBotaoLimparCampos.Size = new System.Drawing.Size(152, 33);
-            this.pnlBotaoLimparCampos.TabIndex = 8;
+            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtos_FornecimentoBindingSource, "idProduto", true));
+            this.txtId.Location = new System.Drawing.Point(717, 144);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 9;
             // 
-            // lblIdFornecimento
+            // produtos_FornecimentoBindingSource
             // 
-            lblIdFornecimento.AutoSize = true;
-            lblIdFornecimento.Location = new System.Drawing.Point(157, 150);
-            lblIdFornecimento.Name = "lblIdFornecimento";
-            lblIdFornecimento.Size = new System.Drawing.Size(83, 13);
-            lblIdFornecimento.TabIndex = 0;
-            lblIdFornecimento.Text = "Id Fornecimento";
+            this.produtos_FornecimentoBindingSource.DataMember = "FK_Produtos_Fornecimento_Fornecimento";
+            this.produtos_FornecimentoBindingSource.DataSource = this.fornecimentoBindingSource;
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtos_FornecimentoBindingSource, "quantidadeProduto", true));
+            this.txtQuantidade.Location = new System.Drawing.Point(717, 192);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantidade.TabIndex = 13;
             // 
             // txtIdFornecimento
             // 
@@ -215,15 +287,6 @@
             this.txtIdFornecimento.Size = new System.Drawing.Size(200, 20);
             this.txtIdFornecimento.TabIndex = 1;
             // 
-            // lblIdFornecedor
-            // 
-            lblIdFornecedor.AutoSize = true;
-            lblIdFornecedor.Location = new System.Drawing.Point(157, 176);
-            lblIdFornecedor.Name = "lblIdFornecedor";
-            lblIdFornecedor.Size = new System.Drawing.Size(73, 13);
-            lblIdFornecedor.TabIndex = 2;
-            lblIdFornecedor.Text = "Id Fornecedor";
-            // 
             // txtIdFornecedor
             // 
             this.txtIdFornecedor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecimentoBindingSource, "idFornecedor", true));
@@ -232,147 +295,85 @@
             this.txtIdFornecedor.Size = new System.Drawing.Size(200, 20);
             this.txtIdFornecedor.TabIndex = 3;
             // 
-            // lblDataFornecimento
-            // 
-            lblDataFornecimento.AutoSize = true;
-            lblDataFornecimento.Location = new System.Drawing.Point(157, 203);
-            lblDataFornecimento.Name = "lblDataFornecimento";
-            lblDataFornecimento.Size = new System.Drawing.Size(109, 13);
-            lblDataFornecimento.TabIndex = 4;
-            lblDataFornecimento.Text = "Data do fornecimento";
-            // 
             // dtpDataFornecimento
             // 
             this.dtpDataFornecimento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.fornecimentoBindingSource, "dataFornecimento", true));
-            this.dtpDataFornecimento.Location = new System.Drawing.Point(270, 199);
+            this.dtpDataFornecimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataFornecimento.Location = new System.Drawing.Point(392, 199);
             this.dtpDataFornecimento.Name = "dtpDataFornecimento";
-            this.dtpDataFornecimento.Size = new System.Drawing.Size(200, 20);
+            this.dtpDataFornecimento.Size = new System.Drawing.Size(78, 20);
             this.dtpDataFornecimento.TabIndex = 5;
             // 
-            // idFornecimentoDataGridViewTextBoxColumn
+            // pnlBotaoLimparCampos
             // 
-            this.idFornecimentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idFornecimentoDataGridViewTextBoxColumn.DataPropertyName = "idFornecimento";
-            this.idFornecimentoDataGridViewTextBoxColumn.HeaderText = "Id do fornecimento";
-            this.idFornecimentoDataGridViewTextBoxColumn.Name = "idFornecimentoDataGridViewTextBoxColumn";
-            this.idFornecimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idFornecedorDataGridViewTextBoxColumn
-            // 
-            this.idFornecedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idFornecedorDataGridViewTextBoxColumn.DataPropertyName = "idFornecedor";
-            this.idFornecedorDataGridViewTextBoxColumn.HeaderText = "Id do fornecedor";
-            this.idFornecedorDataGridViewTextBoxColumn.Name = "idFornecedorDataGridViewTextBoxColumn";
-            this.idFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataFornecimentoDataGridViewTextBoxColumn
-            // 
-            this.dataFornecimentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataFornecimentoDataGridViewTextBoxColumn.DataPropertyName = "dataFornecimento";
-            this.dataFornecimentoDataGridViewTextBoxColumn.HeaderText = "Data do fornecimento";
-            this.dataFornecimentoDataGridViewTextBoxColumn.Name = "dataFornecimentoDataGridViewTextBoxColumn";
-            this.dataFornecimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // produtos_FornecimentoBindingSource
-            // 
-            this.produtos_FornecimentoBindingSource.DataMember = "FK_Produtos_Fornecimento_Fornecimento";
-            this.produtos_FornecimentoBindingSource.DataSource = this.fornecimentoBindingSource;
+            this.pnlBotaoLimparCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBotaoLimparCampos.Controls.Add(this.btnLimparCampos);
+            this.pnlBotaoLimparCampos.Location = new System.Drawing.Point(12, 333);
+            this.pnlBotaoLimparCampos.Name = "pnlBotaoLimparCampos";
+            this.pnlBotaoLimparCampos.Size = new System.Drawing.Size(152, 33);
+            this.pnlBotaoLimparCampos.TabIndex = 8;
             // 
             // produtos_FornecimentoTableAdapter
             // 
             this.produtos_FornecimentoTableAdapter.ClearBeforeFill = true;
             // 
-            // lblIdProduto
+            // pnlDgvFornecedor
             // 
-            lblIdProduto.AutoSize = true;
-            lblIdProduto.Location = new System.Drawing.Point(586, 142);
-            lblIdProduto.Name = "lblIdProduto";
-            lblIdProduto.Size = new System.Drawing.Size(56, 13);
-            lblIdProduto.TabIndex = 8;
-            lblIdProduto.Text = "Id Produto";
-            // 
-            // txtIdProduto
-            // 
-            this.txtIdProduto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtos_FornecimentoBindingSource, "idProduto", true));
-            this.txtIdProduto.Location = new System.Drawing.Point(717, 139);
-            this.txtIdProduto.Name = "txtIdProduto";
-            this.txtIdProduto.Size = new System.Drawing.Size(100, 20);
-            this.txtIdProduto.TabIndex = 9;
-            // 
-            // lblQuantidadeProduto
-            // 
-            lblQuantidadeProduto.AutoSize = true;
-            lblQuantidadeProduto.Location = new System.Drawing.Point(586, 194);
-            lblQuantidadeProduto.Name = "lblQuantidadeProduto";
-            lblQuantidadeProduto.Size = new System.Drawing.Size(62, 13);
-            lblQuantidadeProduto.TabIndex = 12;
-            lblQuantidadeProduto.Text = "Quantidade";
-            // 
-            // txtQuantidadeProduto
-            // 
-            this.txtQuantidadeProduto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtos_FornecimentoBindingSource, "quantidadeProduto", true));
-            this.txtQuantidadeProduto.Location = new System.Drawing.Point(717, 191);
-            this.txtQuantidadeProduto.Name = "txtQuantidadeProduto";
-            this.txtQuantidadeProduto.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantidadeProduto.TabIndex = 13;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlDgvFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.dgvProdutos);
-            this.panel3.Location = new System.Drawing.Point(487, 372);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(465, 265);
-            this.panel3.TabIndex = 8;
+            this.pnlDgvFornecedor.Controls.Add(this.dataGridView1);
+            this.pnlDgvFornecedor.Location = new System.Drawing.Point(487, 372);
+            this.pnlDgvFornecedor.Name = "pnlDgvFornecedor";
+            this.pnlDgvFornecedor.Size = new System.Drawing.Size(465, 265);
+            this.pnlDgvFornecedor.TabIndex = 8;
             // 
-            // dgvProdutos
+            // dataGridView1
             // 
-            this.dgvProdutos.AllowUserToAddRows = false;
-            this.dgvProdutos.AutoGenerateColumns = false;
-            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dgvProdutos.DataSource = this.fornecimentoBindingSource;
-            this.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProdutos.Location = new System.Drawing.Point(0, 0);
-            this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.ReadOnly = true;
-            this.dgvProdutos.Size = new System.Drawing.Size(465, 265);
-            this.dgvProdutos.TabIndex = 0;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idFornecimentoDataGridViewTextBoxColumn1,
+            this.idProdutoDataGridViewTextBoxColumn,
+            this.quantidadeProdutoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.produtos_FornecimentoBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(465, 265);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
+            // idFornecimentoDataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idFornecimento";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id do fornecimento";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idFornecimentoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idFornecimentoDataGridViewTextBoxColumn1.DataPropertyName = "idFornecimento";
+            this.idFornecimentoDataGridViewTextBoxColumn1.HeaderText = "Id do fornecimento";
+            this.idFornecimentoDataGridViewTextBoxColumn1.Name = "idFornecimentoDataGridViewTextBoxColumn1";
+            this.idFornecimentoDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // idProdutoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "idFornecedor";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Id do fornecedor";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "idProduto";
+            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Id do Produto";
+            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
+            this.idProdutoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // quantidadeProdutoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "dataFornecimento";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Data do fornecimento";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.quantidadeProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantidadeProdutoDataGridViewTextBoxColumn.DataPropertyName = "quantidadeProduto";
+            this.quantidadeProdutoDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeProdutoDataGridViewTextBoxColumn.Name = "quantidadeProdutoDataGridViewTextBoxColumn";
+            this.quantidadeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmCadFornecimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 649);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlDgvFornecedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBotaoConfirmar);
             this.Controls.Add(this.pnlCampos);
@@ -388,10 +389,10 @@
             this.pnlBotaoConfirmar.ResumeLayout(false);
             this.pnlCampos.ResumeLayout(false);
             this.pnlCampos.PerformLayout();
-            this.pnlBotaoLimparCampos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.produtos_FornecimentoBindingSource)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            this.pnlBotaoLimparCampos.ResumeLayout(false);
+            this.pnlDgvFornecedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,12 +418,12 @@
         public System.Windows.Forms.Panel pnlBotaoLimparCampos;
         private System.Windows.Forms.BindingSource produtos_FornecimentoBindingSource;
         private Dados.dsPrincipalTableAdapters.Produtos_FornecimentoTableAdapter produtos_FornecimentoTableAdapter;
-        private System.Windows.Forms.TextBox txtIdProduto;
-        private System.Windows.Forms.TextBox txtQuantidadeProduto;
-        public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.DataGridView dgvProdutos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtQuantidade;
+        public System.Windows.Forms.Panel pnlDgvFornecedor;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idFornecimentoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeProdutoDataGridViewTextBoxColumn;
     }
 }
