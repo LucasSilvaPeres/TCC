@@ -1,4 +1,5 @@
 ﻿using frmMenuPrincipal.Formulários;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,19 +12,20 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal
 {
-	public partial class frmMenuPrincip : Form
+	public partial class frmMenuPrincip : MaterialForm
 	{
 		public frmMenuPrincip()
 		{
 			InitializeComponent();
-		}
+           
+        }
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-            frmCadastroAtendimento frmatendimento = new frmCadastroAtendimento();
-			frmatendimento.MdiParent = this;
-			frmatendimento.Show();
-			frmatendimento.Anchor = AnchorStyles.Bottom;
+   //         frmCadPrincipais frmatendimento = new frmCadPrincipais();
+			//frmatendimento.MdiParent = this;
+			//frmatendimento.Show();
+			//frmatendimento.Anchor = AnchorStyles.Bottom;
 
 		}
 
@@ -73,5 +75,6 @@ namespace frmMenuPrincipal
             }
         }
 
-	}
+        
+    }
 }
