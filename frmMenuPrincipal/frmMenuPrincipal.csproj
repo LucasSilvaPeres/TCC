@@ -185,6 +185,12 @@
     <Compile Include="Formulários\frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmCadastrarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadastrarProdutos.Designer.cs">
+      <DependentUpon>frmCadastrarProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmCadastroAtendimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmCadastrarProdutos.resx">
+      <DependentUpon>frmCadastrarProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmCadastroAtendimento.resx">
       <DependentUpon>frmCadastroAtendimento.cs</DependentUpon>

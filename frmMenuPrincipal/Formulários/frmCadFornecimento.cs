@@ -27,6 +27,8 @@ namespace frmMenuPrincipal.Formulários
 
         private void frmCadFornecimento_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsPrincipal.Produtos_Fornecimento' table. You can move, or remove it, as needed.
+            this.produtos_FornecimentoTableAdapter.Fill(this.dsPrincipal.Produtos_Fornecimento);
             // TODO: This line of code loads data into the 'dsPrincipal.Fornecimento' table. You can move, or remove it, as needed.
             this.fornecimentoTableAdapter.Fill(this.dsPrincipal.Fornecimento);
 

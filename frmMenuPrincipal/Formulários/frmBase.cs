@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal.Formulários
 {
-    public partial class frmBase : Form
+    public partial class frmBase : MaterialSkin.Controls.MaterialForm
     {
+        
         public frmBase()
         {
             InitializeComponent();
