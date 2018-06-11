@@ -1,5 +1,6 @@
 ﻿using frmMenuPrincipal.Dados;
 using frmMenuPrincipal.Dados.dsPrincipalTableAdapters;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +13,12 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal.Formulários
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MaterialForm
     {
         public frmLogin()
         {
             InitializeComponent();
+  
         }
 		int vErros = 0;
 		private bool CaixasOK()
@@ -102,5 +104,6 @@ namespace frmMenuPrincipal.Formulários
         {
             Application.ExitThread();
         }
+
     }
 }

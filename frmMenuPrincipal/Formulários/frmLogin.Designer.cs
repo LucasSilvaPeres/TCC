@@ -32,12 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.cbMostrarSenha = new System.Windows.Forms.CheckBox();
             this.masktxtSenha = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.lblSenha = new System.Windows.Forms.Label();
             this.errErro = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errErro)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbMostrarSenha
@@ -48,7 +49,7 @@
             this.cbMostrarSenha.AutoSize = true;
             this.cbMostrarSenha.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMostrarSenha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cbMostrarSenha.Location = new System.Drawing.Point(281, 113);
+            this.cbMostrarSenha.Location = new System.Drawing.Point(123, 109);
             this.cbMostrarSenha.Name = "cbMostrarSenha";
             this.cbMostrarSenha.Size = new System.Drawing.Size(102, 17);
             this.cbMostrarSenha.TabIndex = 13;
@@ -62,23 +63,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.masktxtSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masktxtSenha.Location = new System.Drawing.Point(275, 78);
+            this.masktxtSenha.Location = new System.Drawing.Point(117, 74);
             this.masktxtSenha.Name = "masktxtSenha";
-            this.masktxtSenha.Size = new System.Drawing.Size(225, 29);
+            this.masktxtSenha.Size = new System.Drawing.Size(257, 29);
             this.masktxtSenha.TabIndex = 12;
             this.masktxtSenha.UseSystemPasswordChar = true;
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-            this.pictureBox.Location = new System.Drawing.Point(11, 10);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(238, 244);
-            this.pictureBox.TabIndex = 16;
-            this.pictureBox.TabStop = false;
             // 
             // btnOK
             // 
@@ -91,9 +80,9 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btnOK.Location = new System.Drawing.Point(339, 208);
+            this.btnOK.Location = new System.Drawing.Point(322, 165);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 40);
+            this.btnOK.Size = new System.Drawing.Size(132, 28);
             this.btnOK.TabIndex = 14;
             this.btnOK.Text = "Logar";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -105,10 +94,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblSenha.BackColor = System.Drawing.Color.Transparent;
             this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSenha.Location = new System.Drawing.Point(275, 43);
+            this.lblSenha.Location = new System.Drawing.Point(117, 39);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(83, 32);
             this.lblSenha.TabIndex = 15;
@@ -118,28 +107,47 @@
             // 
             this.errErro.ContainerControl = this;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cbMostrarSenha);
+            this.panel1.Controls.Add(this.masktxtSenha);
+            this.panel1.Controls.Add(this.btnOK);
+            this.panel1.Controls.Add(this.lblSenha);
+            this.panel1.Font = new System.Drawing.Font("Dutch801 XBd BT", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 55);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(515, 206);
+            this.panel1.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(150, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 30);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "LM-Lava Rapido";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(510, 265);
-            this.Controls.Add(this.cbMostrarSenha);
-            this.Controls.Add(this.masktxtSenha);
-            this.Controls.Add(this.pictureBox);
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.lblSenha);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Enter += new System.EventHandler(this.btnOK_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errErro)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -147,9 +155,10 @@
 
         private System.Windows.Forms.CheckBox cbMostrarSenha;
         private System.Windows.Forms.MaskedTextBox masktxtSenha;
-        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.ErrorProvider errErro;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

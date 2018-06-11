@@ -1,4 +1,5 @@
 ﻿using frmMenuPrincipal.Formulários;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,20 +12,21 @@ using System.Windows.Forms;
 
 namespace frmMenuPrincipal
 {
-	public partial class frmMenuPrincip : Form
+	public partial class frmMenuPrincip : MaterialForm
 	{
 		public frmMenuPrincip()
 		{
 			InitializeComponent();
-		}
+           
+        }
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-            frmCadPrincipais frmCadastros = new frmCadPrincipais();
-            frmCadastros.MdiParent = this;
-            frmCadastros.Show();
-            frmCadastros.Anchor = AnchorStyles.Bottom;
-            tslHora.Text = DateTime.Now.ToShortDateString() + " " +  DateTime.Now.ToLongTimeString();
+   //         frmCadPrincipais frmatendimento = new frmCadPrincipais();
+			//frmatendimento.MdiParent = this;
+			//frmatendimento.Show();
+			//frmatendimento.Anchor = AnchorStyles.Bottom;
+
 		}
 
 		private void tsbtnSair_Click(object sender, EventArgs e)
@@ -73,9 +75,6 @@ namespace frmMenuPrincipal
             }
         }
 
-        private void TimerMenuPrincipal_Tick(object sender, EventArgs e)
-        {
-            tslHora.Text = DateTime.Now.ToString();
-        }
+        
     }
 }
