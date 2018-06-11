@@ -24,7 +24,7 @@ namespace frmMenuPrincipal
             frmCadastros.MdiParent = this;
             frmCadastros.Show();
             frmCadastros.Anchor = AnchorStyles.Bottom;
-
+            tslHora.Text = DateTime.Now.ToShortDateString() + " " +  DateTime.Now.ToLongTimeString();
 		}
 
 		private void tsbtnSair_Click(object sender, EventArgs e)
@@ -73,5 +73,9 @@ namespace frmMenuPrincipal
             }
         }
 
-	}
+        private void TimerMenuPrincipal_Tick(object sender, EventArgs e)
+        {
+            tslHora.Text = DateTime.Now.ToString();
+        }
+    }
 }
