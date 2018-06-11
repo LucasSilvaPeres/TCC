@@ -20,10 +20,10 @@ namespace frmMenuPrincipal
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-            frmCadastroAtendimento frmatendimento = new frmCadastroAtendimento();
-			frmatendimento.MdiParent = this;
-			frmatendimento.Show();
-			frmatendimento.Anchor = AnchorStyles.Bottom;
+            frmCadPrincipais frmCadastros = new frmCadPrincipais();
+            frmCadastros.MdiParent = this;
+            frmCadastros.Show();
+            frmCadastros.Anchor = AnchorStyles.Bottom;
 
 		}
 
