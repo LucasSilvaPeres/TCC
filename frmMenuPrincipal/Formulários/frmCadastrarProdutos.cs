@@ -34,12 +34,18 @@ namespace frmMenuPrincipal.Formulários
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
         {
-            foreach (Control item in pnlCampos.Controls)
+            try
             {
-                if(item is TextBox)
+                foreach (Control item in pnlCampos.Controls)
                 {
-                    (item as TextBox).Clear();
+                    if (item is TextBox)
+                    {
+                        (item as TextBox).Clear();
+                    }
                 }
+            }catch(Exception ex)
+            {
+                throw ex;
             }
         }
 

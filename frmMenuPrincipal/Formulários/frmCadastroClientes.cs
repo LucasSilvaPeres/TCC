@@ -23,5 +23,31 @@ namespace frmMenuPrincipal.Formulários
 			this.clienteTableAdapter.Fill(this.dsPrincipal.Cliente);
 
 		}
-	}
+
+        private void btnLimparCampos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (Control item in pnlCampos.Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        (item as TextBox).Clear();
+                    }
+                    if(item is MaskedTextBox)
+                    {
+                        (item as MaskedTextBox).Clear();
+                    }
+                    if(item is DateTimePicker)
+                    {
+                        dtpDataNascimento.Value = DateTime.Now;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    }
 }

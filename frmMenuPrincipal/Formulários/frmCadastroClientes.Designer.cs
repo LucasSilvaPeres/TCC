@@ -40,13 +40,9 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtCPFouCNPJ = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtGastos = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -68,16 +64,22 @@
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
             this.clienteTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ClienteTableAdapter();
-            this.pnlCPFouCNPJ = new System.Windows.Forms.Panel();
+            this.pnlIdentidade = new System.Windows.Forms.Panel();
             this.rbCNPJ = new System.Windows.Forms.RadioButton();
             this.rbCPF = new System.Windows.Forms.RadioButton();
+            this.pnlCampos = new System.Windows.Forms.Panel();
+            this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
-            this.pnlCPFouCNPJ.SuspendLayout();
+            this.pnlIdentidade.SuspendLayout();
+            this.pnlCampos.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialLabel7
@@ -87,7 +89,7 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(649, 10);
+            this.materialLabel7.Location = new System.Drawing.Point(614, 13);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(68, 19);
@@ -101,7 +103,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(649, 36);
+            this.materialLabel8.Location = new System.Drawing.Point(614, 39);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(56, 19);
@@ -115,7 +117,7 @@
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(649, 62);
+            this.materialLabel9.Location = new System.Drawing.Point(614, 65);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
             this.materialLabel9.Size = new System.Drawing.Size(51, 19);
@@ -129,7 +131,7 @@
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.Location = new System.Drawing.Point(648, 137);
+            this.materialLabel10.Location = new System.Drawing.Point(613, 140);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
             this.materialLabel10.Size = new System.Drawing.Size(57, 19);
@@ -139,7 +141,7 @@
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(275, 85);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(268, 88);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(89, 20);
             this.dtpDataNascimento.TabIndex = 85;
@@ -150,7 +152,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(12, 35);
+            this.materialLabel6.Location = new System.Drawing.Point(5, 38);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(50, 19);
@@ -163,7 +165,7 @@
             this.lblCPFouCNPJ.Depth = 0;
             this.lblCPFouCNPJ.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblCPFouCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCPFouCNPJ.Location = new System.Drawing.Point(12, 61);
+            this.lblCPFouCNPJ.Location = new System.Drawing.Point(5, 64);
             this.lblCPFouCNPJ.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCPFouCNPJ.Name = "lblCPFouCNPJ";
             this.lblCPFouCNPJ.Size = new System.Drawing.Size(80, 19);
@@ -176,7 +178,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(12, 87);
+            this.materialLabel4.Location = new System.Drawing.Point(5, 90);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(146, 19);
@@ -189,7 +191,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(12, 112);
+            this.materialLabel3.Location = new System.Drawing.Point(5, 115);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(72, 19);
@@ -202,7 +204,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(13, 138);
+            this.materialLabel2.Location = new System.Drawing.Point(6, 141);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(49, 19);
@@ -215,77 +217,46 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 9);
+            this.materialLabel1.Location = new System.Drawing.Point(5, 12);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(93, 19);
             this.materialLabel1.TabIndex = 79;
             this.materialLabel1.Text = "Id do Cliente";
             // 
-            // txtCPFouCNPJ
-            // 
-            this.txtCPFouCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCPFouCNPJ.Location = new System.Drawing.Point(164, 63);
-            this.txtCPFouCNPJ.Name = "txtCPFouCNPJ";
-            this.txtCPFouCNPJ.Size = new System.Drawing.Size(200, 20);
-            this.txtCPFouCNPJ.TabIndex = 75;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCelular.Location = new System.Drawing.Point(736, 35);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(200, 20);
-            this.txtCelular.TabIndex = 76;
-            // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(736, 61);
+            this.txtEmail.Location = new System.Drawing.Point(710, 64);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
             this.txtEmail.TabIndex = 77;
             // 
-            // txtGastos
-            // 
-            this.txtGastos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGastos.Location = new System.Drawing.Point(736, 138);
-            this.txtGastos.Name = "txtGastos";
-            this.txtGastos.Size = new System.Drawing.Size(200, 20);
-            this.txtGastos.TabIndex = 78;
-            // 
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(164, 8);
+            this.txtId.Location = new System.Drawing.Point(157, 11);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(200, 20);
             this.txtId.TabIndex = 70;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(164, 34);
+            this.txtNome.Location = new System.Drawing.Point(157, 37);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(200, 20);
             this.txtNome.TabIndex = 71;
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(736, 9);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(200, 20);
-            this.txtTelefone.TabIndex = 72;
-            // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(164, 111);
+            this.txtEndereco.Location = new System.Drawing.Point(157, 114);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(200, 20);
             this.txtEndereco.TabIndex = 73;
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(164, 137);
+            this.txtBairro.Location = new System.Drawing.Point(157, 140);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(200, 20);
             this.txtBairro.TabIndex = 74;
@@ -333,6 +304,7 @@
             this.btnLimparCampos.TabIndex = 3;
             this.btnLimparCampos.Text = "Limpar Campos";
             this.btnLimparCampos.UseVisualStyleBackColor = true;
+            this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
             // 
             // panel1
             // 
@@ -462,29 +434,29 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // pnlCPFouCNPJ
+            // pnlIdentidade
             // 
-            this.pnlCPFouCNPJ.Controls.Add(this.rbCNPJ);
-            this.pnlCPFouCNPJ.Controls.Add(this.rbCPF);
-            this.pnlCPFouCNPJ.Location = new System.Drawing.Point(460, 87);
-            this.pnlCPFouCNPJ.Name = "pnlCPFouCNPJ";
-            this.pnlCPFouCNPJ.Size = new System.Drawing.Size(58, 45);
-            this.pnlCPFouCNPJ.TabIndex = 93;
+            this.pnlIdentidade.Controls.Add(this.rbCNPJ);
+            this.pnlIdentidade.Controls.Add(this.rbCPF);
+            this.pnlIdentidade.Location = new System.Drawing.Point(249, 62);
+            this.pnlIdentidade.Name = "pnlIdentidade";
+            this.pnlIdentidade.Size = new System.Drawing.Size(108, 21);
+            this.pnlIdentidade.TabIndex = 93;
             // 
             // rbCNPJ
             // 
             this.rbCNPJ.AutoSize = true;
-            this.rbCNPJ.Location = new System.Drawing.Point(3, 26);
+            this.rbCNPJ.Location = new System.Drawing.Point(54, 2);
             this.rbCNPJ.Name = "rbCNPJ";
             this.rbCNPJ.Size = new System.Drawing.Size(52, 17);
             this.rbCNPJ.TabIndex = 13;
-            this.rbCNPJ.TabStop = true;
             this.rbCNPJ.Text = "CNPJ";
             this.rbCNPJ.UseVisualStyleBackColor = true;
             // 
             // rbCPF
             // 
             this.rbCPF.AutoSize = true;
+            this.rbCPF.Checked = true;
             this.rbCPF.Location = new System.Drawing.Point(3, 2);
             this.rbCPF.Name = "rbCPF";
             this.rbCPF.Size = new System.Drawing.Size(45, 17);
@@ -493,35 +465,75 @@
             this.rbCPF.Text = "CPF";
             this.rbCPF.UseVisualStyleBackColor = true;
             // 
+            // pnlCampos
+            // 
+            this.pnlCampos.Controls.Add(this.maskedTextBox3);
+            this.pnlCampos.Controls.Add(this.maskedTextBox2);
+            this.pnlCampos.Controls.Add(this.maskedTextBox1);
+            this.pnlCampos.Controls.Add(this.txtIdentidade);
+            this.pnlCampos.Controls.Add(this.pnlIdentidade);
+            this.pnlCampos.Controls.Add(this.materialLabel7);
+            this.pnlCampos.Controls.Add(this.materialLabel8);
+            this.pnlCampos.Controls.Add(this.materialLabel9);
+            this.pnlCampos.Controls.Add(this.materialLabel10);
+            this.pnlCampos.Controls.Add(this.dtpDataNascimento);
+            this.pnlCampos.Controls.Add(this.materialLabel6);
+            this.pnlCampos.Controls.Add(this.lblCPFouCNPJ);
+            this.pnlCampos.Controls.Add(this.materialLabel4);
+            this.pnlCampos.Controls.Add(this.materialLabel3);
+            this.pnlCampos.Controls.Add(this.materialLabel2);
+            this.pnlCampos.Controls.Add(this.materialLabel1);
+            this.pnlCampos.Controls.Add(this.txtEmail);
+            this.pnlCampos.Controls.Add(this.txtId);
+            this.pnlCampos.Controls.Add(this.txtNome);
+            this.pnlCampos.Controls.Add(this.txtEndereco);
+            this.pnlCampos.Controls.Add(this.txtBairro);
+            this.pnlCampos.Location = new System.Drawing.Point(16, 12);
+            this.pnlCampos.Name = "pnlCampos";
+            this.pnlCampos.Size = new System.Drawing.Size(920, 169);
+            this.pnlCampos.TabIndex = 94;
+            // 
+            // txtIdentidade
+            // 
+            this.txtIdentidade.Location = new System.Drawing.Point(157, 64);
+            this.txtIdentidade.Mask = "000.000.000-00";
+            this.txtIdentidade.Name = "txtIdentidade";
+            this.txtIdentidade.Size = new System.Drawing.Size(83, 20);
+            this.txtIdentidade.TabIndex = 94;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(710, 14);
+            this.maskedTextBox1.Mask = "(99)09999-9999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBox1.TabIndex = 95;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(710, 38);
+            this.maskedTextBox2.Mask = "(99)09999-9999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBox2.TabIndex = 96;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(710, 139);
+            this.maskedTextBox3.Mask = "$ 0000.0000,00";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBox3.TabIndex = 97;
+            // 
             // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 610);
-            this.Controls.Add(this.pnlCPFouCNPJ);
+            this.Controls.Add(this.pnlCampos);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.materialLabel7);
-            this.Controls.Add(this.materialLabel8);
-            this.Controls.Add(this.materialLabel9);
-            this.Controls.Add(this.materialLabel10);
-            this.Controls.Add(this.dtpDataNascimento);
-            this.Controls.Add(this.materialLabel6);
-            this.Controls.Add(this.lblCPFouCNPJ);
-            this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.txtCPFouCNPJ);
-            this.Controls.Add(this.txtCelular);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtGastos);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtBairro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastroClientes";
             this.Text = "frmCadastroClientes";
@@ -532,10 +544,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
-            this.pnlCPFouCNPJ.ResumeLayout(false);
-            this.pnlCPFouCNPJ.PerformLayout();
+            this.pnlIdentidade.ResumeLayout(false);
+            this.pnlIdentidade.PerformLayout();
+            this.pnlCampos.ResumeLayout(false);
+            this.pnlCampos.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -552,13 +565,9 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.TextBox txtCPFouCNPJ;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtGastos;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtBairro;
         public System.Windows.Forms.Panel panel4;
@@ -580,8 +589,13 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn celularClienteDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn emailClienteDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn pagamentosClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel pnlCPFouCNPJ;
+        private System.Windows.Forms.Panel pnlIdentidade;
         private System.Windows.Forms.RadioButton rbCNPJ;
         private System.Windows.Forms.RadioButton rbCPF;
+        private System.Windows.Forms.Panel pnlCampos;
+        private System.Windows.Forms.MaskedTextBox txtIdentidade;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

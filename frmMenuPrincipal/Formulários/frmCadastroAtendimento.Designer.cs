@@ -54,9 +54,6 @@
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlProdutos = new System.Windows.Forms.Panel();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
-            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoqueProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtPreço = new System.Windows.Forms.TextBox();
@@ -65,6 +62,11 @@
             this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
             this.produtoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ProdutoTableAdapter();
             this.servicoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ServicoTableAdapter();
+            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estoqueProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoUsado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Realizado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             lblIdAtendimento = new System.Windows.Forms.Label();
             lblPrecoAtendimento = new System.Windows.Forms.Label();
             this.pnlDataGridView.SuspendLayout();
@@ -268,7 +270,8 @@
             this.dgvServico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idServicoDataGridViewTextBoxColumn1,
             this.nomeServicoDataGridViewTextBoxColumn,
-            this.precoServicoDataGridViewTextBoxColumn});
+            this.precoServicoDataGridViewTextBoxColumn,
+            this.Realizado});
             this.dgvServico.DataSource = this.servicoBindingSource;
             this.dgvServico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvServico.Location = new System.Drawing.Point(0, 0);
@@ -328,7 +331,8 @@
             this.dgvProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProdutoDataGridViewTextBoxColumn,
             this.nomeProdutoDataGridViewTextBoxColumn,
-            this.estoqueProdutoDataGridViewTextBoxColumn});
+            this.estoqueProdutoDataGridViewTextBoxColumn,
+            this.produtoUsado});
             this.dgvProduto.DataSource = this.produtoBindingSource;
             this.dgvProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduto.Location = new System.Drawing.Point(0, 0);
@@ -336,33 +340,6 @@
             this.dgvProduto.ReadOnly = true;
             this.dgvProduto.Size = new System.Drawing.Size(424, 203);
             this.dgvProduto.TabIndex = 0;
-            // 
-            // idProdutoDataGridViewTextBoxColumn
-            // 
-            this.idProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
-            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Id do produto";
-            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
-            this.idProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "nomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            this.nomeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // estoqueProdutoDataGridViewTextBoxColumn
-            // 
-            this.estoqueProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.estoqueProdutoDataGridViewTextBoxColumn.DataPropertyName = "estoqueProduto";
-            this.estoqueProdutoDataGridViewTextBoxColumn.HeaderText = "Estoque";
-            this.estoqueProdutoDataGridViewTextBoxColumn.Name = "estoqueProdutoDataGridViewTextBoxColumn";
-            this.estoqueProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estoqueProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // produtoBindingSource
             // 
@@ -423,6 +400,46 @@
             // servicoTableAdapter
             // 
             this.servicoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idProdutoDataGridViewTextBoxColumn
+            // 
+            this.idProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
+            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Id do produto";
+            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
+            this.idProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nomeProdutoDataGridViewTextBoxColumn
+            // 
+            this.nomeProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "nomeProduto";
+            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
+            this.nomeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // estoqueProdutoDataGridViewTextBoxColumn
+            // 
+            this.estoqueProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.estoqueProdutoDataGridViewTextBoxColumn.DataPropertyName = "estoqueProduto";
+            this.estoqueProdutoDataGridViewTextBoxColumn.HeaderText = "Estoque";
+            this.estoqueProdutoDataGridViewTextBoxColumn.Name = "estoqueProdutoDataGridViewTextBoxColumn";
+            this.estoqueProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.estoqueProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // produtoUsado
+            // 
+            this.produtoUsado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.produtoUsado.HeaderText = "Usado";
+            this.produtoUsado.Name = "produtoUsado";
+            this.produtoUsado.ReadOnly = true;
+            // 
+            // Realizado
+            // 
+            this.Realizado.HeaderText = "Realizado";
+            this.Realizado.Name = "Realizado";
+            this.Realizado.ReadOnly = true;
             // 
             // frmCadastroAtendimento
             // 
@@ -489,8 +506,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idServicoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeServicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoServicoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Realizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estoqueProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn produtoUsado;
     }
 }
