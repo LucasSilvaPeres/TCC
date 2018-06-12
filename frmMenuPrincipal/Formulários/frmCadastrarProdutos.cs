@@ -32,6 +32,20 @@ namespace frmMenuPrincipal.Formulários
 
         }
 
-        
+        private void btnLimparCampos_Click(object sender, EventArgs e)
+        {
+            foreach (Control item in pnlCampos.Controls)
+            {
+                if(item is TextBox)
+                {
+                    (item as TextBox).Clear();
+                }
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
