@@ -68,10 +68,10 @@
             this.rbCNPJ = new System.Windows.Forms.RadioButton();
             this.rbCPF = new System.Windows.Forms.RadioButton();
             this.pnlCampos = new System.Windows.Forms.Panel();
-            this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -143,8 +143,8 @@
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNascimento.Location = new System.Drawing.Point(268, 88);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(89, 20);
-            this.dtpDataNascimento.TabIndex = 85;
+            this.dtpDataNascimento.Size = new System.Drawing.Size(108, 20);
+            this.dtpDataNascimento.TabIndex = 4;
             // 
             // materialLabel6
             // 
@@ -230,36 +230,36 @@
             this.txtEmail.Location = new System.Drawing.Point(710, 64);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 77;
+            this.txtEmail.TabIndex = 9;
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(157, 11);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(200, 20);
+            this.txtId.Size = new System.Drawing.Size(219, 20);
             this.txtId.TabIndex = 70;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(157, 37);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(200, 20);
-            this.txtNome.TabIndex = 71;
+            this.txtNome.Size = new System.Drawing.Size(219, 20);
+            this.txtNome.TabIndex = 1;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(157, 114);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(200, 20);
-            this.txtEndereco.TabIndex = 73;
+            this.txtEndereco.Size = new System.Drawing.Size(219, 20);
+            this.txtEndereco.TabIndex = 5;
             // 
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(157, 140);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(200, 20);
-            this.txtBairro.TabIndex = 74;
+            this.txtBairro.Size = new System.Drawing.Size(219, 20);
+            this.txtBairro.TabIndex = 6;
             // 
             // panel4
             // 
@@ -279,7 +279,7 @@
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Primary = true;
             this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
-            this.btnConfirmar.TabIndex = 2;
+            this.btnConfirmar.TabIndex = 11;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
@@ -301,7 +301,7 @@
             this.btnLimparCampos.Name = "btnLimparCampos";
             this.btnLimparCampos.Primary = true;
             this.btnLimparCampos.Size = new System.Drawing.Size(126, 36);
-            this.btnLimparCampos.TabIndex = 3;
+            this.btnLimparCampos.TabIndex = 12;
             this.btnLimparCampos.Text = "Limpar Campos";
             this.btnLimparCampos.UseVisualStyleBackColor = true;
             this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
@@ -438,10 +438,10 @@
             // 
             this.pnlIdentidade.Controls.Add(this.rbCNPJ);
             this.pnlIdentidade.Controls.Add(this.rbCPF);
-            this.pnlIdentidade.Location = new System.Drawing.Point(249, 62);
+            this.pnlIdentidade.Location = new System.Drawing.Point(268, 61);
             this.pnlIdentidade.Name = "pnlIdentidade";
             this.pnlIdentidade.Size = new System.Drawing.Size(108, 21);
-            this.pnlIdentidade.TabIndex = 93;
+            this.pnlIdentidade.TabIndex = 3;
             // 
             // rbCNPJ
             // 
@@ -460,10 +460,11 @@
             this.rbCPF.Location = new System.Drawing.Point(3, 2);
             this.rbCPF.Name = "rbCPF";
             this.rbCPF.Size = new System.Drawing.Size(45, 17);
-            this.rbCPF.TabIndex = 12;
+            this.rbCPF.TabIndex = 3;
             this.rbCPF.TabStop = true;
             this.rbCPF.Text = "CPF";
             this.rbCPF.UseVisualStyleBackColor = true;
+            this.rbCPF.CheckedChanged += new System.EventHandler(this.rbCPF_CheckedChanged);
             // 
             // pnlCampos
             // 
@@ -493,21 +494,13 @@
             this.pnlCampos.Size = new System.Drawing.Size(920, 169);
             this.pnlCampos.TabIndex = 94;
             // 
-            // txtIdentidade
+            // maskedTextBox3
             // 
-            this.txtIdentidade.Location = new System.Drawing.Point(157, 64);
-            this.txtIdentidade.Mask = "000.000.000-00";
-            this.txtIdentidade.Name = "txtIdentidade";
-            this.txtIdentidade.Size = new System.Drawing.Size(83, 20);
-            this.txtIdentidade.TabIndex = 94;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(710, 14);
-            this.maskedTextBox1.Mask = "(99)09999-9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBox1.TabIndex = 95;
+            this.maskedTextBox3.Location = new System.Drawing.Point(710, 139);
+            this.maskedTextBox3.Mask = "$ 0000.0000,00";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBox3.TabIndex = 10;
             // 
             // maskedTextBox2
             // 
@@ -515,15 +508,23 @@
             this.maskedTextBox2.Mask = "(99)09999-9999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBox2.TabIndex = 96;
+            this.maskedTextBox2.TabIndex = 8;
             // 
-            // maskedTextBox3
+            // maskedTextBox1
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(710, 139);
-            this.maskedTextBox3.Mask = "$ 0000.0000,00";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBox3.TabIndex = 97;
+            this.maskedTextBox1.Location = new System.Drawing.Point(710, 14);
+            this.maskedTextBox1.Mask = "(99)09999-9999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBox1.TabIndex = 7;
+            // 
+            // txtIdentidade
+            // 
+            this.txtIdentidade.Location = new System.Drawing.Point(157, 64);
+            this.txtIdentidade.Mask = "999,999,999-99";
+            this.txtIdentidade.Name = "txtIdentidade";
+            this.txtIdentidade.Size = new System.Drawing.Size(82, 20);
+            this.txtIdentidade.TabIndex = 2;
             // 
             // frmCadastroClientes
             // 

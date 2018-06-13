@@ -21,8 +21,10 @@ namespace frmMenuPrincipal.Formulários
 		{
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Cliente'. Você pode movê-la ou removê-la conforme necessário.
 			this.clienteTableAdapter.Fill(this.dsPrincipal.Cliente);
+            rbCPF.Checked = true;
+            
 
-		}
+        }
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
         {
@@ -49,5 +51,23 @@ namespace frmMenuPrincipal.Formulários
                 throw ex;
             }
         }
+
+        private void rbCPF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCPF.Checked)
+            {
+                txtIdentidade.Mask = "999,999,999-99";
+                txtIdentidade.Size = new Size(82, 20);
+            }
+            else
+            {
+                txtIdentidade.Mask = "99,999,999/9999-99";
+                txtIdentidade.Size = new Size(105, 20);
+
+
+            }
+        }
+
+        
     }
 }

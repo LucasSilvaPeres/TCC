@@ -55,6 +55,7 @@
             this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlCampos = new System.Windows.Forms.Panel();
+            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.txtIdFuncionario = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
@@ -62,11 +63,10 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtSalário = new System.Windows.Forms.TextBox();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.funcionarioTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.FuncionarioTableAdapter();
             this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
-            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             idFuncionarioLabel = new System.Windows.Forms.Label();
             telefoneFuncionarioLabel = new System.Windows.Forms.Label();
             enderecoFuncionarioLabel = new System.Windows.Forms.Label();
@@ -106,7 +106,7 @@
             // enderecoFuncionarioLabel
             // 
             enderecoFuncionarioLabel.AutoSize = true;
-            enderecoFuncionarioLabel.Location = new System.Drawing.Point(23, 148);
+            enderecoFuncionarioLabel.Location = new System.Drawing.Point(24, 147);
             enderecoFuncionarioLabel.Name = "enderecoFuncionarioLabel";
             enderecoFuncionarioLabel.Size = new System.Drawing.Size(53, 13);
             enderecoFuncionarioLabel.TabIndex = 4;
@@ -142,7 +142,7 @@
             // pagamentoFuncionarioLabel
             // 
             pagamentoFuncionarioLabel.AutoSize = true;
-            pagamentoFuncionarioLabel.Location = new System.Drawing.Point(483, 54);
+            pagamentoFuncionarioLabel.Location = new System.Drawing.Point(552, 55);
             pagamentoFuncionarioLabel.Name = "pagamentoFuncionarioLabel";
             pagamentoFuncionarioLabel.Size = new System.Drawing.Size(39, 13);
             pagamentoFuncionarioLabel.TabIndex = 12;
@@ -321,6 +321,7 @@
             this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCampos.Controls.Add(this.maskedTextBox1);
             this.pnlCampos.Controls.Add(this.dtpDataNascimento);
             this.pnlCampos.Controls.Add(idFuncionarioLabel);
             this.pnlCampos.Controls.Add(this.txtIdFuncionario);
@@ -337,12 +338,19 @@
             this.pnlCampos.Controls.Add(pagamentoFuncionarioLabel);
             this.pnlCampos.Controls.Add(this.txtSalário);
             this.pnlCampos.Controls.Add(identidadeFuncionarioLabel);
-            this.pnlCampos.Controls.Add(this.txtCPF);
             this.pnlCampos.Controls.Add(nascFuncionarioLabel);
             this.pnlCampos.Location = new System.Drawing.Point(4, 5);
             this.pnlCampos.Name = "pnlCampos";
             this.pnlCampos.Size = new System.Drawing.Size(940, 299);
             this.pnlCampos.TabIndex = 9;
+            // 
+            // dtpDataNascimento
+            // 
+            this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNascimento.Location = new System.Drawing.Point(243, 111);
+            this.dtpDataNascimento.Name = "dtpDataNascimento";
+            this.dtpDataNascimento.Size = new System.Drawing.Size(108, 20);
+            this.dtpDataNascimento.TabIndex = 3;
             // 
             // txtIdFuncionario
             // 
@@ -351,7 +359,7 @@
             this.txtIdFuncionario.Location = new System.Drawing.Point(150, 5);
             this.txtIdFuncionario.Name = "txtIdFuncionario";
             this.txtIdFuncionario.Size = new System.Drawing.Size(782, 20);
-            this.txtIdFuncionario.TabIndex = 1;
+            this.txtIdFuncionario.TabIndex = 111;
             // 
             // txtTelefone
             // 
@@ -359,7 +367,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(150, 206);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(200, 20);
-            this.txtTelefone.TabIndex = 3;
+            this.txtTelefone.TabIndex = 6;
             // 
             // txtEndereco
             // 
@@ -367,7 +375,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(150, 144);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(200, 20);
-            this.txtEndereco.TabIndex = 5;
+            this.txtEndereco.TabIndex = 4;
             // 
             // txtNome
             // 
@@ -375,7 +383,7 @@
             this.txtNome.Location = new System.Drawing.Point(150, 51);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(200, 20);
-            this.txtNome.TabIndex = 7;
+            this.txtNome.TabIndex = 1;
             // 
             // txtBairro
             // 
@@ -383,7 +391,7 @@
             this.txtBairro.Location = new System.Drawing.Point(151, 175);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(200, 20);
-            this.txtBairro.TabIndex = 9;
+            this.txtBairro.TabIndex = 5;
             // 
             // txtCelular
             // 
@@ -391,7 +399,7 @@
             this.txtCelular.Location = new System.Drawing.Point(151, 237);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(200, 20);
-            this.txtCelular.TabIndex = 11;
+            this.txtCelular.TabIndex = 7;
             // 
             // txtSalário
             // 
@@ -399,15 +407,7 @@
             this.txtSalário.Location = new System.Drawing.Point(610, 51);
             this.txtSalário.Name = "txtSalário";
             this.txtSalário.Size = new System.Drawing.Size(200, 20);
-            this.txtSalário.TabIndex = 13;
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "identidadeFuncionario", true));
-            this.txtCPF.Location = new System.Drawing.Point(150, 82);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(200, 20);
-            this.txtCPF.TabIndex = 15;
+            this.txtSalário.TabIndex = 8;
             // 
             // panel2
             // 
@@ -438,13 +438,13 @@
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // dtpDataNascimento
+            // maskedTextBox1
             // 
-            this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(273, 111);
-            this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(77, 20);
-            this.dtpDataNascimento.TabIndex = 17;
+            this.maskedTextBox1.Location = new System.Drawing.Point(268, 79);
+            this.maskedTextBox1.Mask = "999,999,999-99";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(82, 20);
+            this.maskedTextBox1.TabIndex = 2;
             // 
             // frmCadastroFuncionários
             // 
@@ -499,8 +499,8 @@
 		private System.Windows.Forms.TextBox txtBairro;
 		private System.Windows.Forms.TextBox txtCelular;
 		private System.Windows.Forms.TextBox txtSalário;
-		private System.Windows.Forms.TextBox txtCPF;
 		private Dados.dsPrincipalTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

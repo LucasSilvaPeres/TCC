@@ -17,7 +17,7 @@ namespace frmMenuPrincipal
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new frmCadastrarProdutos());
+			Application.Run(new frmCadastroClientes());
 		}
 	}
 }
