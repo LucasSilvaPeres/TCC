@@ -28,93 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvBancoForm = new System.Windows.Forms.DataGridView();
-            this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlCampos = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).BeginInit();
+            this.btnAtendimento = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnFornecimento = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnProduto = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnFornecedor = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnServico = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCliente = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dgvBancoForm);
-            this.panel1.Location = new System.Drawing.Point(12, 372);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 265);
-            this.panel1.TabIndex = 0;
-            // 
-            // dgvBancoForm
-            // 
-            this.dgvBancoForm.AllowUserToAddRows = false;
-            this.dgvBancoForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBancoForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
-            this.dgvBancoForm.Name = "dgvBancoForm";
-            this.dgvBancoForm.ReadOnly = true;
-            this.dgvBancoForm.Size = new System.Drawing.Size(940, 265);
-            this.dgvBancoForm.TabIndex = 0;
-            // 
-            // btnLimparCampos
-            // 
-            this.btnLimparCampos.Depth = 0;
-            this.btnLimparCampos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLimparCampos.Location = new System.Drawing.Point(0, 0);
-            this.btnLimparCampos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLimparCampos.Name = "btnLimparCampos";
-            this.btnLimparCampos.Primary = true;
-            this.btnLimparCampos.Size = new System.Drawing.Size(152, 33);
-            this.btnLimparCampos.TabIndex = 3;
-            this.btnLimparCampos.Text = "Limpar Campos";
-            this.btnLimparCampos.UseVisualStyleBackColor = true;
-            // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.Depth = 0;
-            this.btnConfirmar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnConfirmar.Location = new System.Drawing.Point(0, 0);
-            this.btnConfirmar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Primary = true;
-            this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
-            this.btnConfirmar.TabIndex = 2;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.Controls.Add(this.btnLimparCampos);
-            this.panel2.Location = new System.Drawing.Point(12, 333);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(152, 33);
-            this.panel2.TabIndex = 4;
-            // 
-            // pnlCampos
-            // 
-            this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlCampos.Location = new System.Drawing.Point(12, 65);
-            this.pnlCampos.Name = "pnlCampos";
-            this.pnlCampos.Size = new System.Drawing.Size(940, 258);
-            this.pnlCampos.TabIndex = 5;
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Controls.Add(this.btnAtendimento);
+            this.panel2.Controls.Add(this.btnFornecimento);
+            this.panel2.Controls.Add(this.btnProduto);
+            this.panel2.Controls.Add(this.btnFornecedor);
+            this.panel2.Controls.Add(this.btnServico);
+            this.panel2.Controls.Add(this.btnCliente);
+            this.panel2.ForeColor = System.Drawing.Color.Silver;
+            this.panel2.Location = new System.Drawing.Point(-160, -10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1284, 669);
+            this.panel2.TabIndex = 15;
             // 
-            // panel4
+            // btnAtendimento
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.btnConfirmar);
-            this.panel4.Location = new System.Drawing.Point(830, 334);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(122, 32);
-            this.panel4.TabIndex = 6;
+            this.btnAtendimento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAtendimento.Depth = 0;
+            this.btnAtendimento.Location = new System.Drawing.Point(417, 337);
+            this.btnAtendimento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAtendimento.Name = "btnAtendimento";
+            this.btnAtendimento.Primary = true;
+            this.btnAtendimento.Size = new System.Drawing.Size(450, 250);
+            this.btnAtendimento.TabIndex = 23;
+            this.btnAtendimento.Text = "Atendimento";
+            this.btnAtendimento.UseVisualStyleBackColor = true;
+            // 
+            // btnFornecimento
+            // 
+            this.btnFornecimento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFornecimento.Depth = 0;
+            this.btnFornecimento.Location = new System.Drawing.Point(873, 337);
+            this.btnFornecimento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFornecimento.Name = "btnFornecimento";
+            this.btnFornecimento.Primary = true;
+            this.btnFornecimento.Size = new System.Drawing.Size(450, 250);
+            this.btnFornecimento.TabIndex = 22;
+            this.btnFornecimento.Text = "Fornecimento";
+            this.btnFornecimento.UseVisualStyleBackColor = true;
+            // 
+            // btnProduto
+            // 
+            this.btnProduto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProduto.Depth = 0;
+            this.btnProduto.Location = new System.Drawing.Point(-39, 337);
+            this.btnProduto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnProduto.Name = "btnProduto";
+            this.btnProduto.Primary = true;
+            this.btnProduto.Size = new System.Drawing.Size(450, 250);
+            this.btnProduto.TabIndex = 21;
+            this.btnProduto.Text = "Produto";
+            this.btnProduto.UseVisualStyleBackColor = true;
+            // 
+            // btnFornecedor
+            // 
+            this.btnFornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFornecedor.Depth = 0;
+            this.btnFornecedor.Location = new System.Drawing.Point(873, 81);
+            this.btnFornecedor.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Primary = true;
+            this.btnFornecedor.Size = new System.Drawing.Size(450, 250);
+            this.btnFornecedor.TabIndex = 19;
+            this.btnFornecedor.Text = "Fornecedor";
+            this.btnFornecedor.UseVisualStyleBackColor = true;
+            // 
+            // btnServico
+            // 
+            this.btnServico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnServico.Depth = 0;
+            this.btnServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServico.Location = new System.Drawing.Point(417, 81);
+            this.btnServico.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnServico.Name = "btnServico";
+            this.btnServico.Primary = true;
+            this.btnServico.Size = new System.Drawing.Size(450, 250);
+            this.btnServico.TabIndex = 18;
+            this.btnServico.Text = "Serviço";
+            this.btnServico.UseVisualStyleBackColor = true;
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCliente.Depth = 0;
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Location = new System.Drawing.Point(-39, 81);
+            this.btnCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Primary = true;
+            this.btnCliente.Size = new System.Drawing.Size(450, 250);
+            this.btnCliente.TabIndex = 17;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
             // 
             // frmBase
             // 
@@ -122,29 +142,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 649);
             this.ControlBox = false;
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.pnlCampos);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "frmBase";
             this.Text = "asvvsasa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.DataGridView dgvBancoForm;
-        public MaterialSkin.Controls.MaterialRaisedButton btnConfirmar;
-        public MaterialSkin.Controls.MaterialRaisedButton btnLimparCampos;
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Panel pnlCampos;
-        public System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
+        public MaterialSkin.Controls.MaterialRaisedButton btnAtendimento;
+        public MaterialSkin.Controls.MaterialRaisedButton btnFornecimento;
+        public MaterialSkin.Controls.MaterialRaisedButton btnProduto;
+        public MaterialSkin.Controls.MaterialRaisedButton btnFornecedor;
+        public MaterialSkin.Controls.MaterialRaisedButton btnServico;
+        public MaterialSkin.Controls.MaterialRaisedButton btnCliente;
     }
 }
