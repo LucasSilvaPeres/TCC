@@ -22,11 +22,12 @@ namespace frmMenuPrincipal
 
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-   //         frmCadPrincipais frmatendimento = new frmCadPrincipais();
+			//         frmCadPrincipais frmatendimento = new frmCadPrincipais();
 			//frmatendimento.MdiParent = this;
 			//frmatendimento.Show();
 			//frmatendimento.Anchor = AnchorStyles.Bottom;
-
+			tslHora.Text = DateTime.Now.ToString();
+			timerHora.Enabled = true;
 		}
 
 		private void tsbtnSair_Click(object sender, EventArgs e)
@@ -75,6 +76,9 @@ namespace frmMenuPrincipal
             }
         }
 
-        
-    }
+		private void timerHora_Tick(object sender, EventArgs e)
+		{
+			tslHora.Text = DateTime.Now.ToString();
+		}
+	}
 }

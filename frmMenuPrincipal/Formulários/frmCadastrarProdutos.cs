@@ -34,8 +34,6 @@ namespace frmMenuPrincipal.Formulários
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
         {
-            try
-            {
                 foreach (Control item in pnlCampos.Controls)
                 {
                     if (item is TextBox)
@@ -43,10 +41,6 @@ namespace frmMenuPrincipal.Formulários
                         (item as TextBox).Clear();
                     }
                 }
-            }catch(Exception ex)
-            {
-                throw ex;
-            }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

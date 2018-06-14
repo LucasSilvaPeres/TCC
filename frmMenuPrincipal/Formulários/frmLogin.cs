@@ -58,30 +58,33 @@ namespace frmMenuPrincipal.Formulários
         //        }
         //}
 
+		private void Login()
+		{
+			if (CaixasOK())
+			{
+				if (masktxtSenha.Text != "123")
+				{
+					MessageBox.Show("Senha inválida");
+					vErros++;
+					if (vErros == 3)
+					{
+						MessageBox.Show("Número de Tentativas esgotado...");
+						Close();
+					}
+				}
+				else
+				{
+					Properties.Settings.Default.NivelUsuarioLogado = 1;
+					frmMenuPrincip frmMP = new frmMenuPrincip();
+					frmMP.Show();
+					Hide();
+				}
+
+			}
+		}
         private void btnOK_Click(object sender, EventArgs e)
         {
-
-            if (CaixasOK())
-            {
-                if (masktxtSenha.Text != "123")
-                {
-                    MessageBox.Show("Senha inválida");
-                    vErros++;
-                    if (vErros == 3)
-                    {
-                        MessageBox.Show("Número de Tentativas esgotado...");
-                        Close();
-                    }
-                }
-                else
-                {
-                    Properties.Settings.Default.NivelUsuarioLogado = 1;
-                    frmMenuPrincip frmMP = new frmMenuPrincip();
-                    frmMP.Show();
-                    Hide();
-                }
-
-            }
+			Login();
         }
 
 		private void cbMostrarSenha_CheckedChanged(object sender, EventArgs e)
@@ -89,21 +92,21 @@ namespace frmMenuPrincipal.Formulários
 			if(cbMostrarSenha.Checked == true) masktxtSenha.UseSystemPasswordChar = false;
 			else masktxtSenha.UseSystemPasswordChar = true;
 		}
-
-		private void timerMostrarSenha_Tick(object sender, EventArgs e)
-		{
-			//int Cont = 0;
-			//Cont++;
-			//if (Cont == 5)
-			//{
-
-			//}
-		}
-
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.ExitThread();
         }
-
-    }
+		private void masktxtSenha_Enter(object sender, EventArgs e)
+		{
+			Login();
+		}
+		private void frmLogin_Enter(object sender, EventArgs e)
+		{
+			Login();
+		}
+		private void Login_Enter(object sender, EventArgs e)
+		{
+			Login();
+		}
+	}
 }

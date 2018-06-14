@@ -34,6 +34,20 @@ namespace frmMenuPrincipal.Formulários
 
         }
 
-        
-    }
+		private void btnLimparCampos_Click(object sender, EventArgs e)
+		{
+			foreach (Control item in pnlCampos.Controls)
+			{
+				if (item is TextBox)
+				{
+					(item as TextBox).Clear();
+				}
+				
+				if (item is DateTimePicker)
+				{
+					dtpDataFornecimento.Value = DateTime.Now;
+				}
+			}
+		}
+	}
 }

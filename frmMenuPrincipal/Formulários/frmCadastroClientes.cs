@@ -57,14 +57,12 @@ namespace frmMenuPrincipal.Formulários
             if (rbCPF.Checked)
             {
                 txtIdentidade.Mask = "999,999,999-99";
-                txtIdentidade.Size = new Size(82, 20);
+                txtIdentidade.Size = new Size(80, 20);
             }
             else
             {
                 txtIdentidade.Mask = "99,999,999/9999-99";
                 txtIdentidade.Size = new Size(105, 20);
-
-
             }
         }
 
