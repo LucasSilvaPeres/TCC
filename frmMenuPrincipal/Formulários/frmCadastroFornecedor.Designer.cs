@@ -49,6 +49,8 @@
 			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.pnlCampos = new System.Windows.Forms.Panel();
+			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+			this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
 			this.pnlCPFouCNPJ = new System.Windows.Forms.Panel();
 			this.rbCNPJ = new System.Windows.Forms.RadioButton();
 			this.rbCPF = new System.Windows.Forms.RadioButton();
@@ -59,8 +61,6 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.fornecedorTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.FornecedorTableAdapter();
 			this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
-			this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
-			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			idFornecedorLabel = new System.Windows.Forms.Label();
 			nomeFornecedorLabel = new System.Windows.Forms.Label();
 			enderecoFornecedorLabel = new System.Windows.Forms.Label();
@@ -145,6 +145,7 @@
 			// 
 			this.dgvBancoForm.AllowUserToAddRows = false;
 			this.dgvBancoForm.AutoGenerateColumns = false;
+			this.dgvBancoForm.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
 			this.dgvBancoForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvBancoForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idFornecedorDataGridViewTextBoxColumn,
@@ -260,6 +261,7 @@
 			this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlCampos.BackColor = System.Drawing.SystemColors.Control;
 			this.pnlCampos.Controls.Add(this.maskedTextBox1);
 			this.pnlCampos.Controls.Add(this.txtIdentidade);
 			this.pnlCampos.Controls.Add(this.pnlCPFouCNPJ);
@@ -277,6 +279,22 @@
 			this.pnlCampos.Name = "pnlCampos";
 			this.pnlCampos.Size = new System.Drawing.Size(940, 311);
 			this.pnlCampos.TabIndex = 9;
+			// 
+			// maskedTextBox1
+			// 
+			this.maskedTextBox1.Location = new System.Drawing.Point(402, 173);
+			this.maskedTextBox1.Mask = "(99)09999-9999";
+			this.maskedTextBox1.Name = "maskedTextBox1";
+			this.maskedTextBox1.Size = new System.Drawing.Size(92, 20);
+			this.maskedTextBox1.TabIndex = 16;
+			// 
+			// txtIdentidade
+			// 
+			this.txtIdentidade.Location = new System.Drawing.Point(402, 120);
+			this.txtIdentidade.Mask = "999,999,999-99";
+			this.txtIdentidade.Name = "txtIdentidade";
+			this.txtIdentidade.Size = new System.Drawing.Size(80, 20);
+			this.txtIdentidade.TabIndex = 15;
 			// 
 			// pnlCPFouCNPJ
 			// 
@@ -374,26 +392,11 @@
 			this.tableAdapterManager.ServicoTableAdapter = null;
 			this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
 			// 
-			// txtIdentidade
-			// 
-			this.txtIdentidade.Location = new System.Drawing.Point(402, 120);
-			this.txtIdentidade.Mask = "999,999,999-99";
-			this.txtIdentidade.Name = "txtIdentidade";
-			this.txtIdentidade.Size = new System.Drawing.Size(80, 20);
-			this.txtIdentidade.TabIndex = 15;
-			// 
-			// maskedTextBox1
-			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(402, 173);
-			this.maskedTextBox1.Mask = "(99)09999-9999";
-			this.maskedTextBox1.Name = "maskedTextBox1";
-			this.maskedTextBox1.Size = new System.Drawing.Size(92, 20);
-			this.maskedTextBox1.TabIndex = 16;
-			// 
 			// frmCadastroFornecedor
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.ClientSize = new System.Drawing.Size(964, 649);
 			this.ControlBox = false;
 			this.Controls.Add(this.panel1);
@@ -401,6 +404,7 @@
 			this.Controls.Add(this.pnlCampos);
 			this.Controls.Add(this.panel2);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.MaximizeBox = false;
 			this.Name = "frmCadastroFornecedor";
 			this.Text = "frmCadastroFornecedor";
 			this.Load += new System.EventHandler(this.frmCadastroFornecedor_Load);
