@@ -22,7 +22,6 @@ namespace frmMenuPrincipal.Formulários
         private void servicoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.servicoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsPrincipal);
 
         }

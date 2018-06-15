@@ -34,7 +34,6 @@
             System.Windows.Forms.Label precoServicoLabel;
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvBancoForm = new System.Windows.Forms.DataGridView();
-            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
             this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -46,19 +45,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.servicoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ServicoTableAdapter();
             this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
-            this.dgvTxtIdServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInfoServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idServicoLabel = new System.Windows.Forms.Label();
             nomeServicoLabel = new System.Windows.Forms.Label();
             precoServicoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.panel4.SuspendLayout();
             this.pnlCampos.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idServicoLabel
@@ -104,9 +105,10 @@
             this.dgvBancoForm.AutoGenerateColumns = false;
             this.dgvBancoForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBancoForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvTxtIdServico,
-            this.nomeServicoDataGridViewTextBoxColumn,
-            this.precoServicoDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataInfoServicoDataGridViewTextBoxColumn});
             this.dgvBancoForm.DataSource = this.servicoBindingSource;
             this.dgvBancoForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
@@ -114,11 +116,6 @@
             this.dgvBancoForm.ReadOnly = true;
             this.dgvBancoForm.Size = new System.Drawing.Size(940, 265);
             this.dgvBancoForm.TabIndex = 0;
-            // 
-            // servicoBindingSource
-            // 
-            this.servicoBindingSource.DataMember = "Servico";
-            this.servicoBindingSource.DataSource = this.dsPrincipal;
             // 
             // dsPrincipal
             // 
@@ -151,7 +148,6 @@
             this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // panel4
             // 
@@ -180,7 +176,6 @@
             // 
             // txtId
             // 
-            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "idServico", true));
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(118, 10);
             this.txtId.Name = "txtId";
@@ -189,7 +184,6 @@
             // 
             // txtServico
             // 
-            this.txtServico.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "nomeServico", true));
             this.txtServico.Location = new System.Drawing.Point(313, 124);
             this.txtServico.Name = "txtServico";
             this.txtServico.Size = new System.Drawing.Size(200, 20);
@@ -197,7 +191,6 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "precoServico", true));
             this.txtPreco.Location = new System.Drawing.Point(313, 150);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(200, 20);
@@ -232,34 +225,44 @@
             this.tableAdapterManager.ServicoTableAdapter = this.servicoTableAdapter;
             this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // dgvTxtIdServico
+            // servicoBindingSource
             // 
-            this.dgvTxtIdServico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvTxtIdServico.DataPropertyName = "idServico";
-            this.dgvTxtIdServico.HeaderText = "Id do Serviço";
-            this.dgvTxtIdServico.Name = "dgvTxtIdServico";
-            this.dgvTxtIdServico.ReadOnly = true;
+            this.servicoBindingSource.DataMember = "Servico";
+            this.servicoBindingSource.DataSource = this.dsPrincipal;
             // 
-            // nomeServicoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.nomeServicoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeServicoDataGridViewTextBoxColumn.DataPropertyName = "nomeServico";
-            this.nomeServicoDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeServicoDataGridViewTextBoxColumn.Name = "nomeServicoDataGridViewTextBoxColumn";
-            this.nomeServicoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idServico";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idServico";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // precoServicoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.precoServicoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.precoServicoDataGridViewTextBoxColumn.DataPropertyName = "precoServico";
-            this.precoServicoDataGridViewTextBoxColumn.HeaderText = "Preço";
-            this.precoServicoDataGridViewTextBoxColumn.Name = "precoServicoDataGridViewTextBoxColumn";
-            this.precoServicoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nomeServico";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nomeServico";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "precoServico";
+            this.dataGridViewTextBoxColumn3.HeaderText = "precoServico";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataInfoServicoDataGridViewTextBoxColumn
+            // 
+            this.dataInfoServicoDataGridViewTextBoxColumn.DataPropertyName = "dataInfoServico";
+            this.dataInfoServicoDataGridViewTextBoxColumn.HeaderText = "dataInfoServico";
+            this.dataInfoServicoDataGridViewTextBoxColumn.Name = "dataInfoServicoDataGridViewTextBoxColumn";
+            this.dataInfoServicoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmCadastroServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 610);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -272,12 +275,12 @@
             this.Load += new System.EventHandler(this.frmCadastroServico_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             this.panel4.ResumeLayout(false);
             this.pnlCampos.ResumeLayout(false);
             this.pnlCampos.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,14 +295,18 @@
         public System.Windows.Forms.Panel pnlCampos;
         public System.Windows.Forms.Panel panel2;
         private Dados.dsPrincipal dsPrincipal;
-        private System.Windows.Forms.BindingSource servicoBindingSource;
         private Dados.dsPrincipalTableAdapters.ServicoTableAdapter servicoTableAdapter;
         private Dados.dsPrincipalTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtServico;
         private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTxtIdServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeServicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoServicoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataInfoServicoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource servicoBindingSource;
     }
 }
