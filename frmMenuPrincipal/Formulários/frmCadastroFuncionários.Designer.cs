@@ -41,25 +41,6 @@
 			System.Windows.Forms.Label lblObs;
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.dgvBancoForm = new System.Windows.Forms.DataGridView();
-			this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
-			this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
-			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
-			this.panel4 = new System.Windows.Forms.Panel();
-			this.pnlCampos = new System.Windows.Forms.Panel();
-			this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
-			this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
-			this.txtIdFuncionario = new System.Windows.Forms.TextBox();
-			this.txtEndereco = new System.Windows.Forms.TextBox();
-			this.txtNome = new System.Windows.Forms.TextBox();
-			this.txtBairro = new System.Windows.Forms.TextBox();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.funcionarioTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.FuncionarioTableAdapter();
-			this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
-			this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-			this.txtCelular = new System.Windows.Forms.MaskedTextBox();
-			this.txtObs = new System.Windows.Forms.TextBox();
-			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.identidadeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +51,25 @@
 			this.celularFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.pagamentoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.observaçãoFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
+			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
+			this.panel4 = new System.Windows.Forms.Panel();
+			this.pnlCampos = new System.Windows.Forms.Panel();
+			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+			this.txtObs = new System.Windows.Forms.TextBox();
+			this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+			this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+			this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
+			this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
+			this.txtIdFuncionario = new System.Windows.Forms.TextBox();
+			this.txtEndereco = new System.Windows.Forms.TextBox();
+			this.txtNome = new System.Windows.Forms.TextBox();
+			this.txtBairro = new System.Windows.Forms.TextBox();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.funcionarioTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.FuncionarioTableAdapter();
+			this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
 			idFuncionarioLabel = new System.Windows.Forms.Label();
 			telefoneFuncionarioLabel = new System.Windows.Forms.Label();
 			enderecoFuncionarioLabel = new System.Windows.Forms.Label();
@@ -170,6 +170,15 @@
 			nascFuncionarioLabel.TabIndex = 16;
 			nascFuncionarioLabel.Text = "Data de Nascimento";
 			// 
+			// lblObs
+			// 
+			lblObs.AutoSize = true;
+			lblObs.Location = new System.Drawing.Point(533, 120);
+			lblObs.Name = "lblObs";
+			lblObs.Size = new System.Drawing.Size(65, 13);
+			lblObs.TabIndex = 115;
+			lblObs.Text = "Observação";
+			// 
 			// panel1
 			// 
 			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -203,201 +212,6 @@
 			this.dgvBancoForm.ReadOnly = true;
 			this.dgvBancoForm.Size = new System.Drawing.Size(940, 253);
 			this.dgvBancoForm.TabIndex = 0;
-			// 
-			// funcionarioBindingSource
-			// 
-			this.funcionarioBindingSource.DataMember = "Funcionario";
-			this.funcionarioBindingSource.DataSource = this.dsPrincipal;
-			// 
-			// dsPrincipal
-			// 
-			this.dsPrincipal.DataSetName = "dsPrincipal";
-			this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// btnLimparCampos
-			// 
-			this.btnLimparCampos.Depth = 0;
-			this.btnLimparCampos.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnLimparCampos.Location = new System.Drawing.Point(0, 0);
-			this.btnLimparCampos.MouseState = MaterialSkin.MouseState.HOVER;
-			this.btnLimparCampos.Name = "btnLimparCampos";
-			this.btnLimparCampos.Primary = true;
-			this.btnLimparCampos.Size = new System.Drawing.Size(152, 33);
-			this.btnLimparCampos.TabIndex = 3;
-			this.btnLimparCampos.Text = "Limpar Campos";
-			this.btnLimparCampos.UseVisualStyleBackColor = true;
-			this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
-			// 
-			// btnConfirmar
-			// 
-			this.btnConfirmar.Depth = 0;
-			this.btnConfirmar.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnConfirmar.Location = new System.Drawing.Point(0, 0);
-			this.btnConfirmar.MouseState = MaterialSkin.MouseState.HOVER;
-			this.btnConfirmar.Name = "btnConfirmar";
-			this.btnConfirmar.Primary = true;
-			this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
-			this.btnConfirmar.TabIndex = 2;
-			this.btnConfirmar.Text = "Confirmar";
-			this.btnConfirmar.UseVisualStyleBackColor = true;
-			// 
-			// panel4
-			// 
-			this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.panel4.Controls.Add(this.btnConfirmar);
-			this.panel4.Location = new System.Drawing.Point(822, 315);
-			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(122, 32);
-			this.panel4.TabIndex = 10;
-			// 
-			// pnlCampos
-			// 
-			this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlCampos.Controls.Add(this.maskedTextBox1);
-			this.pnlCampos.Controls.Add(lblObs);
-			this.pnlCampos.Controls.Add(this.txtObs);
-			this.pnlCampos.Controls.Add(this.txtCelular);
-			this.pnlCampos.Controls.Add(this.txtTelefone);
-			this.pnlCampos.Controls.Add(this.txtIdentidade);
-			this.pnlCampos.Controls.Add(this.dtpDataNascimento);
-			this.pnlCampos.Controls.Add(idFuncionarioLabel);
-			this.pnlCampos.Controls.Add(this.txtIdFuncionario);
-			this.pnlCampos.Controls.Add(telefoneFuncionarioLabel);
-			this.pnlCampos.Controls.Add(enderecoFuncionarioLabel);
-			this.pnlCampos.Controls.Add(this.txtEndereco);
-			this.pnlCampos.Controls.Add(nomeFuncionarioLabel);
-			this.pnlCampos.Controls.Add(this.txtNome);
-			this.pnlCampos.Controls.Add(bairroFuncionarioLabel);
-			this.pnlCampos.Controls.Add(this.txtBairro);
-			this.pnlCampos.Controls.Add(celularFuncionarioLabel);
-			this.pnlCampos.Controls.Add(pagamentoFuncionarioLabel);
-			this.pnlCampos.Controls.Add(identidadeFuncionarioLabel);
-			this.pnlCampos.Controls.Add(nascFuncionarioLabel);
-			this.pnlCampos.Location = new System.Drawing.Point(4, 5);
-			this.pnlCampos.Name = "pnlCampos";
-			this.pnlCampos.Size = new System.Drawing.Size(940, 299);
-			this.pnlCampos.TabIndex = 9;
-			// 
-			// txtIdentidade
-			// 
-			this.txtIdentidade.Location = new System.Drawing.Point(282, 79);
-			this.txtIdentidade.Mask = "999,999,999-99";
-			this.txtIdentidade.Name = "txtIdentidade";
-			this.txtIdentidade.Size = new System.Drawing.Size(80, 20);
-			this.txtIdentidade.TabIndex = 2;
-			// 
-			// dtpDataNascimento
-			// 
-			this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpDataNascimento.Location = new System.Drawing.Point(267, 110);
-			this.dtpDataNascimento.Name = "dtpDataNascimento";
-			this.dtpDataNascimento.Size = new System.Drawing.Size(95, 20);
-			this.dtpDataNascimento.TabIndex = 3;
-			// 
-			// txtIdFuncionario
-			// 
-			this.txtIdFuncionario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "idFuncionario", true));
-			this.txtIdFuncionario.Enabled = false;
-			this.txtIdFuncionario.Location = new System.Drawing.Point(150, 5);
-			this.txtIdFuncionario.Name = "txtIdFuncionario";
-			this.txtIdFuncionario.Size = new System.Drawing.Size(782, 20);
-			this.txtIdFuncionario.TabIndex = 111;
-			// 
-			// txtEndereco
-			// 
-			this.txtEndereco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "enderecoFuncionario", true));
-			this.txtEndereco.Location = new System.Drawing.Point(150, 144);
-			this.txtEndereco.Name = "txtEndereco";
-			this.txtEndereco.Size = new System.Drawing.Size(212, 20);
-			this.txtEndereco.TabIndex = 4;
-			// 
-			// txtNome
-			// 
-			this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nomeFuncionario", true));
-			this.txtNome.Location = new System.Drawing.Point(150, 51);
-			this.txtNome.Name = "txtNome";
-			this.txtNome.Size = new System.Drawing.Size(212, 20);
-			this.txtNome.TabIndex = 1;
-			// 
-			// txtBairro
-			// 
-			this.txtBairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "bairroFuncionario", true));
-			this.txtBairro.Location = new System.Drawing.Point(151, 175);
-			this.txtBairro.Name = "txtBairro";
-			this.txtBairro.Size = new System.Drawing.Size(212, 20);
-			this.txtBairro.TabIndex = 5;
-			// 
-			// panel2
-			// 
-			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.panel2.Controls.Add(this.btnLimparCampos);
-			this.panel2.Location = new System.Drawing.Point(4, 314);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(152, 33);
-			this.panel2.TabIndex = 8;
-			// 
-			// funcionarioTableAdapter
-			// 
-			this.funcionarioTableAdapter.ClearBeforeFill = true;
-			// 
-			// tableAdapterManager
-			// 
-			this.tableAdapterManager.AtendimentoTableAdapter = null;
-			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-			this.tableAdapterManager.CarroTableAdapter = null;
-			this.tableAdapterManager.ClienteTableAdapter = null;
-			this.tableAdapterManager.FornecedorTableAdapter = null;
-			this.tableAdapterManager.FornecimentoTableAdapter = null;
-			this.tableAdapterManager.FuncionarioTableAdapter = this.funcionarioTableAdapter;
-			this.tableAdapterManager.Produtos_AtendimentoTableAdapter = null;
-			this.tableAdapterManager.Produtos_FornecimentoTableAdapter = null;
-			this.tableAdapterManager.ProdutoTableAdapter = null;
-			this.tableAdapterManager.Serviços_AtendimentoTableAdapter = null;
-			this.tableAdapterManager.ServicoTableAdapter = null;
-			this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-			// 
-			// txtTelefone
-			// 
-			this.txtTelefone.Location = new System.Drawing.Point(151, 207);
-			this.txtTelefone.Mask = "(99)09999-9999";
-			this.txtTelefone.Name = "txtTelefone";
-			this.txtTelefone.Size = new System.Drawing.Size(80, 20);
-			this.txtTelefone.TabIndex = 112;
-			// 
-			// txtCelular
-			// 
-			this.txtCelular.Location = new System.Drawing.Point(282, 207);
-			this.txtCelular.Mask = "(99)09999-9999";
-			this.txtCelular.Name = "txtCelular";
-			this.txtCelular.Size = new System.Drawing.Size(80, 20);
-			this.txtCelular.TabIndex = 113;
-			// 
-			// txtObs
-			// 
-			this.txtObs.Location = new System.Drawing.Point(610, 114);
-			this.txtObs.Multiline = true;
-			this.txtObs.Name = "txtObs";
-			this.txtObs.Size = new System.Drawing.Size(200, 110);
-			this.txtObs.TabIndex = 114;
-			// 
-			// lblObs
-			// 
-			lblObs.AutoSize = true;
-			lblObs.Location = new System.Drawing.Point(533, 120);
-			lblObs.Name = "lblObs";
-			lblObs.Size = new System.Drawing.Size(65, 13);
-			lblObs.TabIndex = 115;
-			lblObs.Text = "Observação";
-			// 
-			// maskedTextBox1
-			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(610, 55);
-			this.maskedTextBox1.Mask = "$";
-			this.maskedTextBox1.Name = "maskedTextBox1";
-			this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
-			this.maskedTextBox1.TabIndex = 116;
 			// 
 			// idFuncionarioDataGridViewTextBoxColumn
 			// 
@@ -477,6 +291,192 @@
 			this.observaçãoFuncionario.Name = "observaçãoFuncionario";
 			this.observaçãoFuncionario.ReadOnly = true;
 			// 
+			// funcionarioBindingSource
+			// 
+			this.funcionarioBindingSource.DataMember = "Funcionario";
+			this.funcionarioBindingSource.DataSource = this.dsPrincipal;
+			// 
+			// dsPrincipal
+			// 
+			this.dsPrincipal.DataSetName = "dsPrincipal";
+			this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// btnLimparCampos
+			// 
+			this.btnLimparCampos.Depth = 0;
+			this.btnLimparCampos.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnLimparCampos.Location = new System.Drawing.Point(0, 0);
+			this.btnLimparCampos.MouseState = MaterialSkin.MouseState.HOVER;
+			this.btnLimparCampos.Name = "btnLimparCampos";
+			this.btnLimparCampos.Primary = true;
+			this.btnLimparCampos.Size = new System.Drawing.Size(152, 33);
+			this.btnLimparCampos.TabIndex = 3;
+			this.btnLimparCampos.Text = "Limpar Campos";
+			this.btnLimparCampos.UseVisualStyleBackColor = true;
+			this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
+			// 
+			// btnConfirmar
+			// 
+			this.btnConfirmar.Depth = 0;
+			this.btnConfirmar.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnConfirmar.Location = new System.Drawing.Point(0, 0);
+			this.btnConfirmar.MouseState = MaterialSkin.MouseState.HOVER;
+			this.btnConfirmar.Name = "btnConfirmar";
+			this.btnConfirmar.Primary = true;
+			this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
+			this.btnConfirmar.TabIndex = 2;
+			this.btnConfirmar.Text = "Confirmar";
+			this.btnConfirmar.UseVisualStyleBackColor = true;
+			// 
+			// panel4
+			// 
+			this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel4.Controls.Add(this.btnConfirmar);
+			this.panel4.Location = new System.Drawing.Point(822, 315);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(122, 32);
+			this.panel4.TabIndex = 10;
+			// 
+			// pnlCampos
+			// 
+			this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlCampos.Controls.Add(this.maskedTextBox1);
+			this.pnlCampos.Controls.Add(lblObs);
+			this.pnlCampos.Controls.Add(this.txtObs);
+			this.pnlCampos.Controls.Add(this.txtCelular);
+			this.pnlCampos.Controls.Add(this.txtTelefone);
+			this.pnlCampos.Controls.Add(this.txtIdentidade);
+			this.pnlCampos.Controls.Add(this.dtpDataNascimento);
+			this.pnlCampos.Controls.Add(idFuncionarioLabel);
+			this.pnlCampos.Controls.Add(this.txtIdFuncionario);
+			this.pnlCampos.Controls.Add(telefoneFuncionarioLabel);
+			this.pnlCampos.Controls.Add(enderecoFuncionarioLabel);
+			this.pnlCampos.Controls.Add(this.txtEndereco);
+			this.pnlCampos.Controls.Add(nomeFuncionarioLabel);
+			this.pnlCampos.Controls.Add(this.txtNome);
+			this.pnlCampos.Controls.Add(bairroFuncionarioLabel);
+			this.pnlCampos.Controls.Add(this.txtBairro);
+			this.pnlCampos.Controls.Add(celularFuncionarioLabel);
+			this.pnlCampos.Controls.Add(pagamentoFuncionarioLabel);
+			this.pnlCampos.Controls.Add(identidadeFuncionarioLabel);
+			this.pnlCampos.Controls.Add(nascFuncionarioLabel);
+			this.pnlCampos.Location = new System.Drawing.Point(4, 5);
+			this.pnlCampos.Name = "pnlCampos";
+			this.pnlCampos.Size = new System.Drawing.Size(940, 299);
+			this.pnlCampos.TabIndex = 9;
+			// 
+			// maskedTextBox1
+			// 
+			this.maskedTextBox1.Location = new System.Drawing.Point(610, 55);
+			this.maskedTextBox1.Mask = "$";
+			this.maskedTextBox1.Name = "maskedTextBox1";
+			this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
+			this.maskedTextBox1.TabIndex = 116;
+			// 
+			// txtObs
+			// 
+			this.txtObs.Location = new System.Drawing.Point(610, 114);
+			this.txtObs.Multiline = true;
+			this.txtObs.Name = "txtObs";
+			this.txtObs.Size = new System.Drawing.Size(200, 110);
+			this.txtObs.TabIndex = 114;
+			// 
+			// txtCelular
+			// 
+			this.txtCelular.Location = new System.Drawing.Point(282, 207);
+			this.txtCelular.Mask = "(99)09999-9999";
+			this.txtCelular.Name = "txtCelular";
+			this.txtCelular.Size = new System.Drawing.Size(80, 20);
+			this.txtCelular.TabIndex = 113;
+			// 
+			// txtTelefone
+			// 
+			this.txtTelefone.Location = new System.Drawing.Point(151, 207);
+			this.txtTelefone.Mask = "(99)09999-9999";
+			this.txtTelefone.Name = "txtTelefone";
+			this.txtTelefone.Size = new System.Drawing.Size(80, 20);
+			this.txtTelefone.TabIndex = 112;
+			// 
+			// txtIdentidade
+			// 
+			this.txtIdentidade.Location = new System.Drawing.Point(282, 79);
+			this.txtIdentidade.Mask = "999,999,999-99";
+			this.txtIdentidade.Name = "txtIdentidade";
+			this.txtIdentidade.Size = new System.Drawing.Size(80, 20);
+			this.txtIdentidade.TabIndex = 2;
+			// 
+			// dtpDataNascimento
+			// 
+			this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpDataNascimento.Location = new System.Drawing.Point(267, 110);
+			this.dtpDataNascimento.Name = "dtpDataNascimento";
+			this.dtpDataNascimento.Size = new System.Drawing.Size(95, 20);
+			this.dtpDataNascimento.TabIndex = 3;
+			// 
+			// txtIdFuncionario
+			// 
+			this.txtIdFuncionario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "idFuncionario", true));
+			this.txtIdFuncionario.Enabled = false;
+			this.txtIdFuncionario.Location = new System.Drawing.Point(150, 5);
+			this.txtIdFuncionario.Name = "txtIdFuncionario";
+			this.txtIdFuncionario.Size = new System.Drawing.Size(782, 20);
+			this.txtIdFuncionario.TabIndex = 111;
+			// 
+			// txtEndereco
+			// 
+			this.txtEndereco.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "enderecoFuncionario", true));
+			this.txtEndereco.Location = new System.Drawing.Point(150, 144);
+			this.txtEndereco.Name = "txtEndereco";
+			this.txtEndereco.Size = new System.Drawing.Size(212, 20);
+			this.txtEndereco.TabIndex = 4;
+			// 
+			// txtNome
+			// 
+			this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nomeFuncionario", true));
+			this.txtNome.Location = new System.Drawing.Point(150, 51);
+			this.txtNome.Name = "txtNome";
+			this.txtNome.Size = new System.Drawing.Size(212, 20);
+			this.txtNome.TabIndex = 1;
+			// 
+			// txtBairro
+			// 
+			this.txtBairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "bairroFuncionario", true));
+			this.txtBairro.Location = new System.Drawing.Point(151, 175);
+			this.txtBairro.Name = "txtBairro";
+			this.txtBairro.Size = new System.Drawing.Size(212, 20);
+			this.txtBairro.TabIndex = 5;
+			// 
+			// panel2
+			// 
+			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.panel2.Controls.Add(this.btnLimparCampos);
+			this.panel2.Location = new System.Drawing.Point(4, 314);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(152, 33);
+			this.panel2.TabIndex = 8;
+			// 
+			// funcionarioTableAdapter
+			// 
+			this.funcionarioTableAdapter.ClearBeforeFill = true;
+			// 
+			// tableAdapterManager
+			// 
+			this.tableAdapterManager.AtendimentoTableAdapter = null;
+			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+			this.tableAdapterManager.CarroTableAdapter = null;
+			this.tableAdapterManager.ClienteTableAdapter = null;
+			this.tableAdapterManager.FornecedorTableAdapter = null;
+			this.tableAdapterManager.FornecimentoTableAdapter = null;
+			this.tableAdapterManager.FuncionarioTableAdapter = this.funcionarioTableAdapter;
+			this.tableAdapterManager.Produtos_AtendimentoTableAdapter = null;
+			this.tableAdapterManager.Produtos_FornecimentoTableAdapter = null;
+			this.tableAdapterManager.ProdutoTableAdapter = null;
+			this.tableAdapterManager.Serviços_AtendimentoTableAdapter = null;
+			this.tableAdapterManager.ServicoTableAdapter = null;
+			this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			// 
 			// frmCadastroFuncionários
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,8 +486,9 @@
 			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.pnlCampos);
 			this.Controls.Add(this.panel2);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "frmCadastroFuncionários";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "frmCadastroFuncionários";
 			this.Load += new System.EventHandler(this.frmCadastroFuncionários_Load);
 			this.panel1.ResumeLayout(false);

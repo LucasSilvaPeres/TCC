@@ -297,8 +297,9 @@
 			this.Controls.Add(this.pnlBotaoConfirmar);
 			this.Controls.Add(this.pnlCampos);
 			this.Controls.Add(this.pnlLimparCampos);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "frmCadastrarProdutos";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "frmCadastrarProdutos";
 			this.Load += new System.EventHandler(this.frmCadastrarProdutos_Load);
 			this.pnlDataGridView.ResumeLayout(false);

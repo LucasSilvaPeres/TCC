@@ -23,8 +23,8 @@ namespace frmMenuPrincipal
         }
 		private void frmMenuPrincipal_Load(object sender, EventArgs e)
 		{
-            frmcad.MdiParent = this;
-            frmcad.Show();
+            //frmcad.MdiParent = this;
+            //frmcad.Show();
 
             //frmatendimento.Anchor = AnchorStyles.Bottom;
             tslHora.Text = DateTime.Now.ToString();
@@ -53,17 +53,20 @@ namespace frmMenuPrincipal
         {
             if (Application.OpenForms["frmCadPrincipais"] == null)
             {
-                frmCadPrincipais frmCadastros = new frmCadPrincipais { MdiParent = this };
+                frmCadPrincipais frmCadastros = new frmCadPrincipais ();
                 frmCadastros.Show();
-            }
+				frmCadastros.BringToFront();
+
+			}
         }
 
         private void tsmCadastroFornecimento_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["frmCadFornecimento"] == null) 
             {
-                frmCadFornecimento FrmCadFornecimento = new frmCadFornecimento { MdiParent = this };
+                frmCadFornecimento FrmCadFornecimento = new frmCadFornecimento ();
                 FrmCadFornecimento.Show();
+				FrmCadFornecimento.BringToFront();
             }
 
         }
@@ -74,8 +77,10 @@ namespace frmMenuPrincipal
             {
                 frmBackup FrmBackup = new frmBackup();
                 FrmBackup.Show();
-            }
-        }
+				FrmBackup.BringToFront();
+
+			}
+		}
 
 		private void timerHora_Tick(object sender, EventArgs e)
 		{
@@ -114,84 +119,132 @@ namespace frmMenuPrincipal
             //}
         }
 
-        //private void btnCliente_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadastrarClientes"] == null)
-        //    {
-        //        frmCadastroClientes frmcadc = new frmCadastroClientes { MdiParent = this };
-        //        frmcadc.Show();
-        //        //panel2.Visible = false;
-        //    }
+		private void btnCliente_Click(object sender, EventArgs e)
+		{
+			frmCadastroClientes frmcadc = new frmCadastroClientes();
 
-        //}
+			if (Application.OpenForms["frmCadastroClientes"] == null)
+			{
+				frmcadc.Show();
+				//panel2.Visible = false;
+				frmcadc.BringToFront();
 
-        //private void btnServico_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadastrarServico"] == null)
-        //    {
-        //        frmCadastroServico frmcads = new frmCadastroServico { MdiParent = this };
-        //        frmcads.Show();
-        //        //panel2.Visible = false;
-        //    }
-        //}
+			}
+			else
+			{
+				frmcadc.BringToFront();
+			}
 
-        //private void btnProduto_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadastrarProdutos"] == null)
-        //    {
-        //        frmCadastrarProdutos frmcadp = new frmCadastrarProdutos { MdiParent = this };
-        //        frmcadp.Show();
-        //        //panel2.Visible = false;
-        //    }
+		}
 
-        //}
+		private void btnServico_Click(object sender, EventArgs e)
+		{
+			frmCadastroServico frmcads = new frmCadastroServico();
 
-        //private void btnAtendimento_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadastroAtendimento"] == null)
-        //    {
-        //        frmCadastroAtendimento frmcada = new frmCadastroAtendimento { MdiParent = this };
-        //        frmcada.Show();
-        //        //panel2.Visible = false;
-        //    }
+			if (Application.OpenForms["frmCadastroServico"] == null)
+			{
+				frmcads.Show();
+				//panel2.Visible = false;
+				frmcads.BringToFront();
 
-        //}
+			}
+			else
+			{
+				frmcads.BringToFront();
+			}
+		}
 
-        //private void btnFornecimento_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadFornecimento"] == null)
-        //    {
-        //        frmCadFornecimento FrmCadFornecimento = new frmCadFornecimento { MdiParent = this };
-        //        FrmCadFornecimento.Show();
-        //        //panel2.Visible = false;
-        //    }
-        //}
+		private void btnProduto_Click(object sender, EventArgs e)
+		{
+			frmCadastrarProdutos frmcadp = new frmCadastrarProdutos();
 
-        //private void btnFornecedor_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadastroFornecedor"] == null)
-        //    {
-        //        frmCadastroFornecedor frmcadf = new frmCadastroFornecedor { MdiParent = this };
-        //        frmcadf.Show();
-        //        //panel2.Visible = false;
-        //    }
+			if (Application.OpenForms["frmCadastrarProdutos"] == null)
+			{
+				frmcadp.Show();
+				//panel2.Visible = false;
+				frmcadp.BringToFront();
 
-        //}
+			}
+			else
+			{
+				frmcadp.BringToFront();
+			}
+		}
 
-        //private void tsmCadastroFuncionario_Click(object sender, EventArgs e)
-        //{
-        //    if (Application.OpenForms["frmCadastroFuncionários"] == null)
-        //    {
-        //        frmCadastroFuncionários frmcadf = new frmCadastroFuncionários { MdiParent = this };
-        //        frmcadf.Show();
-        //        //panel2.Visible = false;
-        //    }
-        //}
-        public void Servico()
+		private void btnAtendimento_Click(object sender, EventArgs e)
+		{
+			frmCadastroAtendimento frmcada = new frmCadastroAtendimento();
+
+			if (Application.OpenForms["frmCadastroAtendimento"] == null)
+			{
+				frmcada.Show();
+				//panel2.Visible = false;
+				frmcada.BringToFront();
+
+			}
+			else
+			{
+				frmcada.BringToFront();
+			}
+
+		}
+
+		private void btnFornecimento_Click(object sender, EventArgs e)
+		{
+			frmCadFornecimento FrmCadFornecimento = new frmCadFornecimento();
+
+			if (Application.OpenForms["frmCadFornecimento"] == null)
+			{
+				FrmCadFornecimento.Show();
+				//panel2.Visible = false;
+				FrmCadFornecimento.BringToFront();
+
+			}
+			else
+			{
+				FrmCadFornecimento.BringToFront();
+			}
+		}
+
+		private void btnFornecedor_Click(object sender, EventArgs e)
+		{
+			frmCadastroFornecedor frmcadf = new frmCadastroFornecedor();
+
+			if (Application.OpenForms["frmCadastroFornecedor"] == null)
+			{
+				frmcadf.Show();
+				//panel2.Visible = false;
+				frmcadf.BringToFront();
+
+			}
+			else
+			{
+				frmcadf.BringToFront();
+			}
+		}
+
+		private void tsmCadastroFuncionario_Click(object sender, EventArgs e)
+		{
+			frmCadastroFuncionários frmcadf = new frmCadastroFuncionários();
+
+			if (Application.OpenForms["frmCadastroFuncionários"] == null)
+			{
+				frmcadf.Show();
+				//panel2.Visible = false;
+				frmcadf.BringToFront();
+
+			}
+			else
+			{
+				frmcadf.BringToFront();
+			}
+		}
+		public void Servico()
         {
-            if (Application.OpenForms["frmCadastrarServico"] == null)
+			frmCadastroServico frmcads = new frmCadastroServico();
+
+			if (Application.OpenForms["frmCadastrarServico"] == null)
             {
-                frmCadastroServico frmcads = new frmCadastroServico ();
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
@@ -200,9 +253,10 @@ namespace frmMenuPrincipal
         }
         public void Cliente()
         {
-            if (Application.OpenForms["frmCadastrarClientes"] == null)
+			frmCadastroClientes frmcads = new frmCadastroClientes();
+
+			if (Application.OpenForms["frmCadastrarClientes"] == null)
             {
-                frmCadastroClientes frmcads = new frmCadastroClientes { MdiParent = this };
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
@@ -212,9 +266,10 @@ namespace frmMenuPrincipal
         }
         public void Fornecimento()
         {
-            if (Application.OpenForms["frmCadFornecimento"] == null)
+			frmCadFornecimento frmcads = new frmCadFornecimento();
+
+			if (Application.OpenForms["frmCadFornecimento"] == null)
             {
-                frmCadFornecimento frmcads = new frmCadFornecimento { MdiParent = this };
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
@@ -224,9 +279,10 @@ namespace frmMenuPrincipal
         }
         public void Funcionario()
         {
-            if (Application.OpenForms["frmCadastroFuncionários"] == null)
+			frmCadastroFuncionários frmcads = new frmCadastroFuncionários();
+
+			if (Application.OpenForms["frmCadastroFuncionários"] == null)
             {
-                frmCadastroFuncionários frmcads = new frmCadastroFuncionários { MdiParent = this };
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
@@ -235,9 +291,10 @@ namespace frmMenuPrincipal
         }
         public void Produto()
         {
-            if (Application.OpenForms["frmCadastrarProdutos"] == null)
+			frmCadastrarProdutos frmcads = new frmCadastrarProdutos();
+
+			if (Application.OpenForms["frmCadastrarProdutos"] == null)
             {
-                frmCadastrarProdutos frmcads = new frmCadastrarProdutos { MdiParent = this };
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
@@ -246,9 +303,10 @@ namespace frmMenuPrincipal
         }
         public void Fornecedor()
         {
-            if (Application.OpenForms["frmCadastroFornecedor"] == null)
+			frmCadastroFornecedor frmcads = new frmCadastroFornecedor();
+
+			if (Application.OpenForms["frmCadastroFornecedor"] == null)
             {
-                frmCadastroFornecedor frmcads = new frmCadastroFornecedor { MdiParent = this };
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
@@ -257,9 +315,10 @@ namespace frmMenuPrincipal
         }
         public void Atendimento()
         {
-            if (Application.OpenForms["frmCadastroAtendimento"] == null)
+			frmCadastroAtendimento frmcads = new frmCadastroAtendimento();
+
+			if (Application.OpenForms["frmCadastroAtendimento"] == null)
             {
-                frmCadastroAtendimento frmcads = new frmCadastroAtendimento { MdiParent = this };
                 frmcads.Show();
                 //panel2.Visible = false;
                 frmcad.Hide();
