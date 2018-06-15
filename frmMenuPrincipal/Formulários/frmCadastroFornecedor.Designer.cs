@@ -43,7 +43,6 @@
             this.identidadeFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
             this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -69,7 +68,6 @@
             emailFornecedorLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.panel4.SuspendLayout();
             this.pnlCampos.SuspendLayout();
@@ -154,7 +152,6 @@
             this.identidadeFornecedorDataGridViewTextBoxColumn,
             this.telefoneFornecedorDataGridViewTextBoxColumn,
             this.emailFornecedorDataGridViewTextBoxColumn});
-            this.dgvBancoForm.DataSource = this.fornecedorBindingSource;
             this.dgvBancoForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
             this.dgvBancoForm.Name = "dgvBancoForm";
@@ -212,8 +209,6 @@
             // 
             // fornecedorBindingSource
             // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.dsPrincipal;
             // 
             // dsPrincipal
             // 
@@ -332,7 +327,6 @@
             // 
             // idFornecedorTextBox
             // 
-            this.idFornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "idFornecedor", true));
             this.idFornecedorTextBox.Enabled = false;
             this.idFornecedorTextBox.Location = new System.Drawing.Point(51, 10);
             this.idFornecedorTextBox.Name = "idFornecedorTextBox";
@@ -341,7 +335,6 @@
             // 
             // nomeFornecedorTextBox
             // 
-            this.nomeFornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "nomeFornecedor", true));
             this.nomeFornecedorTextBox.Location = new System.Drawing.Point(402, 93);
             this.nomeFornecedorTextBox.Name = "nomeFornecedorTextBox";
             this.nomeFornecedorTextBox.Size = new System.Drawing.Size(218, 20);
@@ -349,7 +342,6 @@
             // 
             // enderecoFornecedorTextBox
             // 
-            this.enderecoFornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "enderecoFornecedor", true));
             this.enderecoFornecedorTextBox.Location = new System.Drawing.Point(402, 147);
             this.enderecoFornecedorTextBox.Name = "enderecoFornecedorTextBox";
             this.enderecoFornecedorTextBox.Size = new System.Drawing.Size(218, 20);
@@ -357,7 +349,6 @@
             // 
             // emailFornecedorTextBox
             // 
-            this.emailFornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "emailFornecedor", true));
             this.emailFornecedorTextBox.Location = new System.Drawing.Point(402, 197);
             this.emailFornecedorTextBox.Name = "emailFornecedorTextBox";
             this.emailFornecedorTextBox.Size = new System.Drawing.Size(218, 20);
@@ -410,7 +401,6 @@
             this.Load += new System.EventHandler(this.frmCadastroFornecedor_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             this.panel4.ResumeLayout(false);
             this.pnlCampos.ResumeLayout(false);
@@ -432,7 +422,6 @@
 		public System.Windows.Forms.Panel pnlCampos;
 		public System.Windows.Forms.Panel panel2;
 		private Dados.dsPrincipal dsPrincipal;
-		private System.Windows.Forms.BindingSource fornecedorBindingSource;
 		private Dados.dsPrincipalTableAdapters.FornecedorTableAdapter fornecedorTableAdapter;
 		private Dados.dsPrincipalTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn idFornecedorDataGridViewTextBoxColumn;

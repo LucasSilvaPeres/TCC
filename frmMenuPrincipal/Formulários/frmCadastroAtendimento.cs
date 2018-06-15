@@ -20,13 +20,13 @@ namespace frmMenuPrincipal.Formulários
 		private void atendimentoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
 		{
 			this.Validate();
-			this.atendimentoBindingSource.EndEdit();
 			this.tableAdapterManager.UpdateAll(this.dsPrincipal);
 
 		}
 
 		private void frmCadastroAtendimento_Load(object sender, EventArgs e)
 		{
+            
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Servico'. Você pode movê-la ou removê-la conforme necessário.
 			this.servicoTableAdapter.Fill(this.dsPrincipal.Servico);
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Produto'. Você pode movê-la ou removê-la conforme necessário.

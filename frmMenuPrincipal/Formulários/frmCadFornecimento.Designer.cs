@@ -261,7 +261,6 @@
             // 
             // txtId
             // 
-            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtos_FornecimentoBindingSource, "idProduto", true));
             this.txtId.Location = new System.Drawing.Point(717, 147);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
@@ -274,7 +273,6 @@
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtos_FornecimentoBindingSource, "quantidadeProduto", true));
             this.txtQuantidade.Location = new System.Drawing.Point(717, 199);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
@@ -282,7 +280,6 @@
             // 
             // txtIdFornecimento
             // 
-            this.txtIdFornecimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecimentoBindingSource, "idFornecimento", true));
             this.txtIdFornecimento.Enabled = false;
             this.txtIdFornecimento.Location = new System.Drawing.Point(134, 15);
             this.txtIdFornecimento.Name = "txtIdFornecimento";
@@ -291,7 +288,6 @@
             // 
             // txtIdFornecedor
             // 
-            this.txtIdFornecedor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecimentoBindingSource, "idFornecedor", true));
             this.txtIdFornecedor.Location = new System.Drawing.Point(270, 147);
             this.txtIdFornecedor.Name = "txtIdFornecedor";
             this.txtIdFornecedor.Size = new System.Drawing.Size(200, 20);

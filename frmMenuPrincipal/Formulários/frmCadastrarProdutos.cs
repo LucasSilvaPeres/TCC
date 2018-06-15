@@ -20,7 +20,6 @@ namespace frmMenuPrincipal.Formulários
         private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.produtoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsPrincipal);
 
         }
