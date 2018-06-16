@@ -1,4 +1,6 @@
-﻿using System;
+﻿using frmMenuPrincipal.Dados.dsPrincipalTableAdapters;
+using frmMenuPrincipal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +39,18 @@ namespace frmMenuPrincipal.Formulários
 			//WindowState = FormWindowState.Normal;
 			//WindowState = FormWindowState.Maximized;
 		}
-
-	}
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            DateTime datainfo = DateTime.Now;
+            Atendimento atendimento = new Produto(int.Parse(txtId.Text),int.Parse(txt;
+            AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
+            pta.Insert(produto.IdFornecedor, produto.NomeProduto, produto.EstoqueProduto, produto.DataInfo);
+            TableRefresh();
+        }
+        private void TableRefresh()
+        {
+            produtoTableAdapter.Fill(dsPrincipal.Produto);
+            dgvProduto.Refresh();
+        }
+    }
 }

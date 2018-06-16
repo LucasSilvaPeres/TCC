@@ -11,7 +11,8 @@ namespace frmMenuPrincipal.Models
     {
         private string nomeCliente, telefoneCliente, emailCliente, enderecoCliente, bairroCliente, identidadeCliente,
             celularCliente;
-        private DateTime dataInfo;
+        private decimal pagamentosCliente;
+        private DateTime dataInfo, nascCliente;
 
         public string NomeCliente
         {
@@ -127,8 +128,35 @@ namespace frmMenuPrincipal.Models
             }
         }
 
+        public DateTime NascCliente
+        {
+            get
+            {
+                return nascCliente;
+            }
+
+            set
+            {
+                nascCliente = value;
+            }
+        }
+
+        public decimal PagamentosCliente
+        {
+            get
+            {
+                return pagamentosCliente;
+            }
+
+            set
+            {
+                pagamentosCliente = value;
+            }
+        }
+
         public Clientes(string nomeCliente, string telefoneCliente, string emailCliente,
-            string enderecoCliente, string bairroCliente, string identidadeCliente, string celularCliente, DateTime dataInfo)
+            string enderecoCliente, string bairroCliente, string identidadeCliente, 
+            string celularCliente, DateTime dataInfo, DateTime nascCliente, decimal pagamentosCliente)
         {
             NomeCliente = nomeCliente;
             TelefoneCliente = telefoneCliente;
@@ -138,6 +166,8 @@ namespace frmMenuPrincipal.Models
             IdentidadeCliente = identidadeCliente;
             CelularCliente = celularCliente;
             DataInfo = dataInfo;
+            NascCliente = nascCliente;
+            PagamentosCliente = pagamentosCliente;
         }
 
         //public string NomeCliente { get => nomeCliente; set => nomeCliente = value; }

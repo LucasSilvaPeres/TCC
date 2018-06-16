@@ -1,4 +1,6 @@
-﻿using System;
+﻿using frmMenuPrincipal.Dados.dsPrincipalTableAdapters;
+using frmMenuPrincipal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,7 +67,21 @@ namespace frmMenuPrincipal.Formulários
                 txtIdentidade.Size = new Size(105, 20);
             }
         }
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            DateTime datainfo = DateTime.Now;
+            Clientes clientes = new Clientes(txtNome.Text,txtTelefone.Text,txtEmail.Text,txtEndereco.Text,txtBairro.Text,txtIdentidade.Text,txtCelular.Text, datainfo, dtpDataNascimento.Value, decimal.Parse(txtGastos.Text));
+            ClienteTableAdapter cta = new ClienteTableAdapter();
+            cta.Insert(clientes.NomeCliente, clientes.TelefoneCliente, 
+                clientes.EmailCliente ,clientes.EnderecoCliente, clientes.BairroCliente,
+                clientes.IdentidadeCliente, clientes.CelularCliente, clientes.NascCliente.ToString(), clientes.PagamentosCliente, clientes.DataInfo);
+            TableRefresh();
+        }
+        private void TableRefresh()
+        {
+            clienteTableAdapter.Fill(this.dsPrincipal.Cliente);
+            dgvBancoForm.Refresh();
+        }
 
-        
     }
 }

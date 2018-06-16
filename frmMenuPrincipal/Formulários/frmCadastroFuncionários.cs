@@ -1,4 +1,6 @@
-﻿using System;
+﻿using frmMenuPrincipal.Dados.dsPrincipalTableAdapters;
+using frmMenuPrincipal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,5 +44,18 @@ namespace frmMenuPrincipal.Formulários
 				}
 			}
 		}
-	}
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            DateTime datainfo = DateTime.Now;
+            Funcionario funcionario = new Funcionario(txtNome.Text,txtIdentidade.Text,txtCelular.Text,txtTelefone.Text,txtBairro.Text,txtEndereco.Text,decimal.Parse(txtSalario.Text));
+            FuncionarioTableAdapter sta = new FuncionarioTableAdapter();
+            sta.Insert(funcionario.TelefoneFuncionario, funcionario.EnderecoFuncionario, funcionario.NomeFuncionario, funcionario.BairroFuncionario,funcionario.CelularFuncionario,funcionario.PagamentoFuncionario,funcionario.IdentidadeFuncionario,funcionario.NascFuncionario,funcionario.);
+            TableRefresh();
+        }
+        private void TableRefresh()
+        {
+            servicoTableAdapter.Fill(this.dsPrincipal.Servico);
+            dgvBancoForm.Refresh();
+        }
+    }
 }

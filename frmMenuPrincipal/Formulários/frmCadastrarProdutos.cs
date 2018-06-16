@@ -1,4 +1,6 @@
-﻿using System;
+﻿using frmMenuPrincipal.Dados.dsPrincipalTableAdapters;
+using frmMenuPrincipal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +46,16 @@ namespace frmMenuPrincipal.Formulários
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
+            DateTime datainfo = DateTime.Now;
+            Produto produto = new Produto(int.Parse(txtIdFornecedor.Text), int.Parse(txtEstoque.Text), txtNome.Text, datainfo);
+            ProdutoTableAdapter pta = new ProdutoTableAdapter();
+            pta.Insert(produto.IdFornecedor, produto.NomeProduto, produto.EstoqueProduto, produto.DataInfo);
+            TableRefresh();
+        }
+        private void TableRefresh()
+        {
+            produtoTableAdapter.Fill(dsPrincipal.Produto);
+            dgvProduto.Refresh();
         }
     }
 }

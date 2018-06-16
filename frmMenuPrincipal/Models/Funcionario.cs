@@ -12,10 +12,11 @@ namespace frmMenuPrincipal.Models
 		private string nomeFuncionario, identidadeFuncionario, celularFuncionario, telefoneFuncionario,
 			bairroFuncionario, enderecoFuncionario;
 		private decimal pagamentoFuncionario;
+        private DateTime nascFuncionario;
 
 		public Funcionario(string nomeFuncionario, string identidadeFuncionario, string celularFuncionario,
 			string telefoneFuncionario, 
-			string bairroFuncionario, string enderecoFuncionario, decimal pagamentoFuncionario)
+			string bairroFuncionario, string enderecoFuncionario, decimal pagamentoFuncionario, DateTime nascFuncionario)
 		{
 			NomeFuncionario = nomeFuncionario;
 			IdentidadeFuncionario = identidadeFuncionario;
@@ -24,7 +25,9 @@ namespace frmMenuPrincipal.Models
 			BairroFuncionario = bairroFuncionario;
 			EnderecoFuncionario = enderecoFuncionario;
 			PagamentoFuncionario = pagamentoFuncionario;
-		}
+            NascFuncionario = nascFuncionario;
+
+        }
 
         public string BairroFuncionario
         {
@@ -121,6 +124,19 @@ namespace frmMenuPrincipal.Models
             set
             {
                 telefoneFuncionario = value;
+            }
+        }
+
+        public DateTime NascFuncionario
+        {
+            get
+            {
+                return nascFuncionario;
+            }
+
+            set
+            {
+                nascFuncionario = value;
             }
         }
 

@@ -41,13 +41,13 @@
             System.Windows.Forms.Label lblObs;
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvBancoForm = new System.Windows.Forms.DataGridView();
-            this.observaçãoFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
             this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlCampos = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtSalario = new System.Windows.Forms.MaskedTextBox();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -60,17 +60,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.funcionarioTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.FuncionarioTableAdapter();
             this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInfoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idFuncionarioLabel = new System.Windows.Forms.Label();
             telefoneFuncionarioLabel = new System.Windows.Forms.Label();
             enderecoFuncionarioLabel = new System.Windows.Forms.Label();
@@ -83,11 +81,11 @@
             lblObs = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.panel4.SuspendLayout();
             this.pnlCampos.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idFuncionarioLabel
@@ -196,17 +194,15 @@
             this.dgvBancoForm.AutoGenerateColumns = false;
             this.dgvBancoForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBancoForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.observaçãoFuncionario,
             this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataInfoFuncionarioDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn9});
             this.dgvBancoForm.DataSource = this.funcionarioBindingSource;
             this.dgvBancoForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
@@ -215,11 +211,10 @@
             this.dgvBancoForm.Size = new System.Drawing.Size(940, 253);
             this.dgvBancoForm.TabIndex = 0;
             // 
-            // observaçãoFuncionario
+            // funcionarioBindingSource
             // 
-            this.observaçãoFuncionario.HeaderText = "Observação";
-            this.observaçãoFuncionario.Name = "observaçãoFuncionario";
-            this.observaçãoFuncionario.ReadOnly = true;
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.dsPrincipal;
             // 
             // dsPrincipal
             // 
@@ -267,7 +262,7 @@
             this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlCampos.Controls.Add(this.maskedTextBox1);
+            this.pnlCampos.Controls.Add(this.txtSalario);
             this.pnlCampos.Controls.Add(lblObs);
             this.pnlCampos.Controls.Add(this.txtObs);
             this.pnlCampos.Controls.Add(this.txtCelular);
@@ -292,13 +287,13 @@
             this.pnlCampos.Size = new System.Drawing.Size(940, 299);
             this.pnlCampos.TabIndex = 9;
             // 
-            // maskedTextBox1
+            // txtSalario
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(610, 55);
-            this.maskedTextBox1.Mask = "$";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBox1.TabIndex = 116;
+            this.txtSalario.Location = new System.Drawing.Point(610, 55);
+            this.txtSalario.Mask = "$";
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(200, 20);
+            this.txtSalario.TabIndex = 116;
             // 
             // txtObs
             // 
@@ -398,80 +393,80 @@
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.dsPrincipal;
-            // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idFuncionario";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idFuncionario";
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id do funcionário";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "nomeFuncionario";
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "telefoneFuncionario";
-            this.dataGridViewTextBoxColumn2.HeaderText = "telefoneFuncionario";
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Telefone";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "enderecoFuncionario";
-            this.dataGridViewTextBoxColumn3.HeaderText = "enderecoFuncionario";
+            this.dataGridViewTextBoxColumn3.Frozen = true;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Endereço";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nomeFuncionario";
-            this.dataGridViewTextBoxColumn4.HeaderText = "nomeFuncionario";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "bairroFuncionario";
-            this.dataGridViewTextBoxColumn5.HeaderText = "bairroFuncionario";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Bairro";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "celularFuncionario";
-            this.dataGridViewTextBoxColumn6.HeaderText = "celularFuncionario";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Celular";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "pagamentoFuncionario";
-            this.dataGridViewTextBoxColumn7.HeaderText = "pagamentoFuncionario";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Salário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "identidadeFuncionario";
-            this.dataGridViewTextBoxColumn8.HeaderText = "identidadeFuncionario";
+            this.dataGridViewTextBoxColumn8.HeaderText = "CPF/RG";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "nascFuncionario";
-            this.dataGridViewTextBoxColumn9.HeaderText = "nascFuncionario";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Data de nascimento";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataInfoFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.dataInfoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "dataInfoFuncionario";
-            this.dataInfoFuncionarioDataGridViewTextBoxColumn.HeaderText = "dataInfoFuncionario";
-            this.dataInfoFuncionarioDataGridViewTextBoxColumn.Name = "dataInfoFuncionarioDataGridViewTextBoxColumn";
-            this.dataInfoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmCadastroFuncionários
             // 
@@ -490,12 +485,12 @@
             this.Load += new System.EventHandler(this.frmCadastroFuncionários_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             this.panel4.ResumeLayout(false);
             this.pnlCampos.ResumeLayout(false);
             this.pnlCampos.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -530,18 +525,16 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn telefoneFuncionarioDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn celularFuncionarioDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn pagamentoFuncionarioDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn observaçãoFuncionario;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+		private System.Windows.Forms.MaskedTextBox txtSalario;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataInfoFuncionarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource funcionarioBindingSource;
     }
 }

@@ -51,17 +51,17 @@
             this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvBancoForm = new System.Windows.Forms.DataGridView();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
             this.clienteTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ClienteTableAdapter();
             this.pnlIdentidade = new System.Windows.Forms.Panel();
             this.rbCNPJ = new System.Windows.Forms.RadioButton();
             this.rbCPF = new System.Windows.Forms.RadioButton();
             this.pnlCampos = new System.Windows.Forms.Panel();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtGastos = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtIdentidade = new System.Windows.Forms.MaskedTextBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,10 +77,10 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.pnlIdentidade.SuspendLayout();
             this.pnlCampos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel7
@@ -283,6 +283,7 @@
             this.btnConfirmar.TabIndex = 11;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // panel2
             // 
@@ -342,6 +343,11 @@
             this.dgvBancoForm.Size = new System.Drawing.Size(920, 369);
             this.dgvBancoForm.TabIndex = 0;
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.dsPrincipal;
+            // 
             // dsPrincipal
             // 
             this.dsPrincipal.DataSetName = "dsPrincipal";
@@ -385,9 +391,9 @@
             // 
             // pnlCampos
             // 
-            this.pnlCampos.Controls.Add(this.maskedTextBox3);
-            this.pnlCampos.Controls.Add(this.maskedTextBox2);
-            this.pnlCampos.Controls.Add(this.maskedTextBox1);
+            this.pnlCampos.Controls.Add(this.txtGastos);
+            this.pnlCampos.Controls.Add(this.txtCelular);
+            this.pnlCampos.Controls.Add(this.txtTelefone);
             this.pnlCampos.Controls.Add(this.txtIdentidade);
             this.pnlCampos.Controls.Add(this.pnlIdentidade);
             this.pnlCampos.Controls.Add(this.materialLabel7);
@@ -411,29 +417,29 @@
             this.pnlCampos.Size = new System.Drawing.Size(920, 169);
             this.pnlCampos.TabIndex = 94;
             // 
-            // maskedTextBox3
+            // txtGastos
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(710, 139);
-            this.maskedTextBox3.Mask = "$ 0000.0000,00";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBox3.TabIndex = 10;
+            this.txtGastos.Location = new System.Drawing.Point(710, 139);
+            this.txtGastos.Mask = "$ 0000.0000,00";
+            this.txtGastos.Name = "txtGastos";
+            this.txtGastos.Size = new System.Drawing.Size(200, 20);
+            this.txtGastos.TabIndex = 10;
             // 
-            // maskedTextBox2
+            // txtCelular
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(710, 38);
-            this.maskedTextBox2.Mask = "(99)09999-9999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(85, 20);
-            this.maskedTextBox2.TabIndex = 8;
+            this.txtCelular.Location = new System.Drawing.Point(710, 38);
+            this.txtCelular.Mask = "(99)09999-9999";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(85, 20);
+            this.txtCelular.TabIndex = 8;
             // 
-            // maskedTextBox1
+            // txtTelefone
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(710, 14);
-            this.maskedTextBox1.Mask = "(99)09999-9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(85, 20);
-            this.maskedTextBox1.TabIndex = 7;
+            this.txtTelefone.Location = new System.Drawing.Point(710, 14);
+            this.txtTelefone.Mask = "(99)09999-9999";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(85, 20);
+            this.txtTelefone.TabIndex = 7;
             // 
             // txtIdentidade
             // 
@@ -443,85 +449,89 @@
             this.txtIdentidade.Size = new System.Drawing.Size(80, 20);
             this.txtIdentidade.TabIndex = 2;
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.dsPrincipal;
-            // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idCliente";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idCliente";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id do Cliente";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nomeCliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nomeCliente";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "telefoneCliente";
-            this.dataGridViewTextBoxColumn3.HeaderText = "telefoneCliente";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Telefone";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "emailCliente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "emailCliente";
+            this.dataGridViewTextBoxColumn4.HeaderText = "E-mail";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "enderecoCliente";
-            this.dataGridViewTextBoxColumn5.HeaderText = "enderecoCliente";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Endereço";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "bairroCliente";
-            this.dataGridViewTextBoxColumn6.HeaderText = "bairroCliente";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Bairro";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "identidadeCliente";
-            this.dataGridViewTextBoxColumn7.HeaderText = "identidadeCliente";
+            this.dataGridViewTextBoxColumn7.HeaderText = "CPF/CNPJ";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "celularCliente";
-            this.dataGridViewTextBoxColumn8.HeaderText = "celularCliente";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Celular";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn9.DataPropertyName = "nascCliente";
-            this.dataGridViewTextBoxColumn9.HeaderText = "nascCliente";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Data de nascimento";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "pagamentosCliente";
-            this.dataGridViewTextBoxColumn10.HeaderText = "pagamentosCliente";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Gastos";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataInfoClienteDataGridViewTextBoxColumn
             // 
             this.dataInfoClienteDataGridViewTextBoxColumn.DataPropertyName = "dataInfoCliente";
-            this.dataInfoClienteDataGridViewTextBoxColumn.HeaderText = "dataInfoCliente";
+            this.dataInfoClienteDataGridViewTextBoxColumn.HeaderText = "Data da informação";
             this.dataInfoClienteDataGridViewTextBoxColumn.Name = "dataInfoClienteDataGridViewTextBoxColumn";
             this.dataInfoClienteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -544,12 +554,12 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             this.pnlIdentidade.ResumeLayout(false);
             this.pnlIdentidade.PerformLayout();
             this.pnlCampos.ResumeLayout(false);
             this.pnlCampos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,9 +605,10 @@
         private System.Windows.Forms.RadioButton rbCPF;
         private System.Windows.Forms.Panel pnlCampos;
         private System.Windows.Forms.MaskedTextBox txtIdentidade;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtGastos;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -609,6 +620,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInfoClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
     }
 }
