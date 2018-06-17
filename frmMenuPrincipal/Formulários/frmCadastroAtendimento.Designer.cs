@@ -34,55 +34,56 @@
 			System.Windows.Forms.Label lblIdCliente;
 			this.pnlDataGridView = new System.Windows.Forms.Panel();
 			this.dgvAtendimento = new System.Windows.Forms.DataGridView();
-			this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
-			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
-			this.pnlBotaoConfirmar = new System.Windows.Forms.Panel();
-			this.pnlCampos = new System.Windows.Forms.Panel();
-			this.txtIdAtendimento = new System.Windows.Forms.TextBox();
-			this.pnlBotaoLimparCampos = new System.Windows.Forms.Panel();
-			this.grpProdutos = new System.Windows.Forms.GroupBox();
-			this.grpServicos = new System.Windows.Forms.GroupBox();
-			this.cmbProdutos = new System.Windows.Forms.ComboBox();
-			this.cmbServicos = new System.Windows.Forms.ComboBox();
-			this.txtListaServicos = new System.Windows.Forms.TextBox();
-			this.txtListaProdutos = new System.Windows.Forms.TextBox();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
 			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.atendimentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
+			this.btnLimparCampos = new MaterialSkin.Controls.MaterialRaisedButton();
+			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
+			this.pnlBotaoConfirmar = new System.Windows.Forms.Panel();
+			this.pnlCampos = new System.Windows.Forms.Panel();
+			this.txtIdCliente = new System.Windows.Forms.TextBox();
+			this.txtPreco = new System.Windows.Forms.MaskedTextBox();
+			this.grpServicos = new System.Windows.Forms.GroupBox();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtListaServicos = new System.Windows.Forms.TextBox();
+			this.cmbServicos = new System.Windows.Forms.ComboBox();
 			this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.grpProdutos = new System.Windows.Forms.GroupBox();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtListaProdutos = new System.Windows.Forms.TextBox();
+			this.cmbProdutos = new System.Windows.Forms.ComboBox();
 			this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.txtIdAtendimento = new System.Windows.Forms.TextBox();
+			this.pnlBotaoLimparCampos = new System.Windows.Forms.Panel();
 			this.atendimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.AtendimentoTableAdapter();
 			this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
 			this.produtoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ProdutoTableAdapter();
 			this.servicoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ServicoTableAdapter();
-			this.txtPreco = new System.Windows.Forms.MaskedTextBox();
-			this.txtIdCliente = new System.Windows.Forms.TextBox();
+			this.produtoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			lblIdAtendimento = new System.Windows.Forms.Label();
 			lblPrecoAtendimento = new System.Windows.Forms.Label();
 			lblIdCliente = new System.Windows.Forms.Label();
 			this.pnlDataGridView.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAtendimento)).BeginInit();
-			this.pnlBotaoConfirmar.SuspendLayout();
-			this.pnlCampos.SuspendLayout();
-			this.pnlBotaoLimparCampos.SuspendLayout();
-			this.grpProdutos.SuspendLayout();
-			this.grpServicos.SuspendLayout();
-			this.panel2.SuspendLayout();
-			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.atendimentoBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
+			this.pnlBotaoConfirmar.SuspendLayout();
+			this.pnlCampos.SuspendLayout();
+			this.grpServicos.SuspendLayout();
+			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
+			this.grpProdutos.SuspendLayout();
+			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
+			this.pnlBotaoLimparCampos.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblIdAtendimento
@@ -103,6 +104,15 @@
 			lblPrecoAtendimento.TabIndex = 6;
 			lblPrecoAtendimento.Text = "Preço do atendimento:";
 			// 
+			// lblIdCliente
+			// 
+			lblIdCliente.AutoSize = true;
+			lblIdCliente.Location = new System.Drawing.Point(479, 15);
+			lblIdCliente.Name = "lblIdCliente";
+			lblIdCliente.Size = new System.Drawing.Size(66, 13);
+			lblIdCliente.TabIndex = 12;
+			lblIdCliente.Text = "Id do Cliente";
+			// 
 			// pnlDataGridView
 			// 
 			this.pnlDataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -120,7 +130,6 @@
 			this.dgvAtendimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn9});
 			this.dgvAtendimento.DataSource = this.atendimentoBindingSource;
@@ -131,6 +140,48 @@
 			this.dgvAtendimento.Size = new System.Drawing.Size(924, 248);
 			this.dgvAtendimento.TabIndex = 0;
 			// 
+			// dataGridViewTextBoxColumn7
+			// 
+			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn7.DataPropertyName = "idAtendimento";
+			this.dataGridViewTextBoxColumn7.HeaderText = "Id do atendimento";
+			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+			this.dataGridViewTextBoxColumn7.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn11
+			// 
+			this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn11.DataPropertyName = "idCliente";
+			this.dataGridViewTextBoxColumn11.HeaderText = "Id do Cliente";
+			this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+			this.dataGridViewTextBoxColumn11.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn10
+			// 
+			this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn10.DataPropertyName = "precoAtendimento";
+			this.dataGridViewTextBoxColumn10.HeaderText = "Preço";
+			this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+			this.dataGridViewTextBoxColumn10.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn9
+			// 
+			this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn9.DataPropertyName = "dataAtendimento";
+			this.dataGridViewTextBoxColumn9.HeaderText = "Data do atendimento";
+			this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+			this.dataGridViewTextBoxColumn9.ReadOnly = true;
+			// 
+			// atendimentoBindingSource
+			// 
+			this.atendimentoBindingSource.DataMember = "Atendimento";
+			this.atendimentoBindingSource.DataSource = this.dsPrincipal;
+			// 
+			// dsPrincipal
+			// 
+			this.dsPrincipal.DataSetName = "dsPrincipal";
+			this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
 			// btnLimparCampos
 			// 
 			this.btnLimparCampos.Depth = 0;
@@ -140,7 +191,7 @@
 			this.btnLimparCampos.Name = "btnLimparCampos";
 			this.btnLimparCampos.Primary = true;
 			this.btnLimparCampos.Size = new System.Drawing.Size(126, 36);
-			this.btnLimparCampos.TabIndex = 3;
+			this.btnLimparCampos.TabIndex = 8;
 			this.btnLimparCampos.Text = "Limpar Campos";
 			this.btnLimparCampos.UseVisualStyleBackColor = true;
 			this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
@@ -154,7 +205,7 @@
 			this.btnConfirmar.Name = "btnConfirmar";
 			this.btnConfirmar.Primary = true;
 			this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
-			this.btnConfirmar.TabIndex = 2;
+			this.btnConfirmar.TabIndex = 7;
 			this.btnConfirmar.Text = "Confirmar";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
 			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -184,37 +235,23 @@
 			this.pnlCampos.Location = new System.Drawing.Point(20, 12);
 			this.pnlCampos.Name = "pnlCampos";
 			this.pnlCampos.Size = new System.Drawing.Size(924, 310);
-			this.pnlCampos.TabIndex = 9;
+			this.pnlCampos.TabIndex = 111;
 			// 
-			// txtIdAtendimento
+			// txtIdCliente
 			// 
-			this.txtIdAtendimento.Enabled = false;
-			this.txtIdAtendimento.Location = new System.Drawing.Point(158, 12);
-			this.txtIdAtendimento.Name = "txtIdAtendimento";
-			this.txtIdAtendimento.Size = new System.Drawing.Size(180, 20);
-			this.txtIdAtendimento.TabIndex = 1;
-			this.txtIdAtendimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtIdCliente.Location = new System.Drawing.Point(600, 12);
+			this.txtIdCliente.Name = "txtIdCliente";
+			this.txtIdCliente.Size = new System.Drawing.Size(180, 20);
+			this.txtIdCliente.TabIndex = 1;
+			this.txtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
-			// pnlBotaoLimparCampos
+			// txtPreco
 			// 
-			this.pnlBotaoLimparCampos.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.pnlBotaoLimparCampos.Controls.Add(this.btnLimparCampos);
-			this.pnlBotaoLimparCampos.Location = new System.Drawing.Point(20, 328);
-			this.pnlBotaoLimparCampos.Name = "pnlBotaoLimparCampos";
-			this.pnlBotaoLimparCampos.Size = new System.Drawing.Size(126, 36);
-			this.pnlBotaoLimparCampos.TabIndex = 8;
-			// 
-			// grpProdutos
-			// 
-			this.grpProdutos.Controls.Add(this.panel1);
-			this.grpProdutos.Controls.Add(this.txtListaProdutos);
-			this.grpProdutos.Controls.Add(this.cmbProdutos);
-			this.grpProdutos.Location = new System.Drawing.Point(34, 57);
-			this.grpProdutos.Name = "grpProdutos";
-			this.grpProdutos.Size = new System.Drawing.Size(414, 216);
-			this.grpProdutos.TabIndex = 8;
-			this.grpProdutos.TabStop = false;
-			this.grpProdutos.Text = "Produtos";
+			this.txtPreco.Location = new System.Drawing.Point(144, 279);
+			this.txtPreco.Mask = "$\\d{9}.00";
+			this.txtPreco.Name = "txtPreco";
+			this.txtPreco.Size = new System.Drawing.Size(773, 20);
+			this.txtPreco.TabIndex = 6;
 			// 
 			// grpServicos
 			// 
@@ -228,42 +265,6 @@
 			this.grpServicos.TabStop = false;
 			this.grpServicos.Text = "Serviços";
 			// 
-			// cmbProdutos
-			// 
-			this.cmbProdutos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "nomeProduto", true));
-			this.cmbProdutos.FormattingEnabled = true;
-			this.cmbProdutos.Location = new System.Drawing.Point(6, 19);
-			this.cmbProdutos.Name = "cmbProdutos";
-			this.cmbProdutos.Size = new System.Drawing.Size(149, 21);
-			this.cmbProdutos.TabIndex = 0;
-			this.cmbProdutos.SelectedIndexChanged += new System.EventHandler(this.cmbProdutos_SelectedIndexChanged);
-			// 
-			// cmbServicos
-			// 
-			this.cmbServicos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "nomeServico", true));
-			this.cmbServicos.FormattingEnabled = true;
-			this.cmbServicos.Location = new System.Drawing.Point(6, 19);
-			this.cmbServicos.Name = "cmbServicos";
-			this.cmbServicos.Size = new System.Drawing.Size(149, 21);
-			this.cmbServicos.TabIndex = 1;
-			this.cmbServicos.SelectedIndexChanged += new System.EventHandler(this.cmbServicos_SelectedIndexChanged);
-			// 
-			// txtListaServicos
-			// 
-			this.txtListaServicos.Location = new System.Drawing.Point(161, 19);
-			this.txtListaServicos.Multiline = true;
-			this.txtListaServicos.Name = "txtListaServicos";
-			this.txtListaServicos.Size = new System.Drawing.Size(247, 191);
-			this.txtListaServicos.TabIndex = 2;
-			// 
-			// txtListaProdutos
-			// 
-			this.txtListaProdutos.Location = new System.Drawing.Point(160, 18);
-			this.txtListaProdutos.Multiline = true;
-			this.txtListaProdutos.Name = "txtListaProdutos";
-			this.txtListaProdutos.Size = new System.Drawing.Size(247, 191);
-			this.txtListaProdutos.TabIndex = 1;
-			// 
 			// panel2
 			// 
 			this.panel2.Controls.Add(this.label4);
@@ -272,6 +273,17 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(149, 163);
 			this.panel2.TabIndex = 4;
+			// 
+			// label4
+			// 
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.label4.Font = new System.Drawing.Font("Consolas", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.Red;
+			this.label4.Location = new System.Drawing.Point(3, 100);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(143, 50);
+			this.label4.TabIndex = 6;
+			this.label4.Text = "Mantenha sempre um item por linha.\r\n";
 			// 
 			// label2
 			// 
@@ -284,16 +296,42 @@
 			this.label2.TabIndex = 5;
 			this.label2.Text = "Para retirar itens da seleção, apague a linha correspondente por completo.";
 			// 
-			// label4
+			// txtListaServicos
 			// 
-			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-			this.label4.Font = new System.Drawing.Font("Consolas", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.ForeColor = System.Drawing.Color.Red;
-			this.label4.Location = new System.Drawing.Point(3, 100);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(143, 50);
-			this.label4.TabIndex = 6;
-			this.label4.Text = "Mantenha sempre um item por linha.\r\n";
+			this.txtListaServicos.Location = new System.Drawing.Point(161, 19);
+			this.txtListaServicos.Multiline = true;
+			this.txtListaServicos.Name = "txtListaServicos";
+			this.txtListaServicos.Size = new System.Drawing.Size(247, 191);
+			this.txtListaServicos.TabIndex = 5;
+			// 
+			// cmbServicos
+			// 
+			this.cmbServicos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "nomeServico", true));
+			this.cmbServicos.FormattingEnabled = true;
+			this.cmbServicos.Items.AddRange(new object[] {
+            ""});
+			this.cmbServicos.Location = new System.Drawing.Point(6, 19);
+			this.cmbServicos.Name = "cmbServicos";
+			this.cmbServicos.Size = new System.Drawing.Size(149, 21);
+			this.cmbServicos.TabIndex = 4;
+			this.cmbServicos.SelectedIndexChanged += new System.EventHandler(this.cmbServicos_SelectedIndexChanged);
+			// 
+			// servicoBindingSource
+			// 
+			this.servicoBindingSource.DataMember = "Servico";
+			this.servicoBindingSource.DataSource = this.dsPrincipal;
+			// 
+			// grpProdutos
+			// 
+			this.grpProdutos.Controls.Add(this.panel1);
+			this.grpProdutos.Controls.Add(this.txtListaProdutos);
+			this.grpProdutos.Controls.Add(this.cmbProdutos);
+			this.grpProdutos.Location = new System.Drawing.Point(34, 57);
+			this.grpProdutos.Name = "grpProdutos";
+			this.grpProdutos.Size = new System.Drawing.Size(414, 216);
+			this.grpProdutos.TabIndex = 8;
+			this.grpProdutos.TabStop = false;
+			this.grpProdutos.Text = "Produtos";
 			// 
 			// panel1
 			// 
@@ -326,65 +364,48 @@
 			this.label3.TabIndex = 5;
 			this.label3.Text = "Para retirar itens da seleção, apague a linha correspondente por completo.";
 			// 
-			// dataGridViewTextBoxColumn7
+			// txtListaProdutos
 			// 
-			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn7.DataPropertyName = "idAtendimento";
-			this.dataGridViewTextBoxColumn7.HeaderText = "Id do atendimento";
-			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-			this.dataGridViewTextBoxColumn7.ReadOnly = true;
+			this.txtListaProdutos.Location = new System.Drawing.Point(160, 18);
+			this.txtListaProdutos.Multiline = true;
+			this.txtListaProdutos.Name = "txtListaProdutos";
+			this.txtListaProdutos.Size = new System.Drawing.Size(247, 191);
+			this.txtListaProdutos.TabIndex = 3;
 			// 
-			// dataGridViewTextBoxColumn11
+			// cmbProdutos
 			// 
-			this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn11.DataPropertyName = "idCliente";
-			this.dataGridViewTextBoxColumn11.HeaderText = "Id do Cliente";
-			this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-			this.dataGridViewTextBoxColumn11.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn8
-			// 
-			this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn8.DataPropertyName = "idServico";
-			this.dataGridViewTextBoxColumn8.HeaderText = "Id do serviço";
-			this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-			this.dataGridViewTextBoxColumn8.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn10
-			// 
-			this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn10.DataPropertyName = "precoAtendimento";
-			this.dataGridViewTextBoxColumn10.HeaderText = "Preço";
-			this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-			this.dataGridViewTextBoxColumn10.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn9
-			// 
-			this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn9.DataPropertyName = "dataAtendimento";
-			this.dataGridViewTextBoxColumn9.HeaderText = "Data do atendimento";
-			this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-			this.dataGridViewTextBoxColumn9.ReadOnly = true;
-			// 
-			// atendimentoBindingSource
-			// 
-			this.atendimentoBindingSource.DataMember = "Atendimento";
-			this.atendimentoBindingSource.DataSource = this.dsPrincipal;
-			// 
-			// dsPrincipal
-			// 
-			this.dsPrincipal.DataSetName = "dsPrincipal";
-			this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// servicoBindingSource
-			// 
-			this.servicoBindingSource.DataMember = "Servico";
-			this.servicoBindingSource.DataSource = this.dsPrincipal;
+			this.cmbProdutos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource1, "nomeProduto", true));
+			this.cmbProdutos.FormattingEnabled = true;
+			this.cmbProdutos.Items.AddRange(new object[] {
+            ""});
+			this.cmbProdutos.Location = new System.Drawing.Point(6, 19);
+			this.cmbProdutos.Name = "cmbProdutos";
+			this.cmbProdutos.Size = new System.Drawing.Size(149, 21);
+			this.cmbProdutos.TabIndex = 2;
+			this.cmbProdutos.SelectedIndexChanged += new System.EventHandler(this.cmbProdutos_SelectedIndexChanged);
 			// 
 			// produtoBindingSource
 			// 
 			this.produtoBindingSource.DataMember = "Produto";
 			this.produtoBindingSource.DataSource = this.dsPrincipal;
+			// 
+			// txtIdAtendimento
+			// 
+			this.txtIdAtendimento.Enabled = false;
+			this.txtIdAtendimento.Location = new System.Drawing.Point(158, 12);
+			this.txtIdAtendimento.Name = "txtIdAtendimento";
+			this.txtIdAtendimento.Size = new System.Drawing.Size(180, 20);
+			this.txtIdAtendimento.TabIndex = 1;
+			this.txtIdAtendimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// pnlBotaoLimparCampos
+			// 
+			this.pnlBotaoLimparCampos.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.pnlBotaoLimparCampos.Controls.Add(this.btnLimparCampos);
+			this.pnlBotaoLimparCampos.Location = new System.Drawing.Point(20, 328);
+			this.pnlBotaoLimparCampos.Name = "pnlBotaoLimparCampos";
+			this.pnlBotaoLimparCampos.Size = new System.Drawing.Size(126, 36);
+			this.pnlBotaoLimparCampos.TabIndex = 8;
 			// 
 			// atendimentoTableAdapter
 			// 
@@ -414,31 +435,10 @@
 			// 
 			this.servicoTableAdapter.ClearBeforeFill = true;
 			// 
-			// txtPreco
+			// produtoBindingSource1
 			// 
-			this.txtPreco.Location = new System.Drawing.Point(144, 279);
-			this.txtPreco.Mask = "$";
-			this.txtPreco.Name = "txtPreco";
-			this.txtPreco.Size = new System.Drawing.Size(773, 20);
-			this.txtPreco.TabIndex = 11;
-			// 
-			// lblIdCliente
-			// 
-			lblIdCliente.AutoSize = true;
-			lblIdCliente.Location = new System.Drawing.Point(479, 15);
-			lblIdCliente.Name = "lblIdCliente";
-			lblIdCliente.Size = new System.Drawing.Size(66, 13);
-			lblIdCliente.TabIndex = 12;
-			lblIdCliente.Text = "Id do Cliente";
-			// 
-			// txtIdCliente
-			// 
-			this.txtIdCliente.Enabled = false;
-			this.txtIdCliente.Location = new System.Drawing.Point(600, 12);
-			this.txtIdCliente.Name = "txtIdCliente";
-			this.txtIdCliente.Size = new System.Drawing.Size(180, 20);
-			this.txtIdCliente.TabIndex = 13;
-			this.txtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.produtoBindingSource1.DataMember = "Produto";
+			this.produtoBindingSource1.DataSource = this.dsPrincipal;
 			// 
 			// frmCadastroAtendimento
 			// 
@@ -453,24 +453,25 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "frmCadastroAtendimento";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Cadastro de Atendimento";
+			this.Text = "Cadastro de atendimentos";
 			this.Load += new System.EventHandler(this.frmCadastroAtendimento_Load);
 			this.pnlDataGridView.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvAtendimento)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.atendimentoBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
 			this.pnlBotaoConfirmar.ResumeLayout(false);
 			this.pnlCampos.ResumeLayout(false);
 			this.pnlCampos.PerformLayout();
-			this.pnlBotaoLimparCampos.ResumeLayout(false);
-			this.grpProdutos.ResumeLayout(false);
-			this.grpProdutos.PerformLayout();
 			this.grpServicos.ResumeLayout(false);
 			this.grpServicos.PerformLayout();
 			this.panel2.ResumeLayout(false);
-			this.panel1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.atendimentoBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
+			this.grpProdutos.ResumeLayout(false);
+			this.grpProdutos.PerformLayout();
+			this.panel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
+			this.pnlBotaoLimparCampos.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -523,5 +524,6 @@
 		private System.Windows.Forms.TextBox txtListaProdutos;
 		private System.Windows.Forms.MaskedTextBox txtPreco;
 		private System.Windows.Forms.TextBox txtIdCliente;
+		private System.Windows.Forms.BindingSource produtoBindingSource1;
 	}
 }

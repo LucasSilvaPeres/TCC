@@ -48,7 +48,7 @@
 			this.pnlBotaoConfirmar = new System.Windows.Forms.Panel();
 			this.pnlCampos = new System.Windows.Forms.Panel();
 			this.pnlCadProduto = new System.Windows.Forms.Panel();
-			this.txtCadProduto = new MaterialSkin.Controls.MaterialRaisedButton();
+			this.btnCadProduto = new MaterialSkin.Controls.MaterialRaisedButton();
 			this.txtProduto = new System.Windows.Forms.TextBox();
 			this.txtQuantidade = new System.Windows.Forms.TextBox();
 			this.txtIdFornecimento = new System.Windows.Forms.TextBox();
@@ -271,25 +271,25 @@
 			// pnlCadProduto
 			// 
 			this.pnlCadProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.pnlCadProduto.Controls.Add(this.txtCadProduto);
-			this.pnlCadProduto.Location = new System.Drawing.Point(755, 265);
+			this.pnlCadProduto.Controls.Add(this.btnCadProduto);
+			this.pnlCadProduto.Location = new System.Drawing.Point(3, 275);
 			this.pnlCadProduto.Name = "pnlCadProduto";
 			this.pnlCadProduto.Size = new System.Drawing.Size(167, 33);
 			this.pnlCadProduto.TabIndex = 9;
 			// 
-			// txtCadProduto
+			// btnCadProduto
 			// 
-			this.txtCadProduto.Depth = 0;
-			this.txtCadProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtCadProduto.Location = new System.Drawing.Point(0, 0);
-			this.txtCadProduto.MouseState = MaterialSkin.MouseState.HOVER;
-			this.txtCadProduto.Name = "txtCadProduto";
-			this.txtCadProduto.Primary = true;
-			this.txtCadProduto.Size = new System.Drawing.Size(167, 33);
-			this.txtCadProduto.TabIndex = 3;
-			this.txtCadProduto.Text = "Cadastrar Produto";
-			this.txtCadProduto.UseVisualStyleBackColor = true;
-			this.txtCadProduto.Click += new System.EventHandler(this.txtCadProduto_Click);
+			this.btnCadProduto.Depth = 0;
+			this.btnCadProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnCadProduto.Location = new System.Drawing.Point(0, 0);
+			this.btnCadProduto.MouseState = MaterialSkin.MouseState.HOVER;
+			this.btnCadProduto.Name = "btnCadProduto";
+			this.btnCadProduto.Primary = true;
+			this.btnCadProduto.Size = new System.Drawing.Size(167, 33);
+			this.btnCadProduto.TabIndex = 3;
+			this.btnCadProduto.Text = "Ir para Cadastro de produto";
+			this.btnCadProduto.UseVisualStyleBackColor = true;
+			this.btnCadProduto.Click += new System.EventHandler(this.txtCadProduto_Click);
 			// 
 			// txtProduto
 			// 
@@ -430,7 +430,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "frmCadFornecimento";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "a";
+			this.Text = "Cadastro de fornecimentos";
 			this.Load += new System.EventHandler(this.frmCadFornecimento_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fornecimentoBindingSource)).EndInit();
@@ -481,6 +481,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn estoqueProdutoDataGridViewTextBoxColumn;
 		public System.Windows.Forms.Panel pnlCadProduto;
-		public MaterialSkin.Controls.MaterialRaisedButton txtCadProduto;
+		public MaterialSkin.Controls.MaterialRaisedButton btnCadProduto;
 	}
 }

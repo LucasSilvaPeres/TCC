@@ -28,6 +28,21 @@ namespace frmMenuPrincipal.Formulários
 
 		private void btnLimparCampos_Click(object sender, EventArgs e)
 		{
+			try
+			{
+				if (MessageBox.Show("Tem certeza que deseja limpar os campos?", "Limpar Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					LimparCampos();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+			}
+		}
+
+		private void LimparCampos()
+		{
 			foreach (Control item in pnlCampos.Controls)
 			{
 				if (item is TextBox)
@@ -43,17 +58,29 @@ namespace frmMenuPrincipal.Formulários
 					dtpDataNascimento.Value = DateTime.Now;
 				}
 			}
+			txtNome.Focus();
 		}
-        private void btnConfirmar_Click(object sender, EventArgs e)
+
+		private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            DateTime datainfo = DateTime.Now;
-            Funcionario funcionario = new Funcionario(txtNome.Text,txtIdentidade.Text,txtCelular.Text,
-				txtTelefone.Text,txtBairro.Text,txtEndereco.Text,decimal.Parse(txtSalario.Text), dtpDataNascimento.Value, datainfo);
-            FuncionarioTableAdapter sta = new FuncionarioTableAdapter();
-			sta.InsertFuncionario(funcionario.TelefoneFuncionario, funcionario.EnderecoFuncionario, funcionario.NomeFuncionario, funcionario.BairroFuncionario, funcionario.CelularFuncionario,
-				funcionario.PagamentoFuncionario, funcionario.IdentidadeFuncionario, funcionario.NascFuncionario.ToString(), funcionario.Datainfo);
-            TableRefresh();
-        }
+			try
+			{
+				if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					DateTime datainfo = DateTime.Now;
+					Funcionario funcionario = new Funcionario(txtNome.Text, txtIdentidade.Text, txtCelular.Text,
+						txtTelefone.Text, txtBairro.Text, txtEndereco.Text, decimal.Parse(txtSalario.Text), dtpDataNascimento.Value, datainfo);
+					FuncionarioTableAdapter sta = new FuncionarioTableAdapter();
+					sta.InsertFuncionario(funcionario.TelefoneFuncionario, funcionario.EnderecoFuncionario, funcionario.NomeFuncionario, funcionario.BairroFuncionario, funcionario.CelularFuncionario,
+						funcionario.PagamentoFuncionario, funcionario.IdentidadeFuncionario, funcionario.NascFuncionario.ToString(), funcionario.Datainfo);
+					TableRefresh();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+			}
+		}
         private void TableRefresh()
         {
             funcionarioTableAdapter.Fill(this.dsPrincipal.Funcionario);

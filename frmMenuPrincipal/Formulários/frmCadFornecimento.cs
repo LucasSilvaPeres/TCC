@@ -40,30 +40,57 @@ namespace frmMenuPrincipal.Formulários
 
 		private void btnLimparCampos_Click(object sender, EventArgs e)
 		{
+			try
+			{
+				if (MessageBox.Show("Tem certeza que deseja limpar os campos?", "Limpar Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					LimparCampos();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+			}
+		}
+
+		private void LimparCampos()
+		{
 			foreach (Control item in pnlCampos.Controls)
 			{
 				if (item is TextBox)
 				{
 					(item as TextBox).Clear();
 				}
-				
+
 				if (item is DateTimePicker)
 				{
 					dtpDataFornecimento.Value = DateTime.Now;
 				}
+				txtIdFornecedor.Focus();
 			}
 		}
 
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			DateTime datainfo = DateTime.Now;
-			Fornecimento fornecimento= new Fornecimento(int.Parse(txtIdFornecedor.Text), dtpDataFornecimento.Value);
-			FornecimentoTableAdapter fta = new FornecimentoTableAdapter();
-			fta.InsertFornecimento(fornecimento.IdFornecedor, fornecimento.DataFornecimento);
-			Produto produto = new Produto(int.Parse(txtQuantidade.Text), txtProduto.Text);
-			ProdutoTableAdapter pta = new ProdutoTableAdapter();
-			pta.UpdateProdutoFornecimento(produto.EstoqueProduto, produto.NomeProduto);
-			TableRefresh();
+			try
+			{
+				if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					DateTime datainfo = DateTime.Now;
+					Fornecimento fornecimento = new Fornecimento(int.Parse(txtIdFornecedor.Text), dtpDataFornecimento.Value);
+					FornecimentoTableAdapter fta = new FornecimentoTableAdapter();
+					fta.InsertFornecimento(fornecimento.IdFornecedor, fornecimento.DataFornecimento);
+					Produto produto = new Produto(int.Parse(txtQuantidade.Text), txtProduto.Text);
+					ProdutoTableAdapter pta = new ProdutoTableAdapter();
+					pta.UpdateProdutoFornecimento(produto.EstoqueProduto, produto.NomeProduto);
+					TableRefresh();
+					LimparCampos();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+			}
 		}
 		private void TableRefresh()
 		{

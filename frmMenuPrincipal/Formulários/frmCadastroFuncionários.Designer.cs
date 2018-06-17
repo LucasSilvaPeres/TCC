@@ -305,7 +305,7 @@
 			this.btnLimparCampos.Name = "btnLimparCampos";
 			this.btnLimparCampos.Primary = true;
 			this.btnLimparCampos.Size = new System.Drawing.Size(152, 33);
-			this.btnLimparCampos.TabIndex = 3;
+			this.btnLimparCampos.TabIndex = 11;
 			this.btnLimparCampos.Text = "Limpar Campos";
 			this.btnLimparCampos.UseVisualStyleBackColor = true;
 			this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
@@ -319,7 +319,7 @@
 			this.btnConfirmar.Name = "btnConfirmar";
 			this.btnConfirmar.Primary = true;
 			this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
-			this.btnConfirmar.TabIndex = 2;
+			this.btnConfirmar.TabIndex = 10;
 			this.btnConfirmar.Text = "Confirmar";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
 			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -366,10 +366,10 @@
 			// txtSalario
 			// 
 			this.txtSalario.Location = new System.Drawing.Point(610, 55);
-			this.txtSalario.Mask = "$";
+			this.txtSalario.Mask = "$\\d{9}.00";
 			this.txtSalario.Name = "txtSalario";
 			this.txtSalario.Size = new System.Drawing.Size(200, 20);
-			this.txtSalario.TabIndex = 116;
+			this.txtSalario.TabIndex = 8;
 			// 
 			// txtObs
 			// 
@@ -377,7 +377,7 @@
 			this.txtObs.Multiline = true;
 			this.txtObs.Name = "txtObs";
 			this.txtObs.Size = new System.Drawing.Size(200, 110);
-			this.txtObs.TabIndex = 114;
+			this.txtObs.TabIndex = 9;
 			// 
 			// txtCelular
 			// 
@@ -385,15 +385,15 @@
 			this.txtCelular.Mask = "(99)09999-9999";
 			this.txtCelular.Name = "txtCelular";
 			this.txtCelular.Size = new System.Drawing.Size(80, 20);
-			this.txtCelular.TabIndex = 113;
+			this.txtCelular.TabIndex = 7;
 			// 
 			// txtTelefone
 			// 
 			this.txtTelefone.Location = new System.Drawing.Point(151, 207);
-			this.txtTelefone.Mask = "(99)09999-9999";
+			this.txtTelefone.Mask = "(00)0000-0000";
 			this.txtTelefone.Name = "txtTelefone";
 			this.txtTelefone.Size = new System.Drawing.Size(80, 20);
-			this.txtTelefone.TabIndex = 112;
+			this.txtTelefone.TabIndex = 6;
 			// 
 			// txtIdentidade
 			// 
@@ -482,7 +482,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "frmCadastroFuncionários";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "frmCadastroFuncionários";
+			this.Text = "Cadastro de funcionários";
 			this.Load += new System.EventHandler(this.frmCadastroFuncionários_Load);
 			this.panel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();

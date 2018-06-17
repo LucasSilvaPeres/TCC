@@ -239,7 +239,7 @@
 			this.btnLimparCampos.Name = "btnLimparCampos";
 			this.btnLimparCampos.Primary = true;
 			this.btnLimparCampos.Size = new System.Drawing.Size(152, 33);
-			this.btnLimparCampos.TabIndex = 3;
+			this.btnLimparCampos.TabIndex = 8;
 			this.btnLimparCampos.Text = "Limpar Campos";
 			this.btnLimparCampos.UseVisualStyleBackColor = true;
 			this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
@@ -253,7 +253,7 @@
 			this.btnConfirmar.Name = "btnConfirmar";
 			this.btnConfirmar.Primary = true;
 			this.btnConfirmar.Size = new System.Drawing.Size(122, 32);
-			this.btnConfirmar.TabIndex = 2;
+			this.btnConfirmar.TabIndex = 7;
 			this.btnConfirmar.Text = "Confirmar";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
 			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -272,7 +272,7 @@
 			this.pnlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlCampos.BackColor = System.Drawing.SystemColors.Control;
+			this.pnlCampos.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.pnlCampos.Controls.Add(this.txtTelefone);
 			this.pnlCampos.Controls.Add(this.txtIdentidade);
 			this.pnlCampos.Controls.Add(this.pnlCPFouCNPJ);
@@ -297,15 +297,15 @@
 			this.txtTelefone.Mask = "(99)09999-9999";
 			this.txtTelefone.Name = "txtTelefone";
 			this.txtTelefone.Size = new System.Drawing.Size(92, 20);
-			this.txtTelefone.TabIndex = 16;
+			this.txtTelefone.TabIndex = 5;
 			// 
 			// txtIdentidade
 			// 
 			this.txtIdentidade.Location = new System.Drawing.Point(402, 120);
 			this.txtIdentidade.Mask = "999,999,999-99";
 			this.txtIdentidade.Name = "txtIdentidade";
-			this.txtIdentidade.Size = new System.Drawing.Size(80, 20);
-			this.txtIdentidade.TabIndex = 15;
+			this.txtIdentidade.Size = new System.Drawing.Size(105, 20);
+			this.txtIdentidade.TabIndex = 2;
 			// 
 			// pnlCPFouCNPJ
 			// 
@@ -314,7 +314,7 @@
 			this.pnlCPFouCNPJ.Location = new System.Drawing.Point(513, 120);
 			this.pnlCPFouCNPJ.Name = "pnlCPFouCNPJ";
 			this.pnlCPFouCNPJ.Size = new System.Drawing.Size(107, 22);
-			this.pnlCPFouCNPJ.TabIndex = 14;
+			this.pnlCPFouCNPJ.TabIndex = 3;
 			// 
 			// rbCNPJ
 			// 
@@ -347,28 +347,28 @@
 			this.idFornecedorTextBox.Location = new System.Drawing.Point(51, 10);
 			this.idFornecedorTextBox.Name = "idFornecedorTextBox";
 			this.idFornecedorTextBox.Size = new System.Drawing.Size(853, 20);
-			this.idFornecedorTextBox.TabIndex = 1;
+			this.idFornecedorTextBox.TabIndex = 111;
 			// 
 			// txtNome
 			// 
 			this.txtNome.Location = new System.Drawing.Point(402, 93);
 			this.txtNome.Name = "txtNome";
 			this.txtNome.Size = new System.Drawing.Size(218, 20);
-			this.txtNome.TabIndex = 3;
+			this.txtNome.TabIndex = 1;
 			// 
 			// txtEndereco
 			// 
 			this.txtEndereco.Location = new System.Drawing.Point(402, 147);
 			this.txtEndereco.Name = "txtEndereco";
 			this.txtEndereco.Size = new System.Drawing.Size(218, 20);
-			this.txtEndereco.TabIndex = 5;
+			this.txtEndereco.TabIndex = 4;
 			// 
 			// txtEmail
 			// 
 			this.txtEmail.Location = new System.Drawing.Point(402, 197);
 			this.txtEmail.Name = "txtEmail";
 			this.txtEmail.Size = new System.Drawing.Size(218, 20);
-			this.txtEmail.TabIndex = 11;
+			this.txtEmail.TabIndex = 6;
 			// 
 			// panel2
 			// 
@@ -413,7 +413,7 @@
 			this.MaximizeBox = false;
 			this.Name = "frmCadastroFornecedor";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "frmCadastroFornecedor";
+			this.Text = "Cadastro de fornecedores";
 			this.Load += new System.EventHandler(this.frmCadastroFornecedor_Load);
 			this.panel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvBancoForm)).EndInit();

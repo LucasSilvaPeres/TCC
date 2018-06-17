@@ -41,10 +41,14 @@ namespace frmMenuPrincipal.Formulários
 		}
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+			try
 			{
-				try
+
+
+				if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados",
+					MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 				{
+
 					DateTime datainfo = DateTime.Now;
 
 					Atendimento atendimento = new Atendimento(int.Parse(txtIdCliente.Text), datainfo, int.Parse(txtPreco.Text));
@@ -54,17 +58,29 @@ namespace frmMenuPrincipal.Formulários
 					//Serviços_Atendimento serviços_Atendimento =  new Serviços_Atendimento
 
 					TableRefresh();
-				}catch(Exception ex)
-				{
-					throw ex;
+					LimparCampos();
+
+
+
 				}
+			}catch(Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 			}
 
 		}
 		private void TableRefresh()
 		{
-			atendimentoTableAdapter.Fill(dsPrincipal.Atendimento);
-			dgvAtendimento.Refresh();
+			try
+			{
+				atendimentoTableAdapter.Fill(dsPrincipal.Atendimento);
+				dgvAtendimento.Refresh();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+			}
 		}
 
 		private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,7 +92,8 @@ namespace frmMenuPrincipal.Formulários
 			}
 			catch (Exception ex)
 			{
-				throw ex;
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
 			}
 		}
 
@@ -94,12 +111,37 @@ namespace frmMenuPrincipal.Formulários
 			}
 			catch (Exception ex)
 			{
-				throw ex;
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 			}
 		}
 
 		private void btnLimparCampos_Click(object sender, EventArgs e)
 		{
+			if (MessageBox.Show("Tem certeza que deseja limpar os campos?", "Limpar Campos",
+				MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+			{
+				LimparCampos();
+			}
+		}
+		private void LimparCampos()
+		{
+
+			foreach (Control item in pnlCampos.Controls)
+			{
+				if (item is TextBox)
+				{
+					(item as TextBox).Clear();
+				}
+				if(item is ComboBox)
+				{
+					(item as ComboBox).SelectedIndex = 0;
+				}
+				if(item is MaskedTextBox)
+				{
+					(item as MaskedTextBox).Clear();
+				}
+			}
+			txtIdCliente.Focus();
 
 		}
 	}
