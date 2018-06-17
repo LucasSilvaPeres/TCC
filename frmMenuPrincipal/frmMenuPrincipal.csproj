@@ -257,6 +257,7 @@
     <Compile Include="Models\Fornecimento.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Servicos_Atendimento.cs" />
     <Compile Include="Models\Serviço.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

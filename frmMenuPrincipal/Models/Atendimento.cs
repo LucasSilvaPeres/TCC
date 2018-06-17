@@ -8,20 +8,20 @@ namespace frmMenuPrincipal.Models
 {
 	class Atendimento
 	{
-		private int idServico;
+		private int idCliente;
 		private DateTime dataAtendimento;
 		private decimal precoAtendimento;
 
-        public int IdServico
+        public int IdCliente
         {
             get
             {
-                return idServico;
+                return idCliente;
             }
 
             set
             {
-                idServico = value;
+                idCliente = value;
             }
         }
 
@@ -51,9 +51,9 @@ namespace frmMenuPrincipal.Models
             }
         }
 
-        public Atendimento(int idServico, DateTime dataAtendimento, decimal precoAtendimento)
+        public Atendimento(int idCliente, DateTime dataAtendimento, decimal precoAtendimento)
 		{
-			this.IdServico = idServico;
+			this.IdCliente = idCliente;
 			this.DataAtendimento = dataAtendimento;
 			this.PrecoAtendimento = precoAtendimento;
 		}

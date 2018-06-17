@@ -50,8 +50,6 @@ namespace frmMenuPrincipal.Dados {
         
         private global::System.Data.DataRelation relationFK_Serviços_Atendimento_Servico;
         
-        private global::System.Data.DataRelation relationFK__Atendimen__idSer__7D439ABD;
-        
         private global::System.Data.DataRelation relationFK_Atendimento_Cliente;
         
         private global::System.Data.DataRelation relationFK__Fornecime__idFor__7F2BE32F;
@@ -458,7 +456,6 @@ namespace frmMenuPrincipal.Dados {
             }
             this.relationFK_Serviços_Atendimento_Atendimento = this.Relations["FK_Serviços_Atendimento_Atendimento"];
             this.relationFK_Serviços_Atendimento_Servico = this.Relations["FK_Serviços_Atendimento_Servico"];
-            this.relationFK__Atendimen__idSer__7D439ABD = this.Relations["FK__Atendimen__idSer__7D439ABD"];
             this.relationFK_Atendimento_Cliente = this.Relations["FK_Atendimento_Cliente"];
             this.relationFK__Fornecime__idFor__7F2BE32F = this.Relations["FK__Fornecime__idFor__7F2BE32F"];
             this.relationFK__Produto__idForne__00200768 = this.Relations["FK__Produto__idForne__00200768"];
@@ -507,10 +504,6 @@ namespace frmMenuPrincipal.Dados {
                         this.tableServico.idServicoColumn}, new global::System.Data.DataColumn[] {
                         this.tableServiços_Atendimento.idServicoColumn}, false);
             this.Relations.Add(this.relationFK_Serviços_Atendimento_Servico);
-            this.relationFK__Atendimen__idSer__7D439ABD = new global::System.Data.DataRelation("FK__Atendimen__idSer__7D439ABD", new global::System.Data.DataColumn[] {
-                        this.tableServico.idServicoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAtendimento.idServicoColumn}, false);
-            this.Relations.Add(this.relationFK__Atendimen__idSer__7D439ABD);
             this.relationFK_Atendimento_Cliente = new global::System.Data.DataRelation("FK_Atendimento_Cliente", new global::System.Data.DataColumn[] {
                         this.tableCliente.idClienteColumn}, new global::System.Data.DataColumn[] {
                         this.tableAtendimento.idClienteColumn}, false);
@@ -1004,8 +997,6 @@ namespace frmMenuPrincipal.Dados {
             
             private global::System.Data.DataColumn columnidAtendimento;
             
-            private global::System.Data.DataColumn columnidServico;
-            
             private global::System.Data.DataColumn columndataAtendimento;
             
             private global::System.Data.DataColumn columnprecoAtendimento;
@@ -1050,14 +1041,6 @@ namespace frmMenuPrincipal.Dados {
             public global::System.Data.DataColumn idAtendimentoColumn {
                 get {
                     return this.columnidAtendimento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idServicoColumn {
-                get {
-                    return this.columnidServico;
                 }
             }
             
@@ -1122,19 +1105,15 @@ namespace frmMenuPrincipal.Dados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public AtendimentoRow AddAtendimentoRow(ServicoRow parentServicoRowByFK__Atendimen__idSer__7D439ABD, System.DateTime dataAtendimento, decimal precoAtendimento, ClienteRow parentClienteRowByFK_Atendimento_Cliente) {
+            public AtendimentoRow AddAtendimentoRow(System.DateTime dataAtendimento, decimal precoAtendimento, ClienteRow parentClienteRowByFK_Atendimento_Cliente) {
                 AtendimentoRow rowAtendimentoRow = ((AtendimentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         null,
                         dataAtendimento,
                         precoAtendimento,
                         null};
-                if ((parentServicoRowByFK__Atendimen__idSer__7D439ABD != null)) {
-                    columnValuesArray[1] = parentServicoRowByFK__Atendimen__idSer__7D439ABD[0];
-                }
                 if ((parentClienteRowByFK_Atendimento_Cliente != null)) {
-                    columnValuesArray[4] = parentClienteRowByFK_Atendimento_Cliente[0];
+                    columnValuesArray[3] = parentClienteRowByFK_Atendimento_Cliente[0];
                 }
                 rowAtendimentoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAtendimentoRow);
@@ -1166,7 +1145,6 @@ namespace frmMenuPrincipal.Dados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnidAtendimento = base.Columns["idAtendimento"];
-                this.columnidServico = base.Columns["idServico"];
                 this.columndataAtendimento = base.Columns["dataAtendimento"];
                 this.columnprecoAtendimento = base.Columns["precoAtendimento"];
                 this.columnidCliente = base.Columns["idCliente"];
@@ -1177,8 +1155,6 @@ namespace frmMenuPrincipal.Dados {
             private void InitClass() {
                 this.columnidAtendimento = new global::System.Data.DataColumn("idAtendimento", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidAtendimento);
-                this.columnidServico = new global::System.Data.DataColumn("idServico", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidServico);
                 this.columndataAtendimento = new global::System.Data.DataColumn("dataAtendimento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndataAtendimento);
                 this.columnprecoAtendimento = new global::System.Data.DataColumn("precoAtendimento", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -4460,22 +4436,6 @@ namespace frmMenuPrincipal.Dados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int idServico {
-                get {
-                    try {
-                        return ((int)(this[this.tableAtendimento.idServicoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'idServico\' na tabela \'Atendimento\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAtendimento.idServicoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime dataAtendimento {
                 get {
                     try {
@@ -4524,17 +4484,6 @@ namespace frmMenuPrincipal.Dados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ServicoRow ServicoRow {
-                get {
-                    return ((ServicoRow)(this.GetParentRow(this.Table.ParentRelations["FK__Atendimen__idSer__7D439ABD"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Atendimen__idSer__7D439ABD"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ClienteRow ClienteRow {
                 get {
                     return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["FK_Atendimento_Cliente"])));
@@ -4542,18 +4491,6 @@ namespace frmMenuPrincipal.Dados {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Atendimento_Cliente"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsidServicoNull() {
-                return this.IsNull(this.tableAtendimento.idServicoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetidServicoNull() {
-                this[this.tableAtendimento.idServicoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6096,17 +6033,6 @@ namespace frmMenuPrincipal.Dados {
                     return ((Serviços_AtendimentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Serviços_Atendimento_Servico"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public AtendimentoRow[] GetAtendimentoRows() {
-                if ((this.Table.ChildRelations["FK__Atendimen__idSer__7D439ABD"] == null)) {
-                    return new AtendimentoRow[0];
-                }
-                else {
-                    return ((AtendimentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Atendimen__idSer__7D439ABD"])));
-                }
-            }
         }
         
         /// <summary>
@@ -7111,7 +7037,6 @@ SELECT idAtendimento, idServico_Atendimento, idServico FROM Serviços_Atendiment
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Atendimento";
             tableMapping.ColumnMappings.Add("idAtendimento", "idAtendimento");
-            tableMapping.ColumnMappings.Add("idServico", "idServico");
             tableMapping.ColumnMappings.Add("dataAtendimento", "dataAtendimento");
             tableMapping.ColumnMappings.Add("precoAtendimento", "precoAtendimento");
             tableMapping.ColumnMappings.Add("idCliente", "idCliente");
@@ -7134,16 +7059,13 @@ SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FR
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Atendimento] SET [idServico] = @idServico, [dataAtendimento] = @dataAtendimento, [precoAtendimento] = @precoAtendimento, [idCliente] = @idCliente WHERE (([idAtendimento] = @Original_idAtendimento) AND ((@IsNull_idServico = 1 AND [idServico] IS NULL) OR ([idServico] = @Original_idServico)) AND ((@IsNull_dataAtendimento = 1 AND [dataAtendimento] IS NULL) OR ([dataAtendimento] = @Original_dataAtendimento)) AND ((@IsNull_precoAtendimento = 1 AND [precoAtendimento] IS NULL) OR ([precoAtendimento] = @Original_precoAtendimento)) AND ((@IsNull_idCliente = 1 AND [idCliente] IS NULL) OR ([idCliente] = @Original_idCliente)));
-SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FROM Atendimento WHERE (idAtendimento = @idAtendimento)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Atendimento] SET [dataAtendimento] = @dataAtendimento, [precoAtendimento] = @precoAtendimento, [idCliente] = @idCliente WHERE (([idAtendimento] = @Original_idAtendimento) AND ((@IsNull_dataAtendimento = 1 AND [dataAtendimento] IS NULL) OR ([dataAtendimento] = @Original_dataAtendimento)) AND ((@IsNull_precoAtendimento = 1 AND [precoAtendimento] IS NULL) OR ([precoAtendimento] = @Original_precoAtendimento)) AND ((@IsNull_idCliente = 1 AND [idCliente] IS NULL) OR ([idCliente] = @Original_idCliente)));
+SELECT idAtendimento, dataAtendimento, precoAtendimento, idCliente FROM Atendimento WHERE (idAtendimento = @idAtendimento)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idServico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idServico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataAtendimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAtendimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precoAtendimento", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precoAtendimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAtendimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAtendimento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idServico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idServico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idServico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idServico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dataAtendimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAtendimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dataAtendimento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAtendimento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_precoAtendimento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precoAtendimento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7166,23 +7088,24 @@ SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FR
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FRO" +
-                "M dbo.Atendimento";
+            this._commandCollection[0].CommandText = "SELECT idAtendimento, dataAtendimento, precoAtendimento, idCliente FROM Atendimen" +
+                "to";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente\r\nFR" +
-                "OM dbo.Atendimento \r\nWHERE idAtendimento = @idAtendimento";
+            this._commandCollection[1].CommandText = "SELECT idAtendimento, dataAtendimento, precoAtendimento, idCliente FROM Atendimen" +
+                "to WHERE (idAtendimento = @idAtendimento)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAtendimento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idAtendimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"INSERT INTO Atendimento
-                         (idServico, dataAtendimento, precoAtendimento, idCliente)
-VALUES        (@idServico,@dataAtendimento,@precoAtendimento,@idCliente); 
-SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FROM Atendimento WHERE (idAtendimento = SCOPE_IDENTITY())";
+                         (dataAtendimento, precoAtendimento, idCliente)
+VALUES        (@dataAtendimento,@precoAtendimento,@idCliente); 
+SELECT idAtendimento, dataAtendimento, precoAtendimento, idCliente
+ FROM Atendimento 
+WHERE (idAtendimento = SCOPE_IDENTITY())";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idServico", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idServico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataAtendimento", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "dataAtendimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precoAtendimento", global::System.Data.SqlDbType.Money, 8, global::System.Data.ParameterDirection.Input, 0, 0, "precoAtendimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7324,65 +7247,51 @@ SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> idServico, global::System.Nullable<global::System.DateTime> dataAtendimento, global::System.Nullable<decimal> precoAtendimento, global::System.Nullable<int> idCliente, int Original_idAtendimento, global::System.Nullable<int> Original_idServico, global::System.Nullable<global::System.DateTime> Original_dataAtendimento, global::System.Nullable<decimal> Original_precoAtendimento, global::System.Nullable<int> Original_idCliente, int idAtendimento) {
-            if ((idServico.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idServico.Value));
+        public virtual int Update(global::System.Nullable<global::System.DateTime> dataAtendimento, global::System.Nullable<decimal> precoAtendimento, global::System.Nullable<int> idCliente, int Original_idAtendimento, global::System.Nullable<global::System.DateTime> Original_dataAtendimento, global::System.Nullable<decimal> Original_precoAtendimento, global::System.Nullable<int> Original_idCliente, int idAtendimento) {
+            if ((dataAtendimento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(dataAtendimento.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((dataAtendimento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(dataAtendimento.Value));
+            if ((precoAtendimento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(precoAtendimento.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((precoAtendimento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(precoAtendimento.Value));
+            if ((idCliente.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(idCliente.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((idCliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(idCliente.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idAtendimento));
-            if ((Original_idServico.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_idServico.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_idAtendimento));
             if ((Original_dataAtendimento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_dataAtendimento.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_dataAtendimento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Original_precoAtendimento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_precoAtendimento.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_precoAtendimento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             if ((Original_idCliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_idCliente.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_idCliente.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(idAtendimento));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(idAtendimento));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7403,39 +7312,33 @@ SELECT idAtendimento, idServico, dataAtendimento, precoAtendimento, idCliente FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> idServico, global::System.Nullable<global::System.DateTime> dataAtendimento, global::System.Nullable<decimal> precoAtendimento, global::System.Nullable<int> idCliente, int Original_idAtendimento, global::System.Nullable<int> Original_idServico, global::System.Nullable<global::System.DateTime> Original_dataAtendimento, global::System.Nullable<decimal> Original_precoAtendimento, global::System.Nullable<int> Original_idCliente) {
-            return this.Update(idServico, dataAtendimento, precoAtendimento, idCliente, Original_idAtendimento, Original_idServico, Original_dataAtendimento, Original_precoAtendimento, Original_idCliente, Original_idAtendimento);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> dataAtendimento, global::System.Nullable<decimal> precoAtendimento, global::System.Nullable<int> idCliente, int Original_idAtendimento, global::System.Nullable<global::System.DateTime> Original_dataAtendimento, global::System.Nullable<decimal> Original_precoAtendimento, global::System.Nullable<int> Original_idCliente) {
+            return this.Update(dataAtendimento, precoAtendimento, idCliente, Original_idAtendimento, Original_dataAtendimento, Original_precoAtendimento, Original_idCliente, Original_idAtendimento);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int insertAtendimento(global::System.Nullable<int> idServico, global::System.Nullable<global::System.DateTime> dataAtendimento, global::System.Nullable<decimal> precoAtendimento, global::System.Nullable<int> idCliente) {
+        public virtual int InsertAtendimento(global::System.Nullable<global::System.DateTime> dataAtendimento, global::System.Nullable<decimal> precoAtendimento, global::System.Nullable<int> idCliente) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            if ((idServico.HasValue == true)) {
-                command.Parameters[0].Value = ((int)(idServico.Value));
+            if ((dataAtendimento.HasValue == true)) {
+                command.Parameters[0].Value = ((System.DateTime)(dataAtendimento.Value));
             }
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((dataAtendimento.HasValue == true)) {
-                command.Parameters[1].Value = ((System.DateTime)(dataAtendimento.Value));
+            if ((precoAtendimento.HasValue == true)) {
+                command.Parameters[1].Value = ((decimal)(precoAtendimento.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((precoAtendimento.HasValue == true)) {
-                command.Parameters[2].Value = ((decimal)(precoAtendimento.Value));
+            if ((idCliente.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(idCliente.Value));
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((idCliente.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(idCliente.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11337,17 +11240,28 @@ SELECT idServico, nomeServico, precoServico, dataInfoServico FROM Servico WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idServico, nomeServico, precoServico, dataInfoServico FROM dbo.Servico";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT idServico, nomeServico, precoServico, dataInfoServico \r\nFROM dbo.Servico\r\n" +
-                "WHERE nomeServico = @nomeServico";
+            this._commandCollection[1].CommandText = "SELECT        precoServico\r\nFROM            Servico\r\nWHERE        (nomeServico = " +
+                "@nomeServico)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeServico", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nomeServico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT precoServico FROM dbo.Servico WHERE nomeServico = @nomeServico";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeServico", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nomeServico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT idServico, nomeServico, precoServico, dataInfoServico \r\nFROM dbo.Servico\r\n" +
+                "WHERE nomeServico = @nomeServico";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeServico", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nomeServico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11379,7 +11293,7 @@ SELECT idServico, nomeServico, precoServico, dataInfoServico FROM Servico WHERE 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual dsPrincipal.ServicoDataTable getDataServico(string nomeServico) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((nomeServico == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -11518,6 +11432,74 @@ SELECT idServico, nomeServico, precoServico, dataInfoServico FROM Servico WHERE 
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string FillBy(string nomeServico) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((nomeServico == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(nomeServico));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string FillBy1(string nomeServico) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((nomeServico == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(nomeServico));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
             }
         }
     }
@@ -12226,15 +12208,6 @@ SELECT idCarro, idCliente, placaCarro, corCarro, modeloCarro, dataInfoCarro FROM
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._servicoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Servico.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._servicoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._atendimentoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Atendimento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12259,6 +12232,15 @@ SELECT idCarro, idCliente, placaCarro, corCarro, modeloCarro, dataInfoCarro FROM
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._produtoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._servicoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Servico.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._servicoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12333,14 +12315,6 @@ SELECT idCarro, idCliente, placaCarro, corCarro, modeloCarro, dataInfoCarro FROM
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._servicoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Servico.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._servicoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._atendimentoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Atendimento.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12362,6 +12336,14 @@ SELECT idCarro, idCliente, placaCarro, corCarro, modeloCarro, dataInfoCarro FROM
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._produtoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._servicoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Servico.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._servicoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12455,6 +12437,14 @@ SELECT idCarro, idCliente, placaCarro, corCarro, modeloCarro, dataInfoCarro FROM
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._servicoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Servico.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._servicoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._produtoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Produto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12476,14 +12466,6 @@ SELECT idCarro, idCliente, placaCarro, corCarro, modeloCarro, dataInfoCarro FROM
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._atendimentoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._servicoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Servico.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._servicoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

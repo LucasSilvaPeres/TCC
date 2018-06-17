@@ -28,7 +28,7 @@ namespace frmMenuPrincipal.Formulários
 
 		private void frmCadastroAtendimento_Load(object sender, EventArgs e)
 		{
-            
+
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Servico'. Você pode movê-la ou removê-la conforme necessário.
 			this.servicoTableAdapter.Fill(this.dsPrincipal.Servico);
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Produto'. Você pode movê-la ou removê-la conforme necessário.
@@ -39,18 +39,68 @@ namespace frmMenuPrincipal.Formulários
 			//WindowState = FormWindowState.Normal;
 			//WindowState = FormWindowState.Maximized;
 		}
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            //DateTime datainfo = DateTime.Now;
-            //Atendimento atendimento = new Produto(int.Parse(txtId.Text),int.Parse(txt;
-            //AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
-            //pta.Insert(produto.IdFornecedor, produto.NomeProduto, produto.EstoqueProduto, produto.DataInfo);
-            //TableRefresh();
-        }
-        private void TableRefresh()
-        {
-            produtoTableAdapter.Fill(dsPrincipal.Produto);
-            dgvProduto.Refresh();
-        }
-    }
+		private void btnConfirmar_Click(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+			{
+				try
+				{
+					DateTime datainfo = DateTime.Now;
+
+					Atendimento atendimento = new Atendimento(int.Parse(txtIdCliente.Text), datainfo, int.Parse(txtPreco.Text));
+					AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
+					ata.InsertAtendimento(atendimento.DataAtendimento, atendimento.PrecoAtendimento, atendimento.IdCliente);
+
+					Serviços_Atendimento serviços_Atendimento =  new Serviços_Atendimento
+
+					TableRefresh();
+				}catch(Exception ex)
+				{
+					throw ex;
+				}
+			}
+
+		}
+		private void TableRefresh()
+		{
+			atendimentoTableAdapter.Fill(dsPrincipal.Atendimento);
+			dgvAtendimento.Refresh();
+		}
+
+		private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			try
+			{
+				txtListaProdutos.Text += "\n" + cmbProdutos.Text;
+				cmbProdutos.SelectedIndex = 0;
+			}
+			catch (Exception ex)
+			{
+				throw ex;
+			}
+		}
+
+		private void cmbServicos_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			try
+			{
+				ServicoTableAdapter sta = new ServicoTableAdapter();
+				int precoServico = int.Parse(sta.FillBy(cmbServicos.Text));
+				int precoAtual = int.Parse(txtPreco.Text);
+				txtPreco.Text = (precoAtual + precoServico).ToString();
+				txtListaServicos.Text += "\n" + cmbServicos.Text;
+				cmbServicos.SelectedIndex = 0;
+
+			}
+			catch (Exception ex)
+			{
+				throw ex;
+			}
+		}
+
+		private void btnLimparCampos_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
