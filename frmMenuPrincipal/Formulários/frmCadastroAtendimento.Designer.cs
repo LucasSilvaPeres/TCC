@@ -143,6 +143,7 @@
 			this.btnLimparCampos.TabIndex = 3;
 			this.btnLimparCampos.Text = "Limpar Campos";
 			this.btnLimparCampos.UseVisualStyleBackColor = true;
+			this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
 			// 
 			// btnConfirmar
 			// 
@@ -156,6 +157,7 @@
 			this.btnConfirmar.TabIndex = 2;
 			this.btnConfirmar.Text = "Confirmar";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
+			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
 			// 
 			// pnlBotaoConfirmar
 			// 

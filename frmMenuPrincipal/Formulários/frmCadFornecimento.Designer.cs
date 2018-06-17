@@ -47,6 +47,8 @@
 			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
 			this.pnlBotaoConfirmar = new System.Windows.Forms.Panel();
 			this.pnlCampos = new System.Windows.Forms.Panel();
+			this.pnlCadProduto = new System.Windows.Forms.Panel();
+			this.txtCadProduto = new MaterialSkin.Controls.MaterialRaisedButton();
 			this.txtProduto = new System.Windows.Forms.TextBox();
 			this.txtQuantidade = new System.Windows.Forms.TextBox();
 			this.txtIdFornecimento = new System.Windows.Forms.TextBox();
@@ -57,14 +59,12 @@
 			this.produtos_FornecimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.Produtos_FornecimentoTableAdapter();
 			this.pnlDgvFornecedor = new System.Windows.Forms.Panel();
 			this.dgvProduto = new System.Windows.Forms.DataGridView();
-			this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.produtoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ProdutoTableAdapter();
 			this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.idFornecedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.estoqueProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.pnlCadProduto = new System.Windows.Forms.Panel();
-			this.txtCadProduto = new MaterialSkin.Controls.MaterialRaisedButton();
+			this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.produtoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ProdutoTableAdapter();
 			lblId = new System.Windows.Forms.Label();
 			lblFornecedor = new System.Windows.Forms.Label();
 			lblDataFornecimento = new System.Windows.Forms.Label();
@@ -76,12 +76,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvFornecimento)).BeginInit();
 			this.pnlBotaoConfirmar.SuspendLayout();
 			this.pnlCampos.SuspendLayout();
+			this.pnlCadProduto.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.produtos_FornecimentoBindingSource)).BeginInit();
 			this.pnlBotaoLimparCampos.SuspendLayout();
 			this.pnlDgvFornecedor.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
-			this.pnlCadProduto.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lblId
@@ -236,6 +236,7 @@
 			this.btnConfirmar.TabIndex = 2;
 			this.btnConfirmar.Text = "Confirmar";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
+			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
 			// 
 			// pnlBotaoConfirmar
 			// 
@@ -266,6 +267,29 @@
 			this.pnlCampos.Name = "pnlCampos";
 			this.pnlCampos.Size = new System.Drawing.Size(940, 311);
 			this.pnlCampos.TabIndex = 9;
+			// 
+			// pnlCadProduto
+			// 
+			this.pnlCadProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.pnlCadProduto.Controls.Add(this.txtCadProduto);
+			this.pnlCadProduto.Location = new System.Drawing.Point(755, 265);
+			this.pnlCadProduto.Name = "pnlCadProduto";
+			this.pnlCadProduto.Size = new System.Drawing.Size(167, 33);
+			this.pnlCadProduto.TabIndex = 9;
+			// 
+			// txtCadProduto
+			// 
+			this.txtCadProduto.Depth = 0;
+			this.txtCadProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txtCadProduto.Location = new System.Drawing.Point(0, 0);
+			this.txtCadProduto.MouseState = MaterialSkin.MouseState.HOVER;
+			this.txtCadProduto.Name = "txtCadProduto";
+			this.txtCadProduto.Primary = true;
+			this.txtCadProduto.Size = new System.Drawing.Size(167, 33);
+			this.txtCadProduto.TabIndex = 3;
+			this.txtCadProduto.Text = "Cadastrar Produto";
+			this.txtCadProduto.UseVisualStyleBackColor = true;
+			this.txtCadProduto.Click += new System.EventHandler(this.txtCadProduto_Click);
 			// 
 			// txtProduto
 			// 
@@ -351,15 +375,6 @@
 			this.dgvProduto.Size = new System.Drawing.Size(465, 265);
 			this.dgvProduto.TabIndex = 0;
 			// 
-			// produtoBindingSource
-			// 
-			this.produtoBindingSource.DataMember = "Produto";
-			this.produtoBindingSource.DataSource = this.dsPrincipal;
-			// 
-			// produtoTableAdapter
-			// 
-			this.produtoTableAdapter.ClearBeforeFill = true;
-			// 
 			// idProdutoDataGridViewTextBoxColumn
 			// 
 			this.idProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -392,28 +407,14 @@
 			this.estoqueProdutoDataGridViewTextBoxColumn.Name = "estoqueProdutoDataGridViewTextBoxColumn";
 			this.estoqueProdutoDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
-			// pnlCadProduto
+			// produtoBindingSource
 			// 
-			this.pnlCadProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.pnlCadProduto.Controls.Add(this.txtCadProduto);
-			this.pnlCadProduto.Location = new System.Drawing.Point(755, 265);
-			this.pnlCadProduto.Name = "pnlCadProduto";
-			this.pnlCadProduto.Size = new System.Drawing.Size(167, 33);
-			this.pnlCadProduto.TabIndex = 9;
+			this.produtoBindingSource.DataMember = "Produto";
+			this.produtoBindingSource.DataSource = this.dsPrincipal;
 			// 
-			// txtCadProduto
+			// produtoTableAdapter
 			// 
-			this.txtCadProduto.Depth = 0;
-			this.txtCadProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txtCadProduto.Location = new System.Drawing.Point(0, 0);
-			this.txtCadProduto.MouseState = MaterialSkin.MouseState.HOVER;
-			this.txtCadProduto.Name = "txtCadProduto";
-			this.txtCadProduto.Primary = true;
-			this.txtCadProduto.Size = new System.Drawing.Size(167, 33);
-			this.txtCadProduto.TabIndex = 3;
-			this.txtCadProduto.Text = "Cadastrar Produto";
-			this.txtCadProduto.UseVisualStyleBackColor = true;
-			this.txtCadProduto.Click += new System.EventHandler(this.txtCadProduto_Click);
+			this.produtoTableAdapter.ClearBeforeFill = true;
 			// 
 			// frmCadFornecimento
 			// 
@@ -438,12 +439,12 @@
 			this.pnlBotaoConfirmar.ResumeLayout(false);
 			this.pnlCampos.ResumeLayout(false);
 			this.pnlCampos.PerformLayout();
+			this.pnlCadProduto.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.produtos_FornecimentoBindingSource)).EndInit();
 			this.pnlBotaoLimparCampos.ResumeLayout(false);
 			this.pnlDgvFornecedor.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
-			this.pnlCadProduto.ResumeLayout(false);
 			this.ResumeLayout(false);
 
         }

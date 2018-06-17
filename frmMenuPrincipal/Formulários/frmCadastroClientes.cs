@@ -69,13 +69,19 @@ namespace frmMenuPrincipal.Formulários
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            DateTime datainfo = DateTime.Now;
-            Clientes clientes = new Clientes(txtNome.Text,txtTelefone.Text,txtEmail.Text,txtEndereco.Text,txtBairro.Text,txtIdentidade.Text,txtCelular.Text, datainfo, dtpDataNascimento.Value, decimal.Parse(txtGastos.Text));
-            ClienteTableAdapter cta = new ClienteTableAdapter();
-            cta.Insert(clientes.NomeCliente, clientes.TelefoneCliente, 
-                clientes.EmailCliente ,clientes.EnderecoCliente, clientes.BairroCliente,
-                clientes.IdentidadeCliente, clientes.CelularCliente, clientes.NascCliente.ToString(), clientes.PagamentosCliente, clientes.DataInfo);
-            TableRefresh();
+			try
+			{
+				DateTime datainfo = DateTime.Now;
+				Clientes clientes = new Clientes(txtNome.Text, txtTelefone.Text, txtEmail.Text, txtEndereco.Text, txtBairro.Text, txtIdentidade.Text, txtCelular.Text, datainfo, dtpDataNascimento.Value, decimal.Parse(txtGastos.Text));
+				ClienteTableAdapter cta = new ClienteTableAdapter();
+				cta.Insert(clientes.NomeCliente, clientes.TelefoneCliente,
+					clientes.EmailCliente, clientes.EnderecoCliente, clientes.BairroCliente,
+					clientes.IdentidadeCliente, clientes.CelularCliente, clientes.NascCliente.ToString(), clientes.PagamentosCliente, clientes.DataInfo);
+				TableRefresh();
+			}catch(Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
+			}
         }
         private void TableRefresh()
         {

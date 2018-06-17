@@ -51,7 +51,7 @@ namespace frmMenuPrincipal.Formulários
 					AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
 					ata.InsertAtendimento(atendimento.DataAtendimento, atendimento.PrecoAtendimento, atendimento.IdCliente);
 
-					Serviços_Atendimento serviços_Atendimento =  new Serviços_Atendimento
+					//Serviços_Atendimento serviços_Atendimento =  new Serviços_Atendimento
 
 					TableRefresh();
 				}catch(Exception ex)
