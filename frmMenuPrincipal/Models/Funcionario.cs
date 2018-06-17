@@ -12,11 +12,11 @@ namespace frmMenuPrincipal.Models
 		private string nomeFuncionario, identidadeFuncionario, celularFuncionario, telefoneFuncionario,
 			bairroFuncionario, enderecoFuncionario;
 		private decimal pagamentoFuncionario;
-        private DateTime nascFuncionario;
+        private DateTime nascFuncionario, datainfo;
 
 		public Funcionario(string nomeFuncionario, string identidadeFuncionario, string celularFuncionario,
 			string telefoneFuncionario, 
-			string bairroFuncionario, string enderecoFuncionario, decimal pagamentoFuncionario, DateTime nascFuncionario)
+			string bairroFuncionario, string enderecoFuncionario, decimal pagamentoFuncionario, DateTime nascFuncionario, DateTime datainfo)
 		{
 			NomeFuncionario = nomeFuncionario;
 			IdentidadeFuncionario = identidadeFuncionario;
@@ -26,7 +26,7 @@ namespace frmMenuPrincipal.Models
 			EnderecoFuncionario = enderecoFuncionario;
 			PagamentoFuncionario = pagamentoFuncionario;
             NascFuncionario = nascFuncionario;
-
+			Datainfo = datainfo;
         }
 
         public string BairroFuncionario
@@ -140,12 +140,14 @@ namespace frmMenuPrincipal.Models
             }
         }
 
-        //public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
-        //public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
-        //public string CelularFuncionario { get => celularFuncionario; set => celularFuncionario = value; }
-        //public string TelefoneFuncionario { get => telefoneFuncionario; set => telefoneFuncionario = value; }
-        //public string BairroFuncionario { get => bairroFuncionario; set => bairroFuncionario = value; }
-        //public string EnderecoFuncionario { get => enderecoFuncionario; set => enderecoFuncionario = value; }
-        //public decimal PagamentoFuncionario { get => pagamentoFuncionario; set => pagamentoFuncionario = value; }
-    }
+		public DateTime Datainfo { get => datainfo; set => datainfo = value; }
+
+		//public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
+		//public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
+		//public string CelularFuncionario { get => celularFuncionario; set => celularFuncionario = value; }
+		//public string TelefoneFuncionario { get => telefoneFuncionario; set => telefoneFuncionario = value; }
+		//public string BairroFuncionario { get => bairroFuncionario; set => bairroFuncionario = value; }
+		//public string EnderecoFuncionario { get => enderecoFuncionario; set => enderecoFuncionario = value; }
+		//public decimal PagamentoFuncionario { get => pagamentoFuncionario; set => pagamentoFuncionario = value; }
+	}
 }

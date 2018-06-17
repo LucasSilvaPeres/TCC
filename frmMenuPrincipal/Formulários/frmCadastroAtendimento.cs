@@ -41,11 +41,11 @@ namespace frmMenuPrincipal.Formulários
 		}
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            DateTime datainfo = DateTime.Now;
-            Atendimento atendimento = new Produto(int.Parse(txtId.Text),int.Parse(txt;
-            AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
-            pta.Insert(produto.IdFornecedor, produto.NomeProduto, produto.EstoqueProduto, produto.DataInfo);
-            TableRefresh();
+            //DateTime datainfo = DateTime.Now;
+            //Atendimento atendimento = new Produto(int.Parse(txtId.Text),int.Parse(txt;
+            //AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
+            //pta.Insert(produto.IdFornecedor, produto.NomeProduto, produto.EstoqueProduto, produto.DataInfo);
+            //TableRefresh();
         }
         private void TableRefresh()
         {
