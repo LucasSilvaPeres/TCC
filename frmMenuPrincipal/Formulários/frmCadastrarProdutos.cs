@@ -30,7 +30,7 @@ namespace frmMenuPrincipal.Formulários
         {
             // TODO: This line of code loads data into the 'dsPrincipal.Produto' table. You can move, or remove it, as needed.
             this.produtoTableAdapter.Fill(this.dsPrincipal.Produto);
-
+			//pnlDeletar.Visible = false;
         }
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
@@ -75,5 +75,28 @@ namespace frmMenuPrincipal.Formulários
 				txtNome.Focus();
 			
 		}
-    }
+
+		//private void btnDeletarDados_Click(object sender, EventArgs e)
+		//{
+		//	try
+		//	{
+		//		if (MessageBox.Show("Tem certeza que deseja deletar os dados?", "Deletar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+		//		{
+		//			pnlDeletar.Visible = true;
+		//			txtNomeDeletar.Focus();
+		//		}
+
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+		//	}
+		//}
+
+		//private void btnDeletar_Click(object sender, EventArgs e)
+		//{
+		//	ProdutoTableAdapter pta = new ProdutoTableAdapter();
+		//	int id = int.Parse(pta.FillNomeProduto(txtNomeDeletar.Text));
+		//}
+	}
 }

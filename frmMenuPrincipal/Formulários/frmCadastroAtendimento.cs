@@ -50,8 +50,9 @@ namespace frmMenuPrincipal.Formulários
 				{
 
 					DateTime datainfo = DateTime.Now;
-
-					Atendimento atendimento = new Atendimento(int.Parse(txtIdCliente.Text), datainfo, int.Parse(txtPreco.Text));
+					txtPreco.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+					Atendimento atendimento = new Atendimento(int.Parse(txtIdCliente.Text), datainfo, decimal.Parse(txtPreco.Text));
+					txtPreco.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
 					AtendimentoTableAdapter ata = new AtendimentoTableAdapter();
 					ata.InsertAtendimento(atendimento.DataAtendimento, atendimento.PrecoAtendimento, atendimento.IdCliente);
 
@@ -144,5 +145,27 @@ namespace frmMenuPrincipal.Formulários
 			txtIdCliente.Focus();
 
 		}
+
+		//private void btnDeletarDados_Click(object sender, EventArgs e)
+		//{
+		//	try
+		//	{
+		//		if (MessageBox.Show("Tem certeza que deseja deletar os dados?", "Deletar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+		//		{
+		//			pnlDeletar.Visible = true;
+		//			txtNomeDeletar.Focus();
+		//		}
+
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+		//	}
+		//}
+
+		//private void btnDeletar_Click(object sender, EventArgs e)
+		//{
+
+		//}
 	}
 }

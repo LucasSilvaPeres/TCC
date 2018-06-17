@@ -44,12 +44,12 @@
 			this.btnConfirmar = new MaterialSkin.Controls.MaterialRaisedButton();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.pnlCampos = new System.Windows.Forms.Panel();
+			this.txtPreco = new System.Windows.Forms.MaskedTextBox();
 			this.txtId = new System.Windows.Forms.TextBox();
 			this.txtServico = new System.Windows.Forms.TextBox();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.servicoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ServicoTableAdapter();
 			this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
-			this.txtPreco = new System.Windows.Forms.MaskedTextBox();
 			idServicoLabel = new System.Windows.Forms.Label();
 			nomeServicoLabel = new System.Windows.Forms.Label();
 			precoServicoLabel = new System.Windows.Forms.Label();
@@ -67,9 +67,9 @@
 			idServicoLabel.AutoSize = true;
 			idServicoLabel.Location = new System.Drawing.Point(21, 13);
 			idServicoLabel.Name = "idServicoLabel";
-			idServicoLabel.Size = new System.Drawing.Size(16, 13);
+			idServicoLabel.Size = new System.Drawing.Size(68, 13);
 			idServicoLabel.TabIndex = 0;
-			idServicoLabel.Text = "Id";
+			idServicoLabel.Text = "Id do serviço";
 			// 
 			// nomeServicoLabel
 			// 
@@ -114,6 +114,7 @@
 			this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
 			this.dgvBancoForm.Name = "dgvBancoForm";
 			this.dgvBancoForm.ReadOnly = true;
+			this.dgvBancoForm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvBancoForm.Size = new System.Drawing.Size(940, 265);
 			this.dgvBancoForm.TabIndex = 0;
 			// 
@@ -212,6 +213,14 @@
 			this.pnlCampos.Size = new System.Drawing.Size(940, 258);
 			this.pnlCampos.TabIndex = 9;
 			// 
+			// txtPreco
+			// 
+			this.txtPreco.Location = new System.Drawing.Point(313, 150);
+			this.txtPreco.Mask = "$999,999.00";
+			this.txtPreco.Name = "txtPreco";
+			this.txtPreco.Size = new System.Drawing.Size(200, 20);
+			this.txtPreco.TabIndex = 2;
+			// 
 			// txtId
 			// 
 			this.txtId.Enabled = false;
@@ -255,14 +264,6 @@
 			this.tableAdapterManager.Serviços_AtendimentoTableAdapter = null;
 			this.tableAdapterManager.ServicoTableAdapter = this.servicoTableAdapter;
 			this.tableAdapterManager.UpdateOrder = frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-			// 
-			// txtPreco
-			// 
-			this.txtPreco.Location = new System.Drawing.Point(313, 150);
-			this.txtPreco.Mask = "$\\d{9}.00";
-			this.txtPreco.Name = "txtPreco";
-			this.txtPreco.Size = new System.Drawing.Size(200, 20);
-			this.txtPreco.TabIndex = 2;
 			// 
 			// frmCadastroServico
 			// 

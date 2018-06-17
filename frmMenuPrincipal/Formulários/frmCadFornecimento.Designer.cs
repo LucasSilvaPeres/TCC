@@ -183,6 +183,7 @@
 			this.dgvFornecimento.Location = new System.Drawing.Point(0, 0);
 			this.dgvFornecimento.Name = "dgvFornecimento";
 			this.dgvFornecimento.ReadOnly = true;
+			this.dgvFornecimento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvFornecimento.Size = new System.Drawing.Size(465, 265);
 			this.dgvFornecimento.TabIndex = 0;
 			// 
@@ -372,6 +373,7 @@
 			this.dgvProduto.Location = new System.Drawing.Point(0, 0);
 			this.dgvProduto.Name = "dgvProduto";
 			this.dgvProduto.ReadOnly = true;
+			this.dgvProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvProduto.Size = new System.Drawing.Size(465, 265);
 			this.dgvProduto.TabIndex = 0;
 			// 

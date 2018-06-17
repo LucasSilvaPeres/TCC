@@ -59,14 +59,14 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtListaProdutos = new System.Windows.Forms.TextBox();
 			this.cmbProdutos = new System.Windows.Forms.ComboBox();
-			this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.produtoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.txtIdAtendimento = new System.Windows.Forms.TextBox();
+			this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.pnlBotaoLimparCampos = new System.Windows.Forms.Panel();
 			this.atendimentoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.AtendimentoTableAdapter();
 			this.tableAdapterManager = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.TableAdapterManager();
 			this.produtoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ProdutoTableAdapter();
 			this.servicoTableAdapter = new frmMenuPrincipal.Dados.dsPrincipalTableAdapters.ServicoTableAdapter();
-			this.produtoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			lblIdAtendimento = new System.Windows.Forms.Label();
 			lblPrecoAtendimento = new System.Windows.Forms.Label();
 			lblIdCliente = new System.Windows.Forms.Label();
@@ -81,9 +81,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
 			this.grpProdutos.SuspendLayout();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
 			this.pnlBotaoLimparCampos.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblIdAtendimento
@@ -137,6 +137,7 @@
 			this.dgvAtendimento.Location = new System.Drawing.Point(0, 0);
 			this.dgvAtendimento.Name = "dgvAtendimento";
 			this.dgvAtendimento.ReadOnly = true;
+			this.dgvAtendimento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvAtendimento.Size = new System.Drawing.Size(924, 248);
 			this.dgvAtendimento.TabIndex = 0;
 			// 
@@ -248,7 +249,7 @@
 			// txtPreco
 			// 
 			this.txtPreco.Location = new System.Drawing.Point(144, 279);
-			this.txtPreco.Mask = "$\\d{9}.00";
+			this.txtPreco.Mask = "$999,999.00";
 			this.txtPreco.Name = "txtPreco";
 			this.txtPreco.Size = new System.Drawing.Size(773, 20);
 			this.txtPreco.TabIndex = 6;
@@ -298,7 +299,7 @@
 			// 
 			// txtListaServicos
 			// 
-			this.txtListaServicos.Location = new System.Drawing.Point(161, 19);
+			this.txtListaServicos.Location = new System.Drawing.Point(158, 19);
 			this.txtListaServicos.Multiline = true;
 			this.txtListaServicos.Name = "txtListaServicos";
 			this.txtListaServicos.Size = new System.Drawing.Size(247, 191);
@@ -384,10 +385,10 @@
 			this.cmbProdutos.TabIndex = 2;
 			this.cmbProdutos.SelectedIndexChanged += new System.EventHandler(this.cmbProdutos_SelectedIndexChanged);
 			// 
-			// produtoBindingSource
+			// produtoBindingSource1
 			// 
-			this.produtoBindingSource.DataMember = "Produto";
-			this.produtoBindingSource.DataSource = this.dsPrincipal;
+			this.produtoBindingSource1.DataMember = "Produto";
+			this.produtoBindingSource1.DataSource = this.dsPrincipal;
 			// 
 			// txtIdAtendimento
 			// 
@@ -397,6 +398,11 @@
 			this.txtIdAtendimento.Size = new System.Drawing.Size(180, 20);
 			this.txtIdAtendimento.TabIndex = 1;
 			this.txtIdAtendimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// produtoBindingSource
+			// 
+			this.produtoBindingSource.DataMember = "Produto";
+			this.produtoBindingSource.DataSource = this.dsPrincipal;
 			// 
 			// pnlBotaoLimparCampos
 			// 
@@ -435,11 +441,6 @@
 			// 
 			this.servicoTableAdapter.ClearBeforeFill = true;
 			// 
-			// produtoBindingSource1
-			// 
-			this.produtoBindingSource1.DataMember = "Produto";
-			this.produtoBindingSource1.DataSource = this.dsPrincipal;
-			// 
 			// frmCadastroAtendimento
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,9 +470,9 @@
 			this.grpProdutos.ResumeLayout(false);
 			this.grpProdutos.PerformLayout();
 			this.panel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
 			this.pnlBotaoLimparCampos.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 
 		}

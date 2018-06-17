@@ -82,17 +82,23 @@ namespace frmMenuPrincipal.Formulários
         {
 			try
 			{
-				DateTime datainfo = DateTime.Now;
-				Clientes clientes = new Clientes(txtNome.Text, txtTelefone.Text,
-					txtEmail.Text, txtEndereco.Text, txtBairro.Text, txtIdentidade.Text,
-					txtCelular.Text, datainfo, dtpDataNascimento.Value, decimal.Parse(txtGastos.Text));
-				ClienteTableAdapter cta = new ClienteTableAdapter();
-				cta.Insert(clientes.NomeCliente, clientes.TelefoneCliente,
-					clientes.EmailCliente, clientes.EnderecoCliente, clientes.BairroCliente,
-					clientes.IdentidadeCliente, clientes.CelularCliente, clientes.NascCliente.ToString(),
-					clientes.PagamentosCliente, clientes.DataInfo);
-				TableRefresh();
-				LimparCampos();
+				if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					DateTime datainfo = DateTime.Now;
+					txtGastos.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+					Clientes clientes = new Clientes(txtNome.Text, txtTelefone.Text,
+						txtEmail.Text, txtEndereco.Text, txtBairro.Text, txtIdentidade.Text,
+						txtCelular.Text, datainfo, dtpDataNascimento.Value, decimal.Parse(txtGastos.Text));
+					txtGastos.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+
+					ClienteTableAdapter cta = new ClienteTableAdapter();
+					cta.Insert(clientes.NomeCliente, clientes.TelefoneCliente,
+						clientes.EmailCliente, clientes.EnderecoCliente, clientes.BairroCliente,
+						clientes.IdentidadeCliente, clientes.CelularCliente, clientes.NascCliente.ToString(),
+						clientes.PagamentosCliente, clientes.DataInfo);
+					TableRefresh();
+					LimparCampos();
+				}
 			}
 			catch (Exception ex)
 			{

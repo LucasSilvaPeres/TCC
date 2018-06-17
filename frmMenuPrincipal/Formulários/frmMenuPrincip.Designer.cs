@@ -139,49 +139,49 @@
 			// tsmCadastroCliente
 			// 
 			this.tsmCadastroCliente.Name = "tsmCadastroCliente";
-			this.tsmCadastroCliente.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroCliente.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroCliente.Text = "Cliente";
 			this.tsmCadastroCliente.Click += new System.EventHandler(this.btnCliente_Click);
 			// 
 			// tsmCadastroAtendimento
 			// 
 			this.tsmCadastroAtendimento.Name = "tsmCadastroAtendimento";
-			this.tsmCadastroAtendimento.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroAtendimento.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroAtendimento.Text = "Atendimento";
 			this.tsmCadastroAtendimento.Click += new System.EventHandler(this.btnAtendimento_Click);
 			// 
 			// tsmCadastroServiço
 			// 
 			this.tsmCadastroServiço.Name = "tsmCadastroServiço";
-			this.tsmCadastroServiço.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroServiço.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroServiço.Text = "Serviço";
 			this.tsmCadastroServiço.Click += new System.EventHandler(this.btnAtendimento_Click);
 			// 
 			// tsmCadastroFornecedor
 			// 
 			this.tsmCadastroFornecedor.Name = "tsmCadastroFornecedor";
-			this.tsmCadastroFornecedor.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroFornecedor.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroFornecedor.Text = "Fornecedor";
 			this.tsmCadastroFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
 			// 
 			// tsmCadastroFornecimento
 			// 
 			this.tsmCadastroFornecimento.Name = "tsmCadastroFornecimento";
-			this.tsmCadastroFornecimento.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroFornecimento.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroFornecimento.Text = "Fornecimento";
 			this.tsmCadastroFornecimento.Click += new System.EventHandler(this.btnFornecimento_Click);
 			// 
 			// tsmCadastroProduto
 			// 
 			this.tsmCadastroProduto.Name = "tsmCadastroProduto";
-			this.tsmCadastroProduto.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroProduto.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroProduto.Text = "Produto";
 			this.tsmCadastroProduto.Click += new System.EventHandler(this.btnProduto_Click);
 			// 
 			// tsmCadastroFuncionario
 			// 
 			this.tsmCadastroFuncionario.Name = "tsmCadastroFuncionario";
-			this.tsmCadastroFuncionario.Size = new System.Drawing.Size(180, 22);
+			this.tsmCadastroFuncionario.Size = new System.Drawing.Size(152, 22);
 			this.tsmCadastroFuncionario.Text = "Funcionário";
 			this.tsmCadastroFuncionario.Click += new System.EventHandler(this.tsmCadastroFuncionario_Click);
 			// 
@@ -372,7 +372,7 @@
 			this.Controls.Add(this.tsMenuPrincipal);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "frmMenuPrincip";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
 			this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);

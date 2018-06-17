@@ -23,6 +23,8 @@ namespace frmMenuPrincipal.Formulários
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
 			this.fornecedorTableAdapter.Fill(this.dsPrincipal.Fornecedor);
 			rbCNPJ.Checked = true;
+			txtIdentidade.Mask = "99,999,999/9999-99";
+			txtIdentidade.Size = new Size(105, 20);
 		}
 
 		private void btnLimparCampos_Click(object sender, EventArgs e)

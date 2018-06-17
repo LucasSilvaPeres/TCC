@@ -340,6 +340,7 @@
 			this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
 			this.dgvBancoForm.Name = "dgvBancoForm";
 			this.dgvBancoForm.ReadOnly = true;
+			this.dgvBancoForm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvBancoForm.Size = new System.Drawing.Size(920, 369);
 			this.dgvBancoForm.TabIndex = 0;
 			// 
@@ -505,8 +506,8 @@
 			// 
 			// txtGastos
 			// 
-			this.txtGastos.Location = new System.Drawing.Point(710, 139);
-			this.txtGastos.Mask = "$\\d{9}.00";
+			this.txtGastos.Location = new System.Drawing.Point(709, 139);
+			this.txtGastos.Mask = "$999,999.00";
 			this.txtGastos.Name = "txtGastos";
 			this.txtGastos.Size = new System.Drawing.Size(200, 20);
 			this.txtGastos.TabIndex = 10;
@@ -620,5 +621,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInfoClienteDataGridViewTextBoxColumn;
-    }
+	}
 }

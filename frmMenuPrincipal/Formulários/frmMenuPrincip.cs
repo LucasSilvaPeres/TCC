@@ -85,38 +85,7 @@ namespace frmMenuPrincipal
 		private void timerHora_Tick(object sender, EventArgs e)
 		{
 			tslHora.Text = DateTime.Now.ToString();
-            //if (Application.OpenForms["frmBackup"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarProdutos"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarAtendimento"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarFornecimento"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarFornecedor"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarServico"] != null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarClientes"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
-            //if (Application.OpenForms["frmCadastrarFuncionários"] == null)
-            //{
-            //    panel2.Visible = true;
-            //}
+            
         }
 
 		private void btnCliente_Click(object sender, EventArgs e)

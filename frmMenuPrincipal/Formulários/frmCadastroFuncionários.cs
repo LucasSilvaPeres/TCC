@@ -68,8 +68,10 @@ namespace frmMenuPrincipal.Formulários
 				if (MessageBox.Show("Tem certeza que deseja confirmar os dados?", "Confirmar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 				{
 					DateTime datainfo = DateTime.Now;
+					txtSalario.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 					Funcionario funcionario = new Funcionario(txtNome.Text, txtIdentidade.Text, txtCelular.Text,
 						txtTelefone.Text, txtBairro.Text, txtEndereco.Text, decimal.Parse(txtSalario.Text), dtpDataNascimento.Value, datainfo);
+					txtSalario.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
 					FuncionarioTableAdapter sta = new FuncionarioTableAdapter();
 					sta.InsertFuncionario(funcionario.TelefoneFuncionario, funcionario.EnderecoFuncionario, funcionario.NomeFuncionario, funcionario.BairroFuncionario, funcionario.CelularFuncionario,
 						funcionario.PagamentoFuncionario, funcionario.IdentidadeFuncionario, funcionario.NascFuncionario.ToString(), funcionario.Datainfo);

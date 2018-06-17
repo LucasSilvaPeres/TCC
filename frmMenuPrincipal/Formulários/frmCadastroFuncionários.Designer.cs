@@ -208,6 +208,7 @@
 			this.dgvBancoForm.Location = new System.Drawing.Point(0, 0);
 			this.dgvBancoForm.Name = "dgvBancoForm";
 			this.dgvBancoForm.ReadOnly = true;
+			this.dgvBancoForm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvBancoForm.Size = new System.Drawing.Size(940, 253);
 			this.dgvBancoForm.TabIndex = 0;
 			// 
@@ -366,7 +367,7 @@
 			// txtSalario
 			// 
 			this.txtSalario.Location = new System.Drawing.Point(610, 55);
-			this.txtSalario.Mask = "$\\d{9}.00";
+			this.txtSalario.Mask = "$999,999.99";
 			this.txtSalario.Name = "txtSalario";
 			this.txtSalario.Size = new System.Drawing.Size(200, 20);
 			this.txtSalario.TabIndex = 8;
