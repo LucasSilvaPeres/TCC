@@ -601,13 +601,19 @@
 </value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
-    <value>Este programa foi desenvolvido por: Marcos Nocetti, 
-Lucas Peres, e Renan Casagrande durante  o curso 
+    <value>Este programa foi desenvolvido durante  o curso 
 técnico de informática da ETEC Fernando Prestes do 
 Centro Paula Souza de São Paulo, que teve duração 
 de 3 semestres (início de 2017 até a metade de 2018).
 
+Foi desenvolvido em C# e SQL-Server
 
+Integrantes:
+Marcos Nocetti, 
+Lucas Peres, 
+e Renan Casagrande
+
+19/06/2018
 
 
 </value>

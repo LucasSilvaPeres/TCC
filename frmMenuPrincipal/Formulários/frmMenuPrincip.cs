@@ -298,7 +298,7 @@ namespace frmMenuPrincipal
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About about = new About();
+            aboutF about = new aboutF();
             about.Show();
         }
     }
