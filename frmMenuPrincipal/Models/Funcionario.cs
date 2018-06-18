@@ -139,15 +139,26 @@ namespace frmMenuPrincipal.Models
                 nascFuncionario = value;
             }
         }
+        public DateTime Datainfo
+        {
+            get
+            {
+                return datainfo;
+            }
 
-		public DateTime Datainfo { get => datainfo; set => datainfo = value; }
+            set
+            {
+                datainfo = value;
+            }
+        }
+        //public DateTime Datainfo { get => datainfo; set => datainfo = value; }
 
-		//public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
-		//public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
-		//public string CelularFuncionario { get => celularFuncionario; set => celularFuncionario = value; }
-		//public string TelefoneFuncionario { get => telefoneFuncionario; set => telefoneFuncionario = value; }
-		//public string BairroFuncionario { get => bairroFuncionario; set => bairroFuncionario = value; }
-		//public string EnderecoFuncionario { get => enderecoFuncionario; set => enderecoFuncionario = value; }
-		//public decimal PagamentoFuncionario { get => pagamentoFuncionario; set => pagamentoFuncionario = value; }
-	}
+        //public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
+        //public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
+        //public string CelularFuncionario { get => celularFuncionario; set => celularFuncionario = value; }
+        //public string TelefoneFuncionario { get => telefoneFuncionario; set => telefoneFuncionario = value; }
+        //public string BairroFuncionario { get => bairroFuncionario; set => bairroFuncionario = value; }
+        //public string EnderecoFuncionario { get => enderecoFuncionario; set => enderecoFuncionario = value; }
+        //public decimal PagamentoFuncionario { get => pagamentoFuncionario; set => pagamentoFuncionario = value; }
+    }
 }
