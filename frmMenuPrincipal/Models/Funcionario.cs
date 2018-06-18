@@ -139,7 +139,6 @@ namespace frmMenuPrincipal.Models
                 nascFuncionario = value;
             }
         }
-
         public DateTime Datainfo
         {
             get
@@ -152,7 +151,6 @@ namespace frmMenuPrincipal.Models
                 datainfo = value;
             }
         }
-
         //public DateTime Datainfo { get => datainfo; set => datainfo = value; }
 
         //public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }

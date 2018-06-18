@@ -1,4 +1,5 @@
-﻿using frmMenuPrincipal.Formulários;
+﻿using frmMenuPrincipal.Docs;
+using frmMenuPrincipal.Formulários;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -293,6 +294,12 @@ namespace frmMenuPrincipal
                 frmcad.Hide();
 
             }
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
         }
     }
 }

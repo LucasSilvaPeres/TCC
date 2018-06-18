@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincip));
             this.tsMenuPrincipal = new System.Windows.Forms.ToolStrip();
-            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tslHora = new System.Windows.Forms.ToolStripLabel();
             this.dsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new frmMenuPrincipal.Dados.dsPrincipal();
@@ -50,7 +49,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmSair = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
@@ -61,6 +59,7 @@
             this.btnFornecedor = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnServico = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCliente = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tsMenuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
@@ -79,18 +78,6 @@
             this.tsMenuPrincipal.Size = new System.Drawing.Size(1268, 25);
             this.tsMenuPrincipal.TabIndex = 1;
             this.tsMenuPrincipal.Text = "toolStrip1";
-            // 
-            // tsbtnSair
-            // 
-            this.tsbtnSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbtnSair.BackColor = System.Drawing.SystemColors.Control;
-            this.tsbtnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnSair.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSair.Image")));
-            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnSair.Name = "tsbtnSair";
-            this.tsbtnSair.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnSair.Text = "toolStripButton1";
-            this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
             // tslHora
             // 
@@ -221,7 +208,6 @@
             // ajudaToolStripMenuItem
             // 
             this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manualToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.ajudaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajudaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
@@ -229,17 +215,12 @@
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
             // 
-            // manualToolStripMenuItem
-            // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.manualToolStripMenuItem.Text = "Manual";
-            // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // msMenu
             // 
@@ -361,6 +342,18 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
+            // tsbtnSair
+            // 
+            this.tsbtnSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbtnSair.BackColor = System.Drawing.SystemColors.Control;
+            this.tsbtnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSair.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSair.Image")));
+            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSair.Name = "tsbtnSair";
+            this.tsbtnSair.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnSair.Text = "toolStripButton1";
+            this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
+            // 
             // frmMenuPrincip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,7 +366,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmMenuPrincip";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "Menu principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
@@ -411,7 +403,6 @@
 		private System.Windows.Forms.ToolStripMenuItem tsmCadastroFornecimento;
 		private System.Windows.Forms.ToolStripMenuItem tsmCadastroProduto;
 		private System.Windows.Forms.ToolStripMenuItem tsmCadastroFuncionario;
-		private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
 		private System.Windows.Forms.Timer timerHora;
 		private System.Windows.Forms.Panel panel2;
