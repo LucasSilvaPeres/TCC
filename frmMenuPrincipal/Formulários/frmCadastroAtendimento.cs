@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace frmMenuPrincipal.Formulários
 {
 	public partial class frmCadastroAtendimento : Form
 	{
+        decimal valor;
 		public frmCadastroAtendimento()
 		{
 			InitializeComponent();
@@ -35,9 +37,10 @@ namespace frmMenuPrincipal.Formulários
 			this.produtoTableAdapter.Fill(this.dsPrincipal.Produto);
 			// TODO: esta linha de código carrega dados na tabela 'dsPrincipal.Atendimento'. Você pode movê-la ou removê-la conforme necessário.
 			this.atendimentoTableAdapter.Fill(this.dsPrincipal.Atendimento);
-			//WindowState = FormWindowState.Maximized;
-			//WindowState = FormWindowState.Normal;
-			//WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Normal;
+            //WindowState = FormWindowState.Maximized;
+            valor = 0;
 		}
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
@@ -66,7 +69,7 @@ namespace frmMenuPrincipal.Formulários
 				}
 			}catch(Exception ex)
 			{
-				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+				MessageBox.Show("Insira um id de cliente valido", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 			}
 
 		}
@@ -88,8 +91,9 @@ namespace frmMenuPrincipal.Formulários
 		{
 			try
 			{
-				txtListaProdutos.Text += "\n" + cmbProdutos.Text;
-				cmbProdutos.SelectedIndex = 0;
+                int i = 0; 
+                lbProdutos.Items.Insert(i, cmbServicos.Text);
+                i++;
 			}
 			catch (Exception ex)
 			{
@@ -97,17 +101,52 @@ namespace frmMenuPrincipal.Formulários
 
 			}
 		}
-
-		private void cmbServicos_SelectedIndexChanged(object sender, EventArgs e)
+        int precoAtual = 0;
+        int preco1 = 0; int preco2 = 0;
+        private void cmbServicos_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			try
 			{
-				ServicoTableAdapter sta = new ServicoTableAdapter();
-				int precoServico = int.Parse(sta.FillBy(cmbServicos.Text));
-				int precoAtual = int.Parse(txtPreco.Text);
-				txtPreco.Text = (precoAtual + precoServico).ToString();
-				txtListaServicos.Text += "\n" + cmbServicos.Text;
-				cmbServicos.SelectedIndex = 0;
+                
+
+
+    //            ServicoTableAdapter sta = new ServicoTableAdapter();
+    //            //SqlCommand cmd = null;
+    //            //string teste = cmbServicos.Text;
+    //            //string CommandText = "SELECT idServico, nomeServico, precoServico, dataInfoServico FROM Servico WHERE(nomeServico = " + teste + ")";
+    //            //cmd = new SqlCommand(CommandText);
+    //            //SqlDataReader rdr = cmd.ExecuteReader();
+    //            //// Fill the string with the values retrieved
+    //            //while (rdr.Read())
+    //            //{
+    //            //   idServico = rdr["idServico"].ToString(); 
+    //            //   nomeServico = rdr["nomeServico"].ToString();
+    //            //   precoServico= rdr["precoServico"].ToString();
+    //            //   dataInfoServico = rdr["dataInfoServico"].ToString();
+    //            //}
+    //            //int precoServico = int.Parse(sta.FillBy(cmbServicos.Text));
+    //            //int precoServiço = int.Parse(precoServico);
+    //            //MessageBox.Show((cmbServicos.SelectedValue.ToString()));
+    //            txtPreco.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+    //            if (txtPreco.Text != "")
+    //            {
+    //                precoAtual = int.Parse(txtPreco.Text);
+    //            }
+    //            else
+    //            {
+    //                //txtPreco.Text = cmbServicos.SelectedValue.ToString();
+    //                //precoAtual = int.Parse(txtPreco.Text);
+    //                //if (int.Parse(txtPreco.Text) > 0)
+    //                //{
+    //                //    txtPreco.Text = (precoAtual + int.Parse(cmbServicos.SelectedValue.ToString())).ToString();
+    //                //}
+    //                valor += decimal.Parse(cmbServicos.SelectedValue.ToString());
+    //                txtPreco.Text = valor.ToString("C");
+                    
+
+    //            }
+    //            txtPreco.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+				//txtListaServicos.Text += "\n" + cmbServicos.Text;
 
 			}
 			catch (Exception ex)
@@ -146,26 +185,20 @@ namespace frmMenuPrincipal.Formulários
 
 		}
 
-		//private void btnDeletarDados_Click(object sender, EventArgs e)
-		//{
-		//	try
-		//	{
-		//		if (MessageBox.Show("Tem certeza que deseja deletar os dados?", "Deletar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-		//		{
-		//			pnlDeletar.Visible = true;
-		//			txtNomeDeletar.Focus();
-		//		}
-
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-		//	}
-		//}
-
-		//private void btnDeletar_Click(object sender, EventArgs e)
-		//{
-
-		//}
-	}
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i = 0;
+                lbServicos.Items.Insert(i, cmbServicos.Text);
+                valor += decimal.Parse(cmbServicos.SelectedValue.ToString());
+                txtPreco.Text = valor.ToString();
+                i++;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+        }
+    }
 }
