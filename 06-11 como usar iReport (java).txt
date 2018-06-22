@@ -1,0 +1,105 @@
+como usar o iReport (plugin do NetBeans para gerar relatórios)
+
+1. instalar o iReport separadamente
+2. instalar o driver do banco de dados
+	• Ferramentas > Opções > Classpath > botão Add JAR > selecionar sqlijdbc4.jar
+	
+Agora há 3 passos para gerar o relatório.
+
+Step 1) Conectar ao banco de dados
+	• clicar no item 1, selecionar o tipo de conexão "Database JDBC connection"
+		em Name: bancopc
+		em JDBC Driver: MS SQLServer (2005) (com...)
+		em JDBC URL: copiar do urlBanco e do nomeBanco (confirmar no firewall se as portas estão livres)
+			jdbc:sqlserver://172.168.255.252;databaseName=db_05578_1_C_1_2017
+		em Username: 05578_1_C_1_2017 (sem o "db_")
+		em Password: P@ssw0rd
+		checar Save Password ---- caso der errado, conectar no banco de dados normalmente para definir senha nova
+		
+Step 2) Pegar um layout pronto (na aula 'Leaf Gray' em retrato)
+	launch report wizard
+	Report name: rptClientes
+	Location: browse > criar nova pasta "relatórios"
+	clicar em next
+	clicar em Design query
+	escolher dbo no menu dropdown para aparecer as tabelas
+	duplo clique em PC_clientes > OK
+	mudar os nomes depois do AS
+		ex.: 
+	excluir os campos cidade e bairro do relatório
+	finalizar
+	
+Step 3)
+	+ do Fields
+	clicar no quarto elemento (primeiro desenho) e vai aparecer uma tela com o código SQL
+	Preview data
+	na pasta do prof achar o Insert_BD_java.sql e abrir em notepad++
+	apagar os inserts das chaves primárias até antes de pc_itemvenda
+	
+	voltando no pewview do relatório
+	ajustes estéticos:
+		selecionar todas os campos e mover eles com a seta do teclado
+		mudar os nomes dos campos (endereco -> Endereço; UF -> Estado)
+		reduzir o tamanho dos campos (diminuir código, aumentar endereço)
+	Caso queira que o título aparece em todas as páginas do relatório, configurar ele em Page Header em vez de Title
+	Deixar a altura do column footer=0
+	
+	rptClientes - Propriedades
+	
+	When No Data 	Blank Page
+	Language		Java
+	
+	Criar um Static Field ou Text Field "Emitido em:" -- se der erro de syntax, botão direito > edit expression
+	Ajuste de formato na data: new.java.util.Date()
+	Format			dd/MM/yyyy - HH:mm:ss
+	no $F{Data}:
+	Format 			dd/MM/yyyy
+
+	Ajustar o telefone:
+	Expression editor > Telefone Field String	substring( int, int) 
+		substituir os int por 0, 2 (primeiro e segundo caracter) e adicionar outra expressao substring
+		
+		
+		
+RELATORIO 2 - mais complexo
+		
+Adicionar
+PC_Venda, PC_ItemVenda, PC_Clientes, PC_Produto
+Botão esquerdo > deselect all
+Depois ROOTQUERY > Adicionar expressão
+expression.edit > Alias: SubTotal
+	pc_itemvenda.quantidade * pc_itemvenda.precounit > OK
+agora em SELECT vai aparecer a expressão nova após a letra sigma
+PROXIMO
+
+Group 1
+	pc_venda_numvenda
+PROXIMO
+
+column header=0
+arrastar os headers pc_vend etc para baixo
+para colocar cor de fundo, pegar o retangula do itembox
+
+preço unitário Pattern R$ #,###,##0.00
+# = ou aparece nada, ou o número na posição
+
+tá faltando rodapé
+o total
+
+Variables +
+criar variável
+Name					Total
+Variable Class 			java.lang.Double
+Calculation				Sum
+Reset type				Group
+Reset group				pc_venda_numvenda
+Variable Expression* 	$F{SubTotal}
+When No Data			Blank Page
+Language				Java
+
+*é possível fazer o cálculo na expressão também.
+
+
+colar uma label no rodapé
+arrastar a variável total e soltar ela ao lado da label
+copiar o pattern do preço unitário
