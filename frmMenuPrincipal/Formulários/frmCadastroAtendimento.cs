@@ -87,20 +87,20 @@ namespace frmMenuPrincipal.Formulários
 			}
 		}
 
-		private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			try
-			{
-                int i = 0; 
-                lbProdutos.Items.Insert(i, cmbServicos.Text);
-                i++;
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+		//private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
+		//{
+		//	try
+		//	{
+  //              int i = 0; 
+  //              lbProdutos.Items.Insert(i, cmbServicos.Text);
+  //              i++;
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 
-			}
-		}
+		//	}
+		//}
         int precoAtual = 0;
         int preco1 = 0; int preco2 = 0;
         private void cmbServicos_SelectedIndexChanged(object sender, EventArgs e)
@@ -180,6 +180,14 @@ namespace frmMenuPrincipal.Formulários
 				{
 					(item as MaskedTextBox).Clear();
 				}
+				
+			}
+			foreach (Control item in grpServicos.Controls)
+			{
+				if (item is ListBox)
+				{
+					(item as ListBox).Items.Clear();
+				}
 			}
 			txtIdCliente.Focus();
 
@@ -200,5 +208,20 @@ namespace frmMenuPrincipal.Formulários
                 MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				int i = 0;
+				lbProdutos.Items.Insert(i, cmbServicos.Text);
+				i++;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+			}
+		}
+	}
 }

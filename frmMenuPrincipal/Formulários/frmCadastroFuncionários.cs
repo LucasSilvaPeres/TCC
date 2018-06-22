@@ -76,6 +76,7 @@ namespace frmMenuPrincipal.Formulários
 					sta.InsertFuncionario(funcionario.TelefoneFuncionario, funcionario.EnderecoFuncionario, funcionario.NomeFuncionario, funcionario.BairroFuncionario, funcionario.CelularFuncionario,
 						funcionario.PagamentoFuncionario, funcionario.IdentidadeFuncionario, funcionario.NascFuncionario.ToString(), funcionario.Datainfo);
 					TableRefresh();
+					LimparCampos();
 				}
 			}
 			catch (Exception ex)

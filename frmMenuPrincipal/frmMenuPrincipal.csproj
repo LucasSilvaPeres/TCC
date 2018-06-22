@@ -34,6 +34,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>asdf_tUe_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
@@ -351,6 +354,7 @@
     <None Include="Resources\Folder-Open-icon.png" />
     <None Include="Resources\Folder-Open-icon1.png" />
     <None Include="Resources\b52bbf17929c8da830fed3f2705d123c.jpg" />
+    <Content Include="asdf_tUe_icon.ico" />
     <Content Include="Resources\login238.png" />
   </ItemGroup>
   <ItemGroup>
