@@ -2,7 +2,8 @@
 {
 
 
-    partial class dsPrincipal
-    {
-    }
+	partial class dsPrincipal
+	{
+	}
 }
+

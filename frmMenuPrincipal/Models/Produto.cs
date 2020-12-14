@@ -71,7 +71,11 @@ namespace frmMenuPrincipal.Models
 			NomeProduto = nomeProduto;
 			DataInfo = dataInfo;
 		}
-
+		public Produto(int estoqueProduto, string nomeProduto)
+		{
+			EstoqueProduto = estoqueProduto;
+			NomeProduto = nomeProduto;
+		}
 		//public int IdFornecedor { get => idFornecedor; set => idFornecedor = value; }
 		//public int EstoqueProduto { get => estoqueProduto; set => estoqueProduto = value; }
 		//public string NomeProduto { get => nomeProduto; set => nomeProduto = value; }

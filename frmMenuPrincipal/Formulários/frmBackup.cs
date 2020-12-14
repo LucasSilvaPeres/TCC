@@ -169,9 +169,7 @@ namespace frmMenuPrincipal.Formulários
                 dbName = Properties.Settings.Default.DBName;
                 ServerConnection srvConn = new ServerConnection(String.Format("{0}\\{1}", server, instance))
                 {
-                    LoginSecure = false,
-                    Login = Properties.Settings.Default.LoginServer,
-                    Password = Properties.Settings.Default.PwdServer,
+                    LoginSecure = true,
                 };
 
                 Server servidor = new Server(srvConn);

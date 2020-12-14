@@ -1,4 +1,5 @@
-﻿using System;
+﻿using frmMenuPrincipal.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace frmMenuPrincipal.Models
 	class Fornecedor
 	{
 		private string nomeFornecedor, telefoneFornecedor,
-			emailFornecedor, enderecoFornecedor, bairroFornecedor, identidadeFornedor;
+			emailFornecedor, enderecoFornecedor, identidadeFornecedor;
 		private DateTime dataInfo;
 
         public string NomeFornecedor
@@ -64,29 +65,26 @@ namespace frmMenuPrincipal.Models
             }
         }
 
-        public string BairroFornecedor
+        
+
+        public string IdentidadeFornecedor
         {
             get
             {
-                return bairroFornecedor;
+                return identidadeFornecedor;
             }
 
             set
             {
-                bairroFornecedor = value;
-            }
-        }
+                if (ValidarIdentidade.Validar(value))
+                {
+                    identidadeFornecedor = value;
+                }
+                else
+                {
+                    throw new Exception("Identidade Inválida");
 
-        public string IdentidadeFornedor
-        {
-            get
-            {
-                return identidadeFornedor;
-            }
-
-            set
-            {
-                identidadeFornedor = value;
+                }
             }
         }
 
@@ -104,14 +102,14 @@ namespace frmMenuPrincipal.Models
         }
 
         public Fornecedor(string nomeFornecedor, string telefoneFornecedor,
-			string emailFornecedor, string enderecoFornecedor, string bairroFornecedor, string identidadeFornedor, DateTime dataInfo)
+			string emailFornecedor, string enderecoFornecedor, string identidadeFornedor, DateTime dataInfo)
 		{
 			NomeFornecedor = nomeFornecedor;
 			TelefoneFornecedor = telefoneFornecedor;
 			EmailFornecedor = emailFornecedor;
 			EnderecoFornecedor = enderecoFornecedor;
-			BairroFornecedor = bairroFornecedor;
-			IdentidadeFornedor = identidadeFornedor;
+			
+			IdentidadeFornecedor = identidadeFornedor;
 			DataInfo = dataInfo;
 		}
 

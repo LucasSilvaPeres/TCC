@@ -1,4 +1,5 @@
-﻿using System;
+﻿using frmMenuPrincipal.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,11 @@ namespace frmMenuPrincipal.Models
 		private string nomeFuncionario, identidadeFuncionario, celularFuncionario, telefoneFuncionario,
 			bairroFuncionario, enderecoFuncionario;
 		private decimal pagamentoFuncionario;
+        private DateTime nascFuncionario, datainfo;
 
 		public Funcionario(string nomeFuncionario, string identidadeFuncionario, string celularFuncionario,
 			string telefoneFuncionario, 
-			string bairroFuncionario, string enderecoFuncionario, decimal pagamentoFuncionario)
+			string bairroFuncionario, string enderecoFuncionario, decimal pagamentoFuncionario, DateTime nascFuncionario, DateTime datainfo)
 		{
 			NomeFuncionario = nomeFuncionario;
 			IdentidadeFuncionario = identidadeFuncionario;
@@ -23,7 +25,9 @@ namespace frmMenuPrincipal.Models
 			BairroFuncionario = bairroFuncionario;
 			EnderecoFuncionario = enderecoFuncionario;
 			PagamentoFuncionario = pagamentoFuncionario;
-		}
+            NascFuncionario = nascFuncionario;
+			Datainfo = datainfo;
+        }
 
         public string BairroFuncionario
         {
@@ -73,7 +77,14 @@ namespace frmMenuPrincipal.Models
 
             set
             {
-                identidadeFuncionario = value;
+                if (ValidarIdentidade.Validar(value))
+                {
+                    identidadeFuncionario = value;
+                }
+                else
+                {
+                    throw new Exception("Identidade Inválida");
+                }
             }
         }
 
@@ -115,6 +126,32 @@ namespace frmMenuPrincipal.Models
                 telefoneFuncionario = value;
             }
         }
+
+        public DateTime NascFuncionario
+        {
+            get
+            {
+                return nascFuncionario;
+            }
+
+            set
+            {
+                nascFuncionario = value;
+            }
+        }
+        public DateTime Datainfo
+        {
+            get
+            {
+                return datainfo;
+            }
+
+            set
+            {
+                datainfo = value;
+            }
+        }
+        //public DateTime Datainfo { get => datainfo; set => datainfo = value; }
 
         //public string NomeFuncionario { get => nomeFuncionario; set => nomeFuncionario = value; }
         //public string IdentidadeFuncionario { get => identidadeFuncionario; set => identidadeFuncionario = value; }
